@@ -1,15 +1,8 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 export function CarouselWithContent() {
-  const godown = () => {
-    window.scrollTo({
-      left: 12,
-      top: 12,
-      behavior: "smooth",
-    });
-  };
   return (
-    <Carousel className="rounded-l">
+    <Carousel className="rounded-l ">
       <div className="relative h-full w-full">
         <img
           src="../assets/1.jpg"
@@ -37,9 +30,6 @@ export function CarouselWithContent() {
             <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
                 Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
               </Button>
             </div>
           </div>
@@ -75,9 +65,6 @@ export function CarouselWithContent() {
               <Button size="lg" color="white">
                 Explore
               </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
             </div>
           </div>
         </div>
@@ -110,9 +97,6 @@ export function CarouselWithContent() {
             <div className="flex gap-2 justify-center">
               <Button size="lg" color="white">
                 Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
               </Button>
             </div>
           </div>
@@ -152,9 +136,6 @@ export function CarouselWithContent() {
                 }}
               >
                 Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
               </Button>
             </div>
           </div>

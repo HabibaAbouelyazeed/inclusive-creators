@@ -1,10 +1,12 @@
+import { ButtonDefault } from "../Buttons";
+
 const Coursesinput = () => {
   return (
     <div>
-      <form>
+      <form className="mt-4 p-4">
         <label
           htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
         >
           Search
         </label>
@@ -41,6 +43,31 @@ const Coursesinput = () => {
           </button>
         </div>
       </form>
+      <div className="row">
+        <div className="col-lg-3">
+          <ButtonDefault
+            onclick={() => {
+              filterbyAll;
+            }}
+            Name="all"
+            classname="m-1 text-olive bg-tealGrey"
+          />
+          <ButtonDefault
+            onclick={() => {
+              filterbyAll;
+            }}
+            Name="Science"
+            classname="m-1 text-olive bg-tealGrey"
+          />
+          <ButtonDefault
+            onclick={() => {
+              filterbyAll;
+            }}
+            Name="F.S"
+            classname="m-1 text-olive bg-tealGrey"
+          />
+        </div>
+      </div>
     </div>
   );
 };
