@@ -57,12 +57,16 @@ export const Navbar = () => {
           </li>
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex lg:gap-2">
-          <button className="self-center px-8 py-3 rounded bg-dirtyPink text-olive">
-            Sign in
-          </button>
-          <button className="self-center px-8 py-3 font-semibold rounded border-2 border-dirtyPink text-secondary-300">
-            Login
-          </button>
+          <Link to="/register">
+            <button className="self-center px-8 py-3 rounded bg-dirtyPink text-olive">
+              Sign Up
+            </button>
+          </Link>
+          <Link to="/login">
+            <button className="self-center px-8 py-3 font-semibold rounded border-2 border-dirtyPink text-secondary-300">
+              Login
+            </button>
+          </Link>
         </div>
         <button className="p-4 lg:hidden">
           <svg
