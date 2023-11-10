@@ -6,7 +6,7 @@ export const Navbar = () => {
     <header className="appNavbar p-4 w-100 bg-olive text-secondary-300 mb-8">
       <div className="container flex justify-between h-16 mx-auto">
         <NavLink
-          exact
+          exact="true"
           to="/"
           aria-label="Back to homepage"
           className="flex items-center p-2"
@@ -25,7 +25,6 @@ export const Navbar = () => {
           <li className="flex">
             <NavLink
               to="/home"
-              activeClassName="text-dirtyPink border-b-2 border-dirtyPink"
               className="flex items-center px-4 -mb-1 border-transparent hover:text-pinkGrey"
             >
               Home
