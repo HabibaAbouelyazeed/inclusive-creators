@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+
+import CarousselItem from "../components/Courses/Caroussel";
 
 const CoursesPage = () => {
   return (
-    <div>CoursesPage</div>
-  )
-}
+    <div>
+      <CarousselItem />
+    </div>
+  );
+};
 
-export default CoursesPage
+export default CoursesPage;
