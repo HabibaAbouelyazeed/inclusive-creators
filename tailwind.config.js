@@ -6,6 +6,9 @@ module.exports = withMT({
   darkMode: "media",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
