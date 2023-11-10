@@ -101,12 +101,3 @@ const ProfilePage = () => {
 };
 
 export default ProfilePage;
-
-{
-  /* <span className="text-subtle text-xl font-semibold hidden md:block">
-Name
-</span>
-<h4 className="text-olive px-5 text-xs sm:text-base dark:text-gray-400">
-Fabian Levy
-</h4> */
-}
