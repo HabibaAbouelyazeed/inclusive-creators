@@ -6,6 +6,7 @@ import {
   Typography,
   IconButton,
   Button,
+  Avatar,
 } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -35,14 +36,18 @@ export const Navbar = () => {
               <NavList />
             </div>
             <div className="flex items-center gap-x-2">
-              <Button size="sm" className="hidden lg:inline-block bg-dirtyPink">
-                <span>Sign in</span>
+              <Button size="sm" className="hidden lg:inline-block bg-dirtyPink ">
+              <NavLink to="/register" className={isActive => (!isActive ? " text-secondary-300" : "text-olive")}>
+              Sign in
+              </NavLink>
               </Button>
               <Button
                 variant="text"
                 size="sm"
                 className="hidden lg:inline-block border-2 border-dirtyPink text-secondary-300">
-                <span>Log In</span>
+                <NavLink to="/login">
+                Login
+              </NavLink>
               </Button>
             </div>
           </div>
@@ -63,11 +68,15 @@ export const Navbar = () => {
         <Collapse open={openNav} className="container">
           <NavList />
           <div className="flex items-center gap-x-1">
-            <Button fullWidth size="sm" className="bg-dirtyPink">
-              <span>Sign in</span>
+            <Button fullWidth size="sm" className="bg-dirtyPink text-olive">
+              <NavLink to="/register">
+              Sign in
+              </NavLink>
             </Button>
             <Button fullWidth variant="text" size="sm" className="text-secondary-300">
-              <span>Log In</span>
+              <NavLink to="/login">
+                Login
+              </NavLink>
             </Button>
           </div>
         </Collapse>
@@ -103,9 +112,16 @@ const NavList = () => {
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
+          to="/articles"
+          className="flex items-center hover:text-pinkGrey transition-colors">
+          Articles
+        </NavLink>
+      </Typography>
+      <Typography as="li" variant="small" className="p-1 font-medium">
+        <NavLink
           to="/profile"
           className="flex items-center hover:text-pinkGrey transition-colors">
-          Profile
+          <Avatar src="../assets/2.jpg" withBorder={true} className="border-dirtyPink" alt="avatar" />
         </NavLink>
       </Typography>
     </ul>
