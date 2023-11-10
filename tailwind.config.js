@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require("tailwindcss/colors");
-
-module.exports = {
+module.exports = withMT({
   darkMode: "media",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -28,4 +26,4 @@ module.exports = {
 
     plugins: [],
   },
-};
+});
