@@ -1,4 +1,5 @@
 // import React from 'react'
+import EventsList from "../components/Events/EventsList";
 import HeroEvent from "../components/Events/HeroEvent";
 import HeroSection from "../components/Events/HeroSection";
 import SearchComponent from "../components/Events/Serach";
@@ -11,6 +12,7 @@ const EventsPage = () => {
       <SearchComponent />
       <HeroEvent />
       <UpcommingEvents />
+      <EventsList />
     </div>
   );
 };

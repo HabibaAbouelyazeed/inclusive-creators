@@ -2,7 +2,7 @@ import { useState } from "react";
 import EventCard from "./EventCard";
 
 // Mock data for upcoming events
-const upcoming_events = [
+const events = [
   {
     id: 1,
     category: "Category",
@@ -59,7 +59,7 @@ const upcoming_events = [
   },
 ];
 
-const UpcommingEvents = () => {
+const EventsList = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const categories = ["All", "Category", "Cat", "Categ"];
   const handleCategoryChange = (category) => {
@@ -67,38 +67,46 @@ const UpcommingEvents = () => {
   };
 
   return (
-    <div className="container py-12">
-      <div className="header flex items-center justify-between">
+    <div className="bg-dirtyPink">
+      <div className="container py-12">
+        <div className="flex justify-between">
+          <div className="w-1/3 text-left">
+            <h2 className="text-5xl text-olive font-bold mb-10">Events List</h2>
+            {categories.map((category) => (
+              <div
+                key={category}
+                className={`cursor-pointer font-bold px-3 py-3 text-xl transition-colors ${
+                  activeCategory === category
+                    ? "text-olive"
+                    : "text-neutral-300"
+                }`}
+                onClick={() => handleCategoryChange(category)}
+              >
+                {category}
+              </div>
+            ))}
+          </div>
 
-        <h2 className="text-5xl text-olive font-bold my-4">Upcoming Events</h2>
-
-        <div className="w-1/4 flex items-center justify-between">
-          {categories.map((category) => (
-            <button
-              key={category}
-              className={`font-bold px-3 py-1 inline-block rounded text-sm transition-colors ${
-                activeCategory === category
-                  ? "bg-olive text-white"
-                  : "bg-dirtyPink text-olive"
-              }`}
-              onClick={() => handleCategoryChange(category)}
-            >
-              {category}
-            </button>
-          ))}
+          <div className="w-2/3">
+            {events.map((event) => (
+              <div key={event.id} className="text-left">
+                <p className="text-olive font-medium text-md">
+                  {event.category} - {event.date}
+                </p>
+                <h3 className="text-olive font-medium text-2xl py-2">
+                  {event.title}
+                </h3>
+                <button className="text-olive py-2 font-semibold rounded hover:bg-neutral-300 transition-colors">
+                  Learn more →
+                </button>
+                <hr className="my-10" />
+              </div>
+            ))}
+          </div>
         </div>
-
-      </div>
-
-      <hr className="my-10" />
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {upcoming_events.map((event) => (
-          <EventCard key={event.id} event={event} />
-        ))}
       </div>
     </div>
   );
 };
 
-export default UpcommingEvents;
+export default EventsList;

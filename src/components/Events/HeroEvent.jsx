@@ -5,7 +5,7 @@ const eventImage = "https://placehold.co/917x450/DDD3D2/F1F6F8";
 
 const HeroEvent = () => {
   return (
-    <div className="container py-10">
+    <div className="container py-12">
       <div className="relative min-h-[450px] flex items-center">
   
         <div className="z-10 w-1/2 bg-white p-10 shadow-md rounded-md text-left border-2 border-pinkGrey">

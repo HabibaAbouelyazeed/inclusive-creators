@@ -4,7 +4,7 @@ const backgroundImage = "https://placehold.co/1500x757";
 
 const HeroSection = () => {
   return (
-    <div className="pb-10">
+    <div className="pb-12">
       <div
         className="relative bg-cover bg-center h-screen flex items-center justify-left"
         style={{ backgroundImage: `url(${backgroundImage})` }}
