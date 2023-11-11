@@ -21,7 +21,7 @@ const HeroSection = () => {
           <button className="bg-white hover:bg-dirtyPink text-olive py-2 px-4 rounded mr-4">
             Sign Up
           </button>
-          <button className="border-2 border-neutral-800 text-secondary-300 font-bold py-2 px-4 rounded hover:border-dirtyPink hover:text-dirtyPink">
+          <button className="bg-olive border-2 border-neutral-800 text-secondary-300 font-bold py-2 px-4 rounded hover:border-dirtyPink hover:text-dirtyPink">
             Learn more
           </button>
         </div>
