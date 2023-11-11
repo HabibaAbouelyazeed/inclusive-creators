@@ -20,6 +20,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: true,
   },
   {
     Title: "Young inventor",
@@ -30,6 +31,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -40,6 +42,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -50,6 +53,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -60,6 +64,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -70,6 +75,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -80,6 +86,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -90,6 +97,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
   {
     Title: "Young inventor",
@@ -100,6 +108,7 @@ const courses = [
     Duration: "15 minutes",
     level: "beginers",
     Age: "3-7",
+    Free: false,
   },
 ];
 export function CardDefault() {
@@ -124,6 +133,14 @@ export function CardDefault() {
               >
                 <img src={course.Image} alt={course.Title} />
               </CardHeader>
+              {course.Free ? (
+                <div className="bg-pinkGrey text-oolive px-4 py-2 absolute top-0 right-5 rounded-md">
+                  Free
+                </div>
+              ) : (
+                ""
+              )}
+
               <CardBody>
                 <section>
                   <Typography variant="h5" color="blue-gray" className="mb-2">
