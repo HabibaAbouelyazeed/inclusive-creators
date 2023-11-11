@@ -4,12 +4,6 @@ const Coursesinput = () => {
   return (
     <div>
       <form className="mt-4 p-4">
-        <label
-          htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
-        >
-          Search
-        </label>
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
@@ -31,13 +25,13 @@ const Coursesinput = () => {
           <input
             type="search"
             id="default-search"
-            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Search Mockups, Logos..."
+            className="block w-full p-5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search courses..."
             required
           />
           <button
             type="submit"
-            className="text-white absolute right-2.5 bottom-2.5 bg-dirtyPink hover:bg-pinkGrey focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-olive absolute right-2.5 bottom-2.5 bg-tealGrey hover:bg-pinkGrey focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Search
           </button>
@@ -50,21 +44,21 @@ const Coursesinput = () => {
               filterbyAll;
             }}
             Name="all"
-            classname="m-1 text-olive bg-tealGrey"
+            classname="m-2 text-olive bg-tealGrey"
           />
           <ButtonDefault
             onclick={() => {
-              filterbyAll;
+              filterbyscience;
             }}
             Name="Science"
-            classname="m-1 text-olive bg-tealGrey"
+            classname="m-2 text-olive bg-tealGrey"
           />
           <ButtonDefault
             onclick={() => {
-              filterbyAll;
+              filterbyF;
             }}
             Name="F.S"
-            classname="m-1 text-olive bg-tealGrey"
+            classname="m-2 text-olive bg-tealGrey"
           />
         </div>
       </div>

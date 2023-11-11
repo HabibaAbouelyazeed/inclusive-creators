@@ -8,6 +8,7 @@ import ArticlesPage from "./pages/ArticlesPage";
 import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import Login from "./pages/LoginPage";
+import CoursesDetailsPage from "./pages/CoursesDetailsPage";
 
 import "./App.css";
 import Footer from "./components/Footer";
@@ -24,6 +25,10 @@ function App() {
           <Route path="" Component={LandingPage} />
           <Route path="/home" Component={HomePage} />
           <Route path="/courses" Component={CoursesPage} />
+          <Route
+            path="/courses/:courseTitle/:courseId"
+            Component={CoursesDetailsPage}
+          />
           <Route path="/events" Component={EventsPage} />
           <Route path="/articles" Component={ArticlesPage} />
           <Route path="/profile" Component={ProfilePage} />
