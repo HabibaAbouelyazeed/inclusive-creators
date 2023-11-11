@@ -7,6 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { ButtonDefault } from "../Buttons";
 import { Breadcrumbs } from "@material-tailwind/react";
+import { DrawerWithNavigation } from "./Drawer";
 
 const CourseDetails = () => {
   const GotoNext = () => {};
@@ -27,13 +28,21 @@ const CourseDetails = () => {
         </header>
         <div className="flex justify-center mt-2 p-2">
           <Breadcrumbs>
-            <a href="/courses" className="opacity-60">
+            <a
+              href="/courses"
+              className="opacity-60 text-olive font-bold text-sm shadow-none hover:bg-none hover:scale-105 transition-all duration-1000"
+            >
               Courses
             </a>
             <a href="#" className="opacity-60">
-              Younginventor
+              <DrawerWithNavigation />
             </a>
-            <a href="#">Video1</a>
+            <a
+              href="#"
+              className="text-olive font-bold text-sm shadow-none hover:bg-none hover:scale-105 transition-all duration-1000"
+            >
+              Video1
+            </a>
           </Breadcrumbs>
         </div>
 

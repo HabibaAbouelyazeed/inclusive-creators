@@ -4,7 +4,6 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";

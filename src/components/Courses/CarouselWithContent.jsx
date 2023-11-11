@@ -2,7 +2,10 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 const CarouselWithContent = () => {
   const godown = () => {
-    window.scrollTo();
+    window.scrollTo({
+      top: 800,
+      behavior: "smooth",
+    });
   };
   return (
     <Carousel className="rounded-l h-[45rem]">
@@ -17,7 +20,7 @@ const CarouselWithContent = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl text-dirtyPink"
             >
               STEM For Everyone
             </Typography>
@@ -33,7 +36,13 @@ const CarouselWithContent = () => {
               learning more concrete
             </Typography>
             <div className="flex justify-center gap-2">
-              <Button size="lg" color="white">
+              <Button
+                size="lg"
+                color="white"
+                onClick={() => {
+                  godown();
+                }}
+              >
                 Explore
               </Button>
             </div>
@@ -51,7 +60,7 @@ const CarouselWithContent = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl  text-dirtyPink "
             >
               The impact of STEM
             </Typography>
@@ -67,7 +76,13 @@ const CarouselWithContent = () => {
               fields of Science, Technology, Engineering, and Mathematics (STEM)
             </Typography>
             <div className="flex justify-center gap-2">
-              <Button size="lg" color="white">
+              <Button
+                size="lg"
+                color="white"
+                onClick={() => {
+                  godown();
+                }}
+              >
                 Explore
               </Button>
             </div>
@@ -85,7 +100,7 @@ const CarouselWithContent = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl  text-dirtyPink"
             >
               Explore, experiment, discover. Thats the heart of STEM learning
             </Typography>
@@ -100,7 +115,13 @@ const CarouselWithContent = () => {
               support communication and interaction.
             </Typography>
             <div className="flex gap-2 justify-center">
-              <Button size="lg" color="white">
+              <Button
+                size="lg"
+                color="white"
+                onClick={() => {
+                  godown();
+                }}
+              >
                 Explore
               </Button>
             </div>
@@ -118,7 +139,7 @@ const CarouselWithContent = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl  text-dirtyPink"
             >
               The heart of STEM learning
             </Typography>
@@ -137,7 +158,7 @@ const CarouselWithContent = () => {
                 size="lg"
                 color="white"
                 onClick={() => {
-                  godown;
+                  godown();
                 }}
               >
                 Explore
