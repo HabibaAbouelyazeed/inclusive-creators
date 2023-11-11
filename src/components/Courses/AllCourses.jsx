@@ -7,6 +7,8 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import { Rating } from "@material-tailwind/react";
+import { ButtonDefault } from "../Buttons";
 
 const courses = [
   {
@@ -15,6 +17,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 1,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -22,6 +27,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 2,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -29,6 +37,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 3,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -36,6 +47,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 4,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -43,6 +57,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 5,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -50,6 +67,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 6,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -57,6 +77,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 7,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -64,6 +87,9 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 8,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
   {
     Title: "Young inventor",
@@ -71,34 +97,72 @@ const courses = [
     Description:
       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
     id: 9,
+    Duration: "15 minutes",
+    level: "beginers",
+    Age: "3-7",
   },
 ];
 export function CardDefault() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <div className="flex flex-wrap mt-5">
-      {courses?.map((course) => (
-        <div
-          className="w-full sm:w-[100%] md:w-[50%] lg:w-[50%]  align-items-center m-auto xl:w-[32%] flex justify-center mt-3 mb-[2rem]"
-          key={course.id}
-        >
-          <Card className="mt-6 w-96 ">
-            <CardHeader color="blue-gray" className="relative h-56 shadow-none">
-              <img src={course.Image} alt={course.Title} />
-            </CardHeader>
-            <CardBody>
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                {course.Title}
-              </Typography>
-              <Typography>{course.Description}</Typography>
-            </CardBody>
-            <CardFooter className="pt-0">
-              <Link to={`/courses/${course.Title}/${course.id}`}>
-                <Button>View Course</Button>
-              </Link>
-            </CardFooter>
-          </Card>
-        </div>
-      ))}
-    </div>
+    <section className="container">
+      <div className="flex flex-wrap mt-5">
+        {courses?.map((course) => (
+          <article
+            className="w-full sm:w-[100%] md:w-[50%] lg:w-[50%]  align-items-center m-auto xl:w-[32%] flex justify-center mt-3 mb-[2rem]"
+            key={course.id}
+          >
+            <Card className="mt-6 w-96 transform scale-100 hover:scale-105 transition-transform duration-300">
+              <CardHeader
+                color="blue-gray"
+                className="relative h-56 shadow-none"
+              >
+                <img src={course.Image} alt={course.Title} />
+              </CardHeader>
+              <CardBody>
+                <section>
+                  <Typography variant="h5" color="blue-gray" className="mb-2">
+                    {course.Title}
+                  </Typography>
+                  <Typography>{course.Description}</Typography>
+                  <div className="flex justify-between">
+                    <p>
+                      <span className="font-bold ">Hours:</span>
+                      {course.Duration}
+                    </p>
+                    <Rating value={4} readonly />
+                  </div>
+                  <div className="flex justify-between pt-4">
+                    <p>
+                      <span className="font-bold px-1">Age:</span>
+                      {course.Age} <span>years</span>
+                    </p>
+
+                    <p>
+                      <span className="font-bold px-1">Level:</span>
+                      {course.level}
+                    </p>
+                  </div>
+                </section>
+              </CardBody>
+              <CardFooter className="pt-0">
+                <Link to={`/courses/${course.Title}/${course.id}`}>
+                  <ButtonDefault
+                    classname="text-olive bg-tealGrey"
+                    Name="View Course"
+                    onclick={scrollToTop}
+                  />
+                </Link>
+              </CardFooter>
+            </Card>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }

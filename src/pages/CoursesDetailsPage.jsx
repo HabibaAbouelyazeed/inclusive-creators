@@ -1,5 +1,11 @@
+import CourseDetails from "../components/Courses/CourseDetails";
+
 const CoursesDetailsPage = () => {
-  return <p>Hello there</p>;
+  return (
+    <div>
+      <CourseDetails />
+    </div>
+  );
 };
 
 export default CoursesDetailsPage;

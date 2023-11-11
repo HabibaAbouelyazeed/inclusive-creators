@@ -6,7 +6,7 @@ const CarouselWithContent = () => {
   };
   return (
     <Carousel className="rounded-l h-[45rem]">
-      <div className="relative h-[100%] w-[100vw]">
+      <article className="relative h-[100%] w-[100vw]">
         <img
           src="../assets/1.jpg"
           alt="image 1"
@@ -14,6 +14,13 @@ const CarouselWithContent = () => {
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
+            <Typography
+              variant="h1"
+              color="white"
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+            >
+              STEM For Everyone
+            </Typography>
             <Typography
               variant="lead"
               color="white"
@@ -32,15 +39,15 @@ const CarouselWithContent = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative h-full w-full">
+      </article>
+      <article className="relative h-full w-full">
         <img
           src="../assets/2.jpg"
           alt="image 2"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
-          <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32 text-center">
+          <div className="w-3/4  md:w-2/4 text-center">
             <Typography
               variant="h1"
               color="white"
@@ -51,7 +58,7 @@ const CarouselWithContent = () => {
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 p-5 text-center opacity-80"
+              className="mb-12  opacity-80"
             >
               STEM education for individuals with special needs involves
               adapting teaching strategies and learning environments to
@@ -59,15 +66,15 @@ const CarouselWithContent = () => {
               aims to provide an inclusive and accessible education in the
               fields of Science, Technology, Engineering, and Mathematics (STEM)
             </Typography>
-            <div className="flex gap-2 justify-center">
+            <div className="flex justify-center gap-2">
               <Button size="lg" color="white">
                 Explore
               </Button>
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative h-full w-full">
+      </article>
+      <article className="relative h-full w-full">
         <img
           src="../assets/3.jpg"
           alt="image 3"
@@ -99,8 +106,8 @@ const CarouselWithContent = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="relative h-full w-full">
+      </article>
+      <article className="relative h-full w-full">
         <img
           src="../assets/4.jpg"
           alt="image 3"
@@ -138,7 +145,7 @@ const CarouselWithContent = () => {
             </div>
           </div>
         </div>
-      </div>
+      </article>
     </Carousel>
   );
 };
