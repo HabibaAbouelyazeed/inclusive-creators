@@ -7,10 +7,7 @@ import {
   List,
   ListItem,
   ListItemPrefix,
-  ListItemSuffix,
-  Chip,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 
 export function DrawerWithNavigation() {
   const [open, setOpen] = React.useState(false);
