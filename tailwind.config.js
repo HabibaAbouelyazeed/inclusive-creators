@@ -8,6 +8,7 @@ module.exports = withMT({
   theme: {
     container: {
       center: true,
+      padding: "2rem"
     },
     colors: {
       transparent: "transparent",
