@@ -1,8 +1,14 @@
-import React from 'react'
+// import React from 'react'
+import HeroSection from '../components/Events/HeroSection'
 
 const EventsPage = () => {
   return (
-    <div>EventsPage</div>
+    <div>
+      <HeroSection />
+
+
+
+    </div>
   )
 }
 
