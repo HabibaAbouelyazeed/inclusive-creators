@@ -10,6 +10,33 @@ import { Breadcrumbs } from "@material-tailwind/react";
 import { DrawerWithNavigation } from "./Drawer";
 
 const CourseDetails = () => {
+  const questions = [
+    {
+      question: "what did you learn from here ?",
+      answer: "i learned all about inventions",
+      id: 1,
+    },
+    {
+      question: "what did you learn from here ?",
+      answer: "i learned all about inventions",
+      id: 2,
+    },
+    {
+      question: "what did you learn from here ?",
+      answer: "i learned all about inventions",
+      id: 3,
+    },
+    {
+      question: "what did you learn from here ?",
+      answer: "i learned all about inventions",
+      id: 4,
+    },
+    {
+      question: "what did you learn from here ?",
+      answer: "i learned all about inventions",
+      id: 5,
+    },
+  ];
   const GotoNext = () => {};
   const GotoPrev = () => {};
   const params = useParams();
@@ -68,64 +95,17 @@ const CourseDetails = () => {
           />
         </div>
         <section className="flex flex-col w-[50%] m-auto pt-5 pb-5">
-          <Accordion open={open === 1}>
-            <AccordionHeader
-              onClick={() => handleOpen(1)}
-              className="text-olive"
-            >
-              1- What do inventors do ?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 2}>
-            <AccordionHeader onClick={() => handleOpen(2)}>
-              2- What did Alexandar Graham invent?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 3}>
-            <AccordionHeader onClick={() => handleOpen(3)}>
-              3- What did Thomas adison invent?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 4}>
-            <AccordionHeader onClick={() => handleOpen(4)}>
-              3- What can I do with Material Tailwind?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
-          <Accordion open={open === 5}>
-            <AccordionHeader onClick={() => handleOpen(5)}>
-              3- What can I do with Material Tailwind?
-            </AccordionHeader>
-            <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </AccordionBody>
-          </Accordion>
+          {questions?.map((question) => (
+            <Accordion open={open === question.id} key={question.id}>
+              <AccordionHeader
+                onClick={() => handleOpen(question.id)}
+                className="text-olive"
+              >
+                {question.id}-{question.question}
+              </AccordionHeader>
+              <AccordionBody>{question.answer}</AccordionBody>
+            </Accordion>
+          ))}
         </section>
       </section>
     </article>
