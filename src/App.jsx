@@ -36,15 +36,10 @@ function App() {
           <Route path="/login" Component={Login} />
         </Routes>
 
-
         <footer>
-        <Footer />
-        </footer> 
-        
-         
-          
+          <Footer />
+        </footer>
       </div>
-      
     </Router>
   );
 }
