@@ -8,10 +8,12 @@
   text-align: center;
 }
 
-
 @layer components {
-  .appNavbar a.active{
+  .appNavbar a.active {
     @apply text-dirtyPink border-b-2 border-dirtyPink;
   }
 }
-
+img {
+  width: 100%;
+  display: block;
+}

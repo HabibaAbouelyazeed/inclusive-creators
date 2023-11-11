@@ -2,21 +2,21 @@
 
 const withMT = require("@material-tailwind/react/utils/withMT");
 
-
 module.exports = withMT({
   darkMode: "media",
-  content: [
-    "./index.html", 
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true,
+    },
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      "dirtyPink": "#F7CBCA",
-      "pinkGrey": "#DDD3D2",
-      "tealGrey": "#BDD7D8",
-      "olive": "#5D6B6B",
+      dirtyPink: "#F7CBCA",
+      pinkGrey: "#DDD3D2",
+      subtle: "#8C8CA1",
+      tealGrey: "#BDD7D8",
+      olive: "#5D6B6B",
       "secondary-300": "#F1F6F8",
       "secondary-500": "#D5E5E5",
       "neutral-800": "#19213D",
@@ -28,7 +28,6 @@ module.exports = withMT({
       "neutral-200": "#F8FAFF",
       "neutral-100": "#FFFFFF",
     },
-    
     plugins: [],
   },
 });
