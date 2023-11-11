@@ -3,7 +3,7 @@ import Post from './Post';
 const PostList = () => {
     return (
       <>
-        <div className='mt-4 w-3/5'>
+        <div className='mt-4 sm:w-full lg:w-3/5 mr-10'>
         <div className="container ms-auto">
       <form>
         <div className="mt-4 mr-10">

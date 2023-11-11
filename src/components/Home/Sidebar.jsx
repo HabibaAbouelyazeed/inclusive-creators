@@ -10,9 +10,9 @@ import CourseImg from '../../assets/images/course.jpg'
 const Sidebar = () => {
     return (
  
-    <div className='w-2/5 mt-6 pt-6 pl-6 rounded  h-full' style={{ backgroundColor: '#E5E7EB' }}>
-  <h2 className='mb-4 text-2xl md:text-3xl lg:text-4xl text-left font-bold'>Latest Articles</h2>
-  <Card className="my-2 w-96 block mx-auto text-left bg-neutral-200">
+    <div className='lg:w-1/5 sm:w-2/5 mt-6 py-6 pl-6 rounded  h-full bg-secondary-500' >
+  <h3 className='mb-4 text-2xl md:text-3xl lg:text-3xl text-left font-bold'>Latest Articles</h3>
+  <Card className="my-2 w-96 block mx-auto text-left">
   
    <article className="max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
 	<div className="w-full mx-auto space-y-4">
@@ -34,14 +34,13 @@ const Sidebar = () => {
 	</div>
 </article>
  </Card>
- <h2 className='mb-4 p-2 text-2xl md:text-3xl lg:text-4xl text-left font-bold'>Latest Courses </h2>
+ <h3 className='my-4 p-2 text-2xl md:text-3xl lg:text-3xl text-left font-bold'>Latest Courses </h3>
  <Card
-      shadow={false}
-      className="relative grid h-[40rem]  max-w-[28rem] items-end justify-center overflow-hidden text-center my-2 w-96  mx-auto  bg-neutral-200"
+      
+      className="relative grid h-[40rem]  max-w-[28rem] items-end justify-center  text-center my-2 w-96  mx-auto  bg-neutral-200"
     >
       <CardHeader
-        floated={false}
-        shadow={false}
+        
         color="transparent"
         className="absolute inset-0 m-0 h-full w-full rounded-none"
         style={{ backgroundImage: `url(${CourseImg})`, backgroundSize: 'cover' }}

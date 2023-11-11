@@ -6,7 +6,7 @@ import eventImage from '../../assets/images/about.jpg'
 
 const HomeCarousel = () => {
     return (
-       <Carousel className="h-[85vh] pb-2">
+       <Carousel className="h-[65vh] pb-2">
         <div className="relative h-full w-full">
   <img
     src={hero}
