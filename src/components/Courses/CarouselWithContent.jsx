@@ -1,9 +1,12 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 const CarouselWithContent = () => {
+  const godown = () => {
+    window.scrollTo();
+  };
   return (
-    <Carousel className="rounded-l ">
-      <div className="relative h-full w-full">
+    <Carousel className="rounded-l h-[45rem]">
+      <div className="relative h-[100%] w-[100vw]">
         <img
           src="../assets/1.jpg"
           alt="image 1"
@@ -11,11 +14,6 @@ const CarouselWithContent = () => {
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
           <div className="w-3/4 text-center md:w-2/4">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-            ></Typography>
             <Typography
               variant="lead"
               color="white"
@@ -82,7 +80,7 @@ const CarouselWithContent = () => {
               color="white"
               className="mb-4 text-3xl md:text-4xl lg:text-5xl"
             >
-              Explore, experiment, discover. That's the heart of STEM learning
+              Explore, experiment, discover. Thats the heart of STEM learning
             </Typography>
             <Typography
               variant="lead"
@@ -143,6 +141,6 @@ const CarouselWithContent = () => {
       </div>
     </Carousel>
   );
-}
+};
 
 export default CarouselWithContent;
