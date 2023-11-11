@@ -1,10 +1,18 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const ProfilePage = () => {
+  const emailIcon = <FontAwesomeIcon icon={faEnvelope} />;
+  const jopIcon = <FontAwesomeIcon icon={faBriefcase} />;
+  const ageIcon = <FontAwesomeIcon icon={faHourglassStart} />;
+  const hobbyIcon = <FontAwesomeIcon icon={faHeart} />;
   return (
     <>
       <section className="profile py-8">
-        <div className="container mx-auto px-6 border-solid border-2 border-indigo-600 ">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-12">
             <div className="profile_details col-span-full md:col-span-4">
               <div className="mx-auto flex flex-col justify-center max-w-xs p-4">
@@ -26,24 +34,28 @@ const ProfilePage = () => {
                     <strong className="text-subtle text-xl font-semibold hidden md:block">
                       E-mail
                     </strong>
+                    <span className="mr-2 md:hidden">{emailIcon}</span>
                     example@youremail.com
                   </p>
                   <p className="text-olive px-4 text-xs sm:text-base font-semibold md:font-normal">
                     <strong className="text-subtle text-xl font-semibold hidden md:block">
                       occupation
                     </strong>
+                    <span className="mr-2 md:hidden">{jopIcon}</span>
                     Web developer
                   </p>
                   <p className="text-olive px-4 text-xs sm:text-base font-semibold md:font-normal">
                     <strong className="text-subtle text-xl font-semibold hidden md:block">
                       Age
                     </strong>
+                    <span className="mr-2 md:hidden">{ageIcon}</span>
                     30 years old
                   </p>
                   <p className="text-olive px-4 text-xs sm:text-base font-semibold md:font-normal">
                     <strong className="text-subtle text-xl font-semibold hidden md:block">
                       Hobbies
                     </strong>
+                    <span className="mr-2 md:hidden">{hobbyIcon}</span>
                     Rock climbig, board games
                   </p>
                 </div>
@@ -51,7 +63,7 @@ const ProfilePage = () => {
             </div>
             <div className="profile_content space-y-8 col-span-full md:col-span-8 p-4">
               <div className="text-left pt-4">
-                <h4 className="font-semibold text-subtle">Profile</h4>
+                <h4 className="font-semibold text-subtle text-lg">Profile</h4>
                 <p className="text-olive">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quidem, fuga laudantium dolore minima excepturi, accusamus
@@ -61,7 +73,9 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className="text-left ">
-                <h4 className="font-semibold text-subtle">Personality</h4>
+                <h4 className="font-semibold text-subtle text-lg">
+                  Personality
+                </h4>
                 <p className="text-olive">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quidem, fuga laudantium dolore minima excepturi, accusamus
@@ -71,7 +85,7 @@ const ProfilePage = () => {
                 </p>
               </div>
               <div className="text-left ">
-                <h4 className="font-semibold text-subtle">Goals</h4>
+                <h4 className="font-semibold text-subtle text-lg">Goals</h4>
                 <ul className="text-olive list-disc pl-4">
                   <li>
                     Get clear overview of nutritional informatiom for meals
@@ -81,11 +95,13 @@ const ProfilePage = () => {
                 </ul>
               </div>
               <div className="text-left ">
-                <h4 className="font-semibold text-subtle">Challenge</h4>
+                <h4 className="font-semibold text-subtle text-lg">Challenge</h4>
                 <p className="text-olive">Build muscle mass and gain weight.</p>
               </div>
               <div className="text-left ">
-                <h4 className="font-semibold text-subtle">Motivation</h4>
+                <h4 className="font-semibold text-subtle text-lg">
+                  Motivation
+                </h4>
                 <p className="text-olive">
                   He aspires to achieve a good physique through exercise and
                   wants to challenge himself with a marathon scheduled for next
