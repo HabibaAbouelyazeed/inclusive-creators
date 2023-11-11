@@ -5,26 +5,32 @@ import courseImage from "../../assets/images/ADHD-Strategies-1024x615.jpg";
 import eventImage from "../../assets/images/about.jpg";
 
 const HomeCarousel = () => {
-  return (
-    <Carousel className="h-[85vh] pb-2">
-      <div className="relative h-full w-full">
-        <img src={hero} alt="image 1" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
-          <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
-            <Typography
-              variant="h1"
-              className="mb-6 text-3xl md:text-4xl lg:text-6xl  text-dirtyPink">
-              Crafting Together: Inclusive Creators&apos; Corner
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="my-12 opacity-60">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-              maiores amet, est laboriosam tempora voluptatem dignissimos ullam
-              accusamus vero sed beatae eius iusto voluptas? Aliquam ut saepe
-              architecto corporis totam.
-            </Typography>
+    return (
+       <Carousel className="h-[65vh] pb-2">
+        <div className="relative h-full w-full">
+  <img
+    src={hero}
+    alt="image 1"
+    className="h-full w-full object-cover"
+  />
+          <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
+            <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
+              <Typography
+                variant="h1"
+                className="mb-6 text-3xl md:text-4xl lg:text-6xl  text-dirtyPink"
+              >
+                Crafting Together: Inclusive Creators&apos; Corner
+              </Typography>
+              <Typography
+                variant="lead"
+                color="white"
+                className="my-12 opacity-60"
+              >
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum maiores amet, est laboriosam tempora voluptatem dignissimos ullam accusamus vero sed beatae
+                 eius iusto voluptas? Aliquam ut saepe architecto corporis totam.
+              </Typography>
+             
+            </div>
           </div>
         </div>
       </div>
