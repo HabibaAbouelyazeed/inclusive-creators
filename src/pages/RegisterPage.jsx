@@ -1,15 +1,18 @@
 import React from "react";
-
+import profileImage from "../assets/images/profile.jpg";
 const RegisterPage = () => {
   return (
     <section className="register py-8">
       <div className="container mx-auto px-6">
-        <form className=" mx-auto text-left w-10/12 shadow-md p-8">
+        <h1 className="text-left mx-auto w-10/12 py-4 font-semibold text-olive text:lg md:text-3xl">
+          Register
+        </h1>
+        <form className=" mx-auto text-left w-10/12 shadow-xl p-8">
           <div className="grid gap-0 md:grid-cols-3 md:gap-12">
             <figure className="order-first md:order-last mx-auto md:mx-0 w-40 py-auto">
               <label htmlFor="myfile" className="cursor-pointer">
                 <img
-                  src="https://placehold.co/100x100"
+                  src={profileImage}
                   alt="User's profile picture"
                   className="rounded-full my-8"
                 />

@@ -121,7 +121,7 @@
 //             )}
 //           </IconButton>
 //         </div>
-        
+
 //         <Collapse open={openNav} className="container">
 //           <NavList />
 //           <div className="flex items-center gap-x-1">
@@ -138,9 +138,9 @@
 //           </div>
 //         </Collapse>
 //       </NavComponent>
-      
+
 //     </header>
-  
+
 //   );
 // };
 
@@ -222,18 +222,25 @@ export const Navbar = () => {
               <NavList />
             </div>
             <div className="flex items-center gap-x-2">
-              <Button size="sm" className="hidden lg:inline-block bg-dirtyPink ">
-              <NavLink to="/register" className={isActive => (!isActive ? " text-secondary-300" : "text-olive")}>
-              Sign in
-              </NavLink>
+              <Button
+                size="sm"
+                className="hidden lg:inline-block bg-dirtyPink "
+              >
+                <NavLink
+                  to="/register"
+                  className={(isActive) =>
+                    !isActive ? " text-secondary-300" : "text-olive"
+                  }
+                >
+                  Sign Up
+                </NavLink>
               </Button>
               <Button
                 variant="text"
                 size="sm"
-                className="hidden lg:inline-block border-2 border-dirtyPink text-secondary-300">
-                <NavLink to="/login">
-                Login
-              </NavLink>
+                className="hidden lg:inline-block border-2 border-dirtyPink text-secondary-300"
+              >
+                <NavLink to="/login">Login</NavLink>
               </Button>
             </div>
           </div>
@@ -242,7 +249,8 @@ export const Navbar = () => {
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
             ripple={false}
-            onClick={() => setOpenNav(!openNav)}>
+            onClick={() => setOpenNav(!openNav)}
+          >
             {openNav ? (
               <FontAwesomeIcon icon={faXmark} className=""></FontAwesomeIcon>
             ) : (
@@ -250,24 +258,24 @@ export const Navbar = () => {
             )}
           </IconButton>
         </div>
-        
+
         <Collapse open={openNav} className="container">
           <NavList />
           <div className="flex items-center gap-x-1">
             <Button fullWidth size="sm" className="bg-dirtyPink text-olive">
-              <NavLink to="/register">
-              Sign in
-              </NavLink>
+              <NavLink to="/register">Sign Up</NavLink>
             </Button>
-            <Button fullWidth variant="text" size="sm" className="text-secondary-300">
-              <NavLink to="/login">
-                Login
-              </NavLink>
+            <Button
+              fullWidth
+              variant="text"
+              size="sm"
+              className="text-secondary-300"
+            >
+              <NavLink to="/login">Login</NavLink>
             </Button>
           </div>
         </Collapse>
       </NavComponent>
-      
     </header>
   );
 };
@@ -278,36 +286,46 @@ const NavList = () => {
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
           to="/home"
-          className="flex items-center hover:text-pinkGrey transition-colors">
+          className="flex items-center hover:text-pinkGrey transition-colors"
+        >
           Home
         </NavLink>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
           to="/courses"
-          className="flex items-center hover:text-pinkGrey transition-colors">
+          className="flex items-center hover:text-pinkGrey transition-colors"
+        >
           Courses
         </NavLink>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
           to="/events"
-          className="flex items-center hover:text-pinkGrey transition-colors">
+          className="flex items-center hover:text-pinkGrey transition-colors"
+        >
           Events
         </NavLink>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
           to="/articles"
-          className="flex items-center hover:text-pinkGrey transition-colors">
+          className="flex items-center hover:text-pinkGrey transition-colors"
+        >
           Articles
         </NavLink>
       </Typography>
       <Typography as="li" variant="small" className="p-1 font-medium">
         <NavLink
           to="/profile"
-          className="flex items-center hover:text-pinkGrey transition-colors">
-          <Avatar src="../assets/2.jpg" withBorder={true} className="border-dirtyPink" alt="avatar" />
+          className="flex items-center hover:text-pinkGrey transition-colors"
+        >
+          <Avatar
+            src="../assets/2.jpg"
+            withBorder={true}
+            className="border-dirtyPink"
+            alt="avatar"
+          />
         </NavLink>
       </Typography>
     </ul>
