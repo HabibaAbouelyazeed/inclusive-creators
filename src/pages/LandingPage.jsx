@@ -6,9 +6,9 @@ import Trending from "../components/Landing/Trending";
 const LandingPage = () => {
   return (
     <>
-    <Hero/>
-    <Strategy/>
-    <Trending/>
+      <Hero />
+      <Strategy />
+      <Trending />
     </>
   );
 };
