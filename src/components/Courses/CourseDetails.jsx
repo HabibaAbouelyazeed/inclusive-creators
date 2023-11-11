@@ -95,13 +95,14 @@ const CourseDetails = () => {
           />
         </div>
         <section className="flex flex-col w-[50%] m-auto pt-5 pb-5">
+          <h3 className="text-olive font-extrabold text-3xl p-4">Questions</h3>
           {questions?.map((question) => (
             <Accordion open={open === question.id} key={question.id}>
               <AccordionHeader
                 onClick={() => handleOpen(question.id)}
                 className="text-olive"
               >
-                {question.id}-{question.question}
+                {question.id} - {question.question}
               </AccordionHeader>
               <AccordionBody>{question.answer}</AccordionBody>
             </Accordion>
