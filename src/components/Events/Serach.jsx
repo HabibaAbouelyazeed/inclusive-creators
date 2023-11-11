@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const SearchComponent = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -9,7 +9,7 @@ const SearchComponent = () => {
     };
 
     return (
-        <div className="container py-8">
+        <div className="container py-10">
         <div className=" flex items-center justify-between">
             <h2 className="text-4xl text-olive font-bold">Explore, Connect, and Grow</h2>
             <div className="flex items-center border-2 border-secondary-300 rounded-md px-2">
