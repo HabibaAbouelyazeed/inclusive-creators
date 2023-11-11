@@ -61,7 +61,7 @@ const events = [
 
 const UpcommingEvents = () => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Category", "Category", "Category"];
+  const categories = ["All", "Category", "Cat", "Categ"];
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
   };
