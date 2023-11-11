@@ -1,9 +1,18 @@
-import React from 'react'
+// import React from 'react'
+import HeroEvent from "../components/Events/HeroEvent";
+import HeroSection from "../components/Events/HeroSection";
+import SearchComponent from "../components/Events/Serach";
+import UpcommingEvents from "../components/Events/UpcomingEvents";
 
 const EventsPage = () => {
   return (
-    <div>EventsPage</div>
-  )
-}
+    <div>
+      <HeroSection />
+      <SearchComponent />
+      <HeroEvent />
+      <UpcommingEvents />
+    </div>
+  );
+};
 
-export default EventsPage
+export default EventsPage;

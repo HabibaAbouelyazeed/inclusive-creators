@@ -35,6 +35,7 @@ function App() {
           <Route path="/register" Component={RegisterPage} />
           <Route path="/login" Component={Login} />
         </Routes>
+
         <footer>
           <Footer />
         </footer>
