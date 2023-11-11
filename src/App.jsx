@@ -28,10 +28,11 @@ function App() {
         </Routes>
 
         
-        <footer>
+        {/* <footer>
           <Footer />
-        </footer>
+        </footer> */}
       </div>
+      
     </Router>
   );
 }

@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import HomeCarousel from "../components/Home/HomeCarousel";
+import PostList from "../components/Home/PostList";
+import Sidebar from "../components/Home/Sidebar";
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
-  )
-}
+    <div>
+      <HomeCarousel />
 
-export default HomePage
+      <div className="container mx-auto flex justify-between h-16  py-2">
+        <PostList />
+        <Sidebar />
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
