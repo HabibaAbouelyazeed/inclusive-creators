@@ -8,7 +8,7 @@ const HomePage = () => {
     <div>
       <HomeCarousel />
 
-      <div className="container mx-auto flex justify-between py-2">
+      <div className="container mx-auto flex sm:flex-wrap lg:flex-nowrap  py-2">
         <PostList />
         <Sidebar />
       </div>
