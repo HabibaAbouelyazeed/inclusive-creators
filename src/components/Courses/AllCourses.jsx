@@ -32,7 +32,7 @@ export function CardDefault() {
   };
   return (
     <section className="container">
-      <div className="flex flex-wrap mt-5">
+      <div className="flex flex-wrap mt-5 pb-5">
         {courses?.map((course) => (
           <article
             className="w-full sm:w-[100%] md:w-[50%] lg:w-[50%]  align-items-center m-auto xl:w-[32%] flex justify-center mt-3 mb-[2rem]"

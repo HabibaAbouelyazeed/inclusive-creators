@@ -2,7 +2,7 @@
   "courses": [
     {
       "Title": "The Inventor",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Embark on a fascinating journey into the world of young inventors and animations! This course is designed to unleash the boundless creativity within your child, providing an exciting exploration of both the realms of invention.",
       "id": "1",
       "Duration": "15 minutes",
@@ -13,18 +13,18 @@
     },
     {
       "Title": "The Pilot Hero",
-      "Image": "",
+      "Image": "../assets/Autism2.jpg",
       "Description": "Welcome to the thrilling world of Air Dynamics and Planes for middle-aged kids! This course takes young aviation enthusiasts on a captivating journey through the principles of air dynamics and the marvels of aviation.",
       "id": "2",
       "Duration": "15 minutes",
-      "level": "intermediate",
+      "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
       "rate": 4
     },
     {
       "Title": "The Mechanic",
-      "Image": "",
+      "Image": "../assets/Autism3.jpg",
       "Description": " In this course, young learners aged 4 to 7 will embark on a thrilling journey into the world of cars and mechanics. Get ready for a fun-filled adventure where we'll explore the fascinating rules that make cars go vroom-vroom",
       "id": 3,
       "Duration": "15 minutes",
@@ -35,7 +35,7 @@
     },
     {
       "Title": "The Investigator",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 4,
       "Duration": "15 minutes",
@@ -46,7 +46,7 @@
     },
     {
       "Title": " Math Marvels",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 5,
       "Duration": "15 minutes",
@@ -57,7 +57,7 @@
     },
     {
       "Title": "The Scientist",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Embark on a journey of scientific discovery with The Scientist! This course introduces young minds to basic scientific principles through exciting experiments.",
       "id": 6,
       "Duration": "15 minutes",
@@ -68,18 +68,18 @@
     },
     {
       "Title": "Detective Explorers Club",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Join the Detective Explorers Club and sharpen your detective skills! This course engages kids in solving mysteries, enhancing their logical thinking and attention to detail.",
       "id": 7,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 4
+      "rate": 5
     },
     {
       "Title": "RoboBuilders Workshop",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Explore the fascinating world of robotics in RoboBuilders Workshop! Kids will learn the basics of building and programming robots, fostering an early interest in technology.",
       "id": 8,
       "Duration": "15 minutes",
@@ -90,7 +90,7 @@
     },
     {
       "Title": "Code Wizards",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "  Unleash the magic of coding with Code Wizards! This course introduces kids to the basics of programming, allowing them to create their own digital wonders.",
       "id": 9,
       "Duration": "15 minutes",
@@ -101,7 +101,7 @@
     },
     {
       "Title": "STEM Storytellers",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Storytelling meets STEM in STEM Storytellers! This course combines the art of narrative with science, technology, engineering, and math, making learning an imaginative adventure",
       "id": 10,
       "Duration": "15 minutes",
@@ -112,7 +112,7 @@
     },
     {
       "Title": "Fun with Physics",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": " Make physics fun and accessible with Fun with Physics! This course introduces young learners to the wonders of the physical world through engaging experiments.",
       "id": 11,
       "Duration": "15 minutes",
@@ -123,7 +123,7 @@
     },
     {
       "Title": "Digital Art and Design for Kids",
-      "Image": "",
+      "Image": "./assets/Autism1.jpg",
       "Description": "Unleash your child's creativity with Digital Art and Design for Kids! This course provides a playful introduction to digital art, allowing kids to express themselves visually",
       "id": 12,
       "Duration": "15 minutes",
@@ -141,55 +141,39 @@
         {
           "id": 1,
           "title": "Introduction",
-          "url": "https://youtu.be/hm9dhgZQHtM"
+          "url": "hm9dhgZQHtM"
         },
         {
           "id": 2,
           "title": "Hands-on Projects",
-          "url": "https://youtu.be/o3-le5neipM"
+          "url": "o3-le5neipM"
         },
         {
           "id": 3,
           "title": "Creative Challenges",
-          "url": "https://youtu.be/hm9dhgZQHtM"
-        },
-        {
-          "id": 4,
-          "title": "Inventor's Notebook",
-          "url": "https://youtu.be/abc123"
-        },
-        {
-          "id": 5,
-          "title": "Problem Solving Strategies",
-          "url": "https://youtu.be/xyz456"
-        },
-        {
-          "id": 6,
-          "title": "From Idea to Prototype",
-          "url": "https://youtu.be/hm9dhgZQHtM"
-        },
-        {
-          "id": 7,
-          "title": "Pitching Your Invention",
-          "url": "https://youtu.be/lmn789"
+          "url": "7dUmq91M5v8"
         }
       ],
       "quiz": [
         {
-          "question": "What is the first step when inventing something?",
-          "answer": "Identify a problem or need"
+          "question": "What is the definition of an invention?",
+          "answer": "An invention is a unique or novel device, method, composition, or process resulting from study and experimentation.",
+          "id": "1"
         },
         {
-          "question": "What is the importance of a prototype?",
-          "answer": "To test and refine the invention"
+          "question": "How do animations bring stories to life?",
+          "answer": "Animations use a sequence of images or frames to create the illusion of motion, bringing characters and stories to life.",
+          "id": "2"
         },
         {
-          "question": "What is a patent?",
-          "answer": "A legal protection for an invention"
+          "question": "What is a zoetrope?",
+          "answer": "A zoetrope is an early animation device that produces the illusion of motion by displaying a sequence of drawings or photographs in a rapidly spinning drum.",
+          "id": "3"
         },
         {
-          "question": "How can you determine if your invention is marketable?",
-          "answer": "By conducting market research"
+          "question": "Explain the concept of a thaumatrope.",
+          "answer": "A thaumatrope is a Victorian toy that creates optical illusions by combining two images on opposite sides of a spinning disk, making them appear as one image.",
+          "id": "4"
         }
       ]
     },
@@ -236,19 +220,23 @@
       "quiz": [
         {
           "question": "What is lift?",
-          "answer": "The force that opposes gravity and keeps the airplane in the air"
+          "answer": "The force that opposes gravity and keeps the airplane in the air",
+          "id": "1"
         },
         {
           "question": "What is the purpose of an altimeter?",
-          "answer": "To measure altitude"
+          "answer": "To measure altitude",
+          "id": "2"
         },
         {
           "question": "What is a flight plan?",
-          "answer": "A detailed route of the flight, including takeoff and landing"
+          "answer": "A detailed route of the flight, including takeoff and landing",
+          "id": "3"
         },
         {
           "question": "What is the role of air traffic control?",
-          "answer": "To monitor and direct airplane traffic"
+          "answer": "To monitor and direct airplane traffic",
+          "id": "4"
         }
       ]
     },
@@ -295,19 +283,23 @@
       "quiz": [
         {
           "question": "What is torque?",
-          "answer": "A twisting force that causes rotation"
+          "answer": "A twisting force that causes rotation",
+          "id": "1"
         },
         {
           "question": "What is a carburetor?",
-          "answer": "A device that mixes air and fuel for an internal combustion engine"
+          "answer": "A device that mixes air and fuel for an internal combustion engine",
+          "id": "2"
         },
         {
           "question": "What is a serpentine belt?",
-          "answer": "A belt that drives multiple engine components"
+          "answer": "A belt that drives multiple engine components",
+          "id": "3"
         },
         {
           "question": "What is the function of a suspension system?",
-          "answer": "To provide a smooth ride and improve handling"
+          "answer": "To provide a smooth ride and improve handling",
+          "id": "4"
         }
       ]
     },
@@ -354,19 +346,23 @@
       "quiz": [
         {
           "question": "What is the difference between physical and biological evidence?",
-          "answer": "Physical evidence can be seen and touched, while biological evidence can only be detected by testing"
+          "answer": "Physical evidence can be seen and touched, while biological evidence can only be detected by testing",
+          "id": "1"
         },
         {
           "question": "What is the chain of custody?",
-          "answer": "A record of who has handled the evidence and when"
+          "answer": "A record of who has handled the evidence and when",
+          "id": "2"
         },
         {
           "question": "What is a fingerprint?",
-          "answer": "A unique pattern of ridges and furrows on the fingertips"
+          "answer": "A unique pattern of ridges and furrows on the fingertips",
+          "id": "3"
         },
         {
           "question": "What is the role of a forensic psychologist?",
-          "answer": "To evaluate suspects for mental health issues that may have contributed to their behavior"
+          "answer": "To evaluate suspects for mental health issues that may have contributed to their behavior",
+          "id": "4"
         }
       ]
     },
@@ -413,19 +409,23 @@
       "quiz": [
         {
           "question": "What is calculus?",
-          "answer": "The branch of mathematics that deals with rates of change and accumulation"
+          "answer": "The branch of mathematics that deals with rates of change and accumulation",
+          "id": "1"
         },
         {
           "question": "What is a standard deviation?",
-          "answer": "A measure of variability in a set of data"
+          "answer": "A measure of variability in a set of data",
+          "id": "2"
         },
         {
           "question": "What is an exponent?",
-          "answer": "A number that indicates the power to which another number is raised"
+          "answer": "A number that indicates the power to which another number is raised",
+          "id": "3"
         },
         {
           "question": "What is the Pythagorean theorem?",
-          "answer": "A formula for finding the length of the sides of a right triangle"
+          "answer": "A formula for finding the length of the sides of a right triangle",
+          "id": "4"
         }
       ]
     },
@@ -472,19 +472,23 @@
       "quiz": [
         {
           "question": "What is an element?",
-          "answer": "A substance made up of atoms with the same number of protons"
+          "answer": "A substance made up of atoms with the same number of protons",
+          "id": "1"
         },
         {
           "question": "What is photosynthesis?",
-          "answer": "The process by which plants convert sunlight into energy"
+          "answer": "The process by which plants convert sunlight into energy",
+          "id": "2"
         },
         {
           "question": "What is a force?",
-          "answer": "A push or a pull on an object"
+          "answer": "A push or a pull on an object",
+          "id": "3"
         },
         {
           "question": "What is the greenhouse effect?",
-          "answer": "The process by which gases in the Earth's atmosphere trap heat, causing global warming"
+          "answer": "The process by which gases in the Earth's atmosphere trap heat, causing global warming",
+          "id": "4"
         }
       ]
     },
@@ -531,19 +535,23 @@
       "quiz": [
         {
           "question": "What is deductive reasoning?",
-          "answer": "The process of using general observations to draw specific conclusions"
+          "answer": "The process of using general observations to draw specific conclusions",
+          "id": "1"
         },
         {
           "question": "What is steganography?",
-          "answer": "The practice of hiding messages within other messages or images"
+          "answer": "The practice of hiding messages within other messages or images",
+          "id": "2"
         },
         {
           "question": "What is a suspect?",
-          "answer": "A person who is believed to have committed a crime"
+          "answer": "A person who is believed to have committed a crime",
+          "id": "3"
         },
         {
           "question": "What is the importance of a chain of custody?",
-          "answer": "To maintain the integrity of the evidence and ensure it is admissible in court"
+          "answer": "To maintain the integrity of the evidence and ensure it is admissible in court",
+          "id": "4"
         }
       ]
     },
@@ -590,19 +598,23 @@
       "quiz": [
         {
           "question": "What is a sensor?",
-          "answer": "A device that detects changes in its environment"
+          "answer": "A device that detects changes in its environment",
+          "id": "1"
         },
         {
           "question": "What is feedback?",
-          "answer": "Information about the output of a system that is used to modify the input"
+          "answer": "Information about the output of a system that is used to modify the input",
+          "id": "2"
         },
         {
           "question": "What is machine learning?",
-          "answer": "A branch of artificial intelligence that uses algorithms to analyze data and make predictions"
+          "answer": "A branch of artificial intelligence that uses algorithms to analyze data and make predictions",
+          "id": "3"
         },
         {
           "question": "What is the future for robotics?",
-          "answer": "Greater integration with artificial intelligence and machine learning, as well as expanded applications in areas such as healthcare and transportation"
+          "answer": "Greater integration with artificial intelligence and machine learning, as well as expanded applications in areas such as healthcare and transportation",
+          "id": "4"
         }
       ]
     },
@@ -649,19 +661,23 @@
       "quiz": [
         {
           "question": "What is an algorithm?",
-          "answer": "A set of instructions for solving a problem or performing a task"
+          "answer": "A set of instructions for solving a problem or performing a task",
+          "id": "1"
         },
         {
           "question": "What is a loop?",
-          "answer": "A programming construct that repeats a sequence of instructions until a condition is met"
+          "answer": "A programming construct that repeats a sequence of instructions until a condition is met",
+          "id": "2"
         },
         {
           "question": "What is HTML?",
-          "answer": "A markup language used for creating and structuring content on the web"
+          "answer": "A markup language used for creating and structuring content on the web",
+          "id": "3"
         },
         {
           "question": "What is a neural network?",
-          "answer": "A type of machine learning algorithm modeled after the structure of the brain"
+          "answer": "A type of machine learning algorithm modeled after the structure of the brain",
+          "id": "4"
         }
       ]
     },
@@ -708,19 +724,23 @@
       "quiz": [
         {
           "question": "What is the difference between science fiction and fantasy?",
-          "answer": "Science fiction is based on scientific concepts, while fantasy is based on magical or supernatural elements"
+          "answer": "Science fiction is based on scientific concepts, while fantasy is based on magical or supernatural elements",
+          "id": "1"
         },
         {
           "question": "What is science communication?",
-          "answer": "The practice of explaining scientific concepts to a non-technical audience"
+          "answer": "The practice of explaining scientific concepts to a non-technical audience",
+          "id": "2"
         },
         {
           "question": "What is the STEM pipeline?",
-          "answer": "The process by which students are introduced to and encouraged to pursue STEM fields"
+          "answer": "The process by which students are introduced to and encouraged to pursue STEM fields",
+          "id": "3"
         },
         {
           "question": "What is the importance of diversity in STEM?",
-          "answer": "To ensure a wide range of perspectives and ideas are contributing to scientific advancements"
+          "answer": "To ensure a wide range of perspectives and ideas are contributing to scientific advancements",
+          "id": "4"
         }
       ]
     }
