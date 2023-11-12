@@ -11,107 +11,6 @@ import { ButtonDefault } from "../Buttons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-// const courses = [
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 1,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: true,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 2,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 3,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 4,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 5,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 6,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 7,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 8,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-//   {
-//     Title: "Young inventor",
-//     Image: "../assets/Autism1.jpg",
-//     Description:
-//       "Unleash the capabilties of you kid,Let him/her discover the world of Animations, Science and many more ",
-//     id: 9,
-//     Duration: "15 minutes",
-//     level: "beginers",
-//     Age: "3-7",
-//     Free: false,
-//   },
-// ];
 export function CardDefault() {
   const [courses, setCourses] = useState([]);
 
@@ -155,28 +54,32 @@ export function CardDefault() {
               )}
 
               <CardBody>
-                <section>
+                <section className="flex flex-col">
                   <Typography variant="h5" color="blue-gray" className="mb-2">
                     {course.Title}
                   </Typography>
-                  <Typography>{course.Description}</Typography>
-                  <div className="flex justify-between">
-                    <p>
-                      <span className="font-bold ">Hours:</span>
-                      {course.Duration}
-                    </p>
-                    <Rating value={4} readonly />
-                  </div>
-                  <div className="flex justify-between pt-4">
-                    <p>
-                      <span className="font-bold px-1">Age:</span>
-                      {course.Age} <span>years</span>
-                    </p>
+                  <div className="details flex flex-col justify-between">
+                    <Typography className="py-4">
+                      {course.Description}
+                    </Typography>
+                    <div className="flex justify-between">
+                      <p>
+                        <span className="font-bold ">Hours:</span>
+                        {course.Duration}
+                      </p>
+                      <Rating value={course.rate} readonly />
+                    </div>
+                    <div className="flex justify-between pt-4">
+                      <p>
+                        <span className="font-bold px-1">Age:</span>
+                        {course.Age} <span>years</span>
+                      </p>
 
-                    <p>
-                      <span className="font-bold px-1">Level:</span>
-                      {course.level}
-                    </p>
+                      <p>
+                        <span className="font-bold px-1">Level:</span>
+                        {course.level}
+                      </p>
+                    </div>
                   </div>
                 </section>
               </CardBody>
