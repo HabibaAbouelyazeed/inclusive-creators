@@ -17,7 +17,7 @@ const HeroEvent = ({ event }) => {
       <div className="relative min-h-[300px] md:min-h-[450px] lg:min-h-[600px] flex items-center">
   
       
-        <div className="z-10 w-full md:w-1/2 bg-white p-6 md:p-10 shadow-md rounded-md text-left border-2 border-pinkGrey">
+        <div className="z-10 w-full md:w-1/2 bg-white p-6 md:p-10 shadow-md rounded-md text-left border-2 border-pinkGrey" style={{ backgroundColor: `rgba(255, 255, 255, 0.95)` }}>
           <div className="bg-olive text-white px-2 py-1 inline-block rounded text-sm">
             {category}
           </div>

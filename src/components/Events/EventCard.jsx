@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const EventCard = ({ event }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden relative">
+    <div className="hover:scale-105 transition-transform duration-300 ease-in-out bg-white shadow-lg rounded-lg overflow-hidden relative hover:shadow-xl transition-all duration-300 ease-in-out hover:bg-lightGray">
       {event.imagePath && (
         <img
           src={event.imagePath}
           alt={event.title}
-          className="object-cover w-full h-48 sm:h-64 md:h-56 lg:h-64 xl:h-80"
+          className="w-full h-auto"
         />
       )}
 
@@ -15,7 +15,7 @@ const EventCard = ({ event }) => {
         {event.category}
       </div>
 
-      <div className="p-4 md:p-8 text-left">
+      <div className="p-4 md:p-8 text-left flex flex-col h-full">
         <h3 className="text-olive font-medium text-lg md:text-xl lg:text-2xl mb-2 md:mb-4">
           {event.title}
         </h3>
@@ -23,13 +23,16 @@ const EventCard = ({ event }) => {
           {event.description}
         </p>
 
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <p className="text-olive font-medium text-sm md:text-base lg:text-lg mb-2 md:mb-0">
-            {event.date}
-          </p>
-          <p className="text-olive font-medium text-sm md:text-base lg:text-lg mb-2 md:mb-0">
-            {event.location}
-          </p>
+        <div className="flex flex-col md:flex-row items-center justify-between text-sm md:text-base lg:text-lg">
+          <div className="">
+            <div className="mb-2 md:mb-0">
+              <span className="text-black font-medium">Date:</span> {event.date}
+            </div>
+            <div className="mb-2 md:mb-0">
+              <span className="text-black font-medium">Location:</span>{" "}
+              {event.location}
+            </div>
+          </div>
           <Link to={`/event/${event.id}`}>
             <button className="bg-olive text-white px-3 py-1 rounded hover:bg-dirtyPink transition-colors flex items-center">
               →

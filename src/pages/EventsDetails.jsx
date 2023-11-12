@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import HeroEvent from '../components/Events/HeroEvent';
 import ExploreEvents from '../components/Events/ExploreEvents';
 import { fetchEvents } from '../components/Events/EventsApi';
+import EventAllDetails from '../components/Events/EventAllDetails';
 
 const EventDetails = () => {
   const { eventId } = useParams();
@@ -44,6 +45,7 @@ const EventDetails = () => {
   return (
     <>
       {event && <HeroEvent key={event.id} event={event} />}
+      <EventAllDetails event={event} />
       <ExploreEvents events={exploreEvents} />
     </>
   );
