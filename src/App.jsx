@@ -12,6 +12,7 @@ import CoursesDetailsPage from "./pages/CoursesDetailsPage";
 
 import "./App.css";
 import Footer from "./components/Footer";
+import EventsDetails from "./pages/EventsDetails";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
             path="/courses/:courseTitle/:courseId"
             Component={CoursesDetailsPage}
           />
-          <Route path="/events" Component={EventsPage} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/event/:eventId" element={<EventsDetails />} />
           <Route path="/articles" Component={ArticlesPage} />
           <Route path="/profile" Component={ProfilePage} />
           <Route path="/register" Component={RegisterPage} />

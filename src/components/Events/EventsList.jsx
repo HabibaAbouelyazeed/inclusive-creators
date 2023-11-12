@@ -1,70 +1,18 @@
 import { useState } from "react";
-import EventCard from "./EventCard";
+import { Link } from "react-router-dom";
 
-// Mock data for upcoming events
-const events = [
-  {
-    id: 1,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-  {
-    id: 2,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-  {
-    id: 3,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-  {
-    id: 4,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-  {
-    id: 5,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-  {
-    id: 6,
-    category: "Category",
-    title: "An Evening Under the Stars: A Gala to Remember",
-    discription:
-      "Lorem ipsum dolor sit amet conse ctetur adip iscing elit justo quis odio sit sit ac port titor sit males dolor sit.",
-    date: "Jan 24, 2024",
-    image: "https://via.placeholder.com/350x200/DDD3D2/F1F6F8",
-  },
-];
-
-const EventsList = () => {
+const EventsList = ({ events }) => {
   const [activeCategory, setActiveCategory] = useState("All");
-  const categories = ["All", "Category", "Cat", "Categ"];
+  const categories = ["All", "Technology", "Science", "Engineering"];
+
   const handleCategoryChange = (category) => {
     setActiveCategory(category);
   };
+
+  const filteredEvents =
+    activeCategory === "All"
+      ? events
+      : events.filter((event) => event.category === activeCategory);
 
   return (
     <div className="bg-dirtyPink">
@@ -88,7 +36,7 @@ const EventsList = () => {
           </div>
 
           <div className="w-2/3">
-            {events.map((event) => (
+            {filteredEvents.map((event) => (
               <div key={event.id} className="text-left">
                 <p className="text-olive font-medium text-md">
                   {event.category} - {event.date}
@@ -96,9 +44,11 @@ const EventsList = () => {
                 <h3 className="text-olive font-medium text-2xl py-2">
                   {event.title}
                 </h3>
-                <button className="text-olive py-2 font-semibold rounded hover:bg-neutral-300 transition-colors">
-                  Learn more →
-                </button>
+                <Link to={`/event/${event.id}`}>
+                  <button className="text-olive py-2 font-semibold rounded hover:bg-neutral-300 transition-colors">
+                    Learn more →
+                  </button>
+                </Link>
                 <hr className="my-10" />
               </div>
             ))}
