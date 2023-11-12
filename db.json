@@ -744,5 +744,127 @@
         }
       ]
     }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "title": "Diversity in STEM Symposium",
+      "date": "2023-04-15",
+      "time": "09:00 AM - 05:00 PM",
+      "location": "Alexandria",
+      "description": "Join us for a symposium celebrating the diversity and achievements in STEM fields. Engage in insightful discussions, network with successful individuals in the industry, and be inspired by their journeys.",
+      "imagePath": "/assets/Events/1.webp",
+      "host": "Random Host 1",
+      "category": "Technology",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 2,
+      "title": "Tech Innovators Hackathon",
+      "date": "2023-05-10",
+      "time": "10:00 AM - 08:00 PM",
+      "location": "Cairo",
+      "description": "Calling all tech enthusiasts! Participate in a hackathon focused on developing innovative solutions to real-world problems. Embrace diversity and collaborate with like-minded individuals to bring your ideas to life.",
+      "imagePath": "/assets/Events/2.webp",
+      "host": "Random Host 2",
+      "category": "Science",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 3,
+      "title": "STEM Education Workshop for Kids",
+      "date": "2023-06-02",
+      "time": "02:00 PM - 04:00 PM",
+      "location": "Alexandria",
+      "description": "Introduce your kids to the wonders of STEM! This workshop provides hands-on activities and experiments to make learning fun and interactive. Open to children of all backgrounds and abilities.",
+      "imagePath": "/assets/Events/3.webp",
+      "host": "Random Host 3",
+      "category": "Engineering",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 4,
+      "title": "Inclusive Coding Bootcamp",
+      "date": "2023-07-08",
+      "time": "10:00 AM - 06:00 PM",
+      "location": "Cairo",
+      "description": "Unlock your coding potential in a supportive and inclusive environment. This bootcamp welcomes participants from all walks of life, fostering a culture of diversity and creativity in the world of programming.",
+      "imagePath": "/assets/Events/4.webp",
+      "host": "Random Host 4",
+      "category": "Technology",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 5,
+      "title": "STEM Careers Panel Discussion",
+      "date": "2023-08-20",
+      "time": "03:00 PM - 05:00 PM",
+      "location": "Alexandria",
+      "description": "Curious about STEM career paths? Attend our panel discussion featuring professionals from various STEM fields. Gain insights into their experiences and learn about the exciting opportunities in the industry.",
+      "imagePath": "/assets/Events/5.webp",
+      "host": "Random Host 5",
+      "category": "Science",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 6,
+      "title": "Virtual Reality Expo",
+      "date": "2023-09-12",
+      "time": "11:00 AM - 07:00 PM",
+      "location": "Cairo",
+      "description": "Immerse yourself in the world of virtual reality! This expo showcases cutting-edge VR technologies developed by inclusive creators. Experience mind-blowing simulations and explore the limitless possibilities of VR.",
+      "imagePath": "/assets/Events/6.webp",
+      "host": "Random Host 6",
+      "category": "Engineering",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 7,
+      "title": "STEM Networking Night",
+      "date": "2023-10-05",
+      "time": "06:00 PM - 09:00 PM",
+      "location": "Alexandria",
+      "description": "Connect with fellow STEM enthusiasts and professionals in a relaxed and inclusive atmosphere. Expand your network, share ideas, and build meaningful connections that can propel your STEM journey forward.",
+      "imagePath": "/assets/Events/7.webp",
+      "host": "Random Host 7",
+      "category": "Technology",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 8,
+      "title": "Robotics Workshop for Teens",
+      "date": "2023-11-18",
+      "time": "01:00 PM - 04:00 PM",
+      "location": "Cairo",
+      "description": "Empower the next generation of innovators! This workshop introduces teens to the exciting world of robotics, encouraging them to explore their creativity and problem-solving skills through hands-on activities.",
+      "imagePath": "/assets/Events/8.webp",
+      "host": "Random Host 8",
+      "category": "Science",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 9,
+      "title": "STEM for All: Accessibility in Technology",
+      "date": "2023-12-07",
+      "time": "04:00 PM - 06:00 PM",
+      "location": "Alexandria",
+      "description": "Delve into the importance of accessibility in technology. This event highlights the efforts of inclusive creators in making STEM tools and technologies accessible to individuals with diverse abilities.",
+      "imagePath": "/assets/Events/9.webp",
+      "host": "Random Host 9",
+      "category": "Engineering",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    },
+    {
+      "id": 10,
+      "title": "Data Science Conference",
+      "date": "2024-01-15",
+      "time": "09:00 AM - 06:00 PM",
+      "location": "Cairo",
+      "description": "Explore the latest trends and breakthroughs in data science. This conference brings together data enthusiasts, scientists, and inclusive creators to discuss and showcase the transformative power of data in various industries.",
+      "imagePath": "/assets/Events/10.webp",
+      "host": "Random Host 10",
+      "category": "Technology",
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+    }
   ]
 }
