@@ -1,17 +1,20 @@
 import React from "react";
 import profileImage from "../assets/images/profile.jpg";
 import { Link } from "react-router-dom";
-import {
-  Button,
-} from "@material-tailwind/react";
+import { Button } from "@material-tailwind/react";
 
 const RegisterPage = () => {
   return (
-    <section className="register py-8">
+    <section className="relative bannerBg py-8">
+      <div
+        className="w-full h-full absolute top-0 left-0 py-8 -z-10  bg-cover bg-center opacity-10"
+        style={{
+          backgroundImage: `url('../public/assets/loginBanner.jpg')`,
+        }}></div>
       <div className="container mx-auto">
-        <h1 className="text-left mx-auto w-10/12 py-4 font-semibold text-olive text:lg md:text-3xl">
+        <h2 className="text-left mx-auto w-10/12 py-4 font-semibold text-olive text:lg md:text-3xl">
           Register
-        </h1>
+        </h2>
         <form className=" mx-auto text-left w-10/12 shadow-xl p-8">
           <div className="grid gap-0 md:grid-cols-3 md:gap-12">
             <div>
@@ -234,12 +237,14 @@ const RegisterPage = () => {
             <Button
               type="submit"
               className="w-full md:w-40 font-bold text-olive bg-dirtyPink hover:bg-pinkGrey  focus:outline-none font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Submit
+              Sign Up
             </Button>
           </div>
           <div className="mt-4 text-center font-normal text-neutral-600">
             Don't have an account?{" "}
-            <Link to="/login" className="font-medium text-neutral-800 underline underline-offset-2">
+            <Link
+              to="/login"
+              className="font-medium text-neutral-800 underline underline-offset-2">
               Login
             </Link>
           </div>
