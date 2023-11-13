@@ -11,7 +11,7 @@ const CarouselWithContent = () => {
     <Carousel className="rounded-l h-[45rem]">
       <article className="relative h-[100%] w-[100vw]">
         <img
-          src="../assets/1.jpg"
+          src="../assets/Courses/1.jpg"
           alt="image 1"
           className="h-full w-full object-cover"
         />
@@ -51,7 +51,7 @@ const CarouselWithContent = () => {
       </article>
       <article className="relative h-full w-full">
         <img
-          src="../assets/2.jpg"
+          src="../assets/Courses/2.jpg"
           alt="image 2"
           className="h-full w-full object-cover"
         />
@@ -91,7 +91,7 @@ const CarouselWithContent = () => {
       </article>
       <article className="relative h-full w-full">
         <img
-          src="../assets/3.jpg"
+          src="../assets/Courses/3.jpg"
           alt="image 3"
           className="h-full w-full object-cover"
         />
@@ -130,7 +130,7 @@ const CarouselWithContent = () => {
       </article>
       <article className="relative h-full w-full">
         <img
-          src="../assets/4.jpg"
+          src="../assets/Courses/4.jpg"
           alt="image 3"
           className="h-full w-full object-cover"
         />

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Card,
   CardHeader,
@@ -8,21 +9,12 @@ import {
 import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 import { ButtonDefault } from "../Buttons";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { fetchCourses } from "./CoursesApi";
 
-export function CardDefault() {
-  const [courses, setCourses] = useState([]);
-
+export function CardDefault({ courses }) {
   useEffect(() => {
-    axios
-      .get("http://localhost:3000/courses")
-      .then((response) => {
-        setCourses(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    fetchCourses();
   }, []);
   const scrollToTop = () => {
     window.scrollTo({

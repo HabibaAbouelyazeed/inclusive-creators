@@ -1,18 +1,6 @@
 import { ButtonDefault } from "../Buttons";
 
-const Coursesinput = () => {
-  useEffect(() => {
-    axios
-      .get(`http://localhost:3000/Details/${params.courseId}`)
-      .then((response) => {
-        console.log(response.data);
-        setCourse(response.data);
-        console.log(response.data.videos);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+const Coursesinput = ({ filterbyAll, filterbyF, filterbyscience }) => {
   return (
     <div>
       <div className="container">
@@ -54,21 +42,21 @@ const Coursesinput = () => {
           <div className="col-lg-3">
             <ButtonDefault
               onclick={() => {
-                filterbyAll;
+                filterbyAll();
               }}
               Name="all"
               classname="m-2 text-olive bg-tealGrey"
             />
             <ButtonDefault
               onclick={() => {
-                filterbyscience;
+                filterbyscience();
               }}
               Name="Science"
               classname="m-2 text-olive bg-tealGrey"
             />
             <ButtonDefault
               onclick={() => {
-                filterbyF;
+                filterbyF();
               }}
               Name="F.S"
               classname="m-2 text-olive bg-tealGrey"

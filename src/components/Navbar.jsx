@@ -321,7 +321,7 @@ const NavList = () => {
           className="flex items-center hover:text-pinkGrey transition-colors"
         >
           <Avatar
-            src="../assets/2.jpg"
+            src="../assets/Courses/2.jpg"
             withBorder={true}
             className="border-dirtyPink"
             alt="avatar"

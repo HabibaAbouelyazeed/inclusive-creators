@@ -11,4 +11,19 @@
   height: 100%;
   width: 100%;
   position: absolute;
+  z-index: -1;
+}
+
+.drawer-list {
+  color: black !important;
+  opacity: 1 !important;
+  font-weight: bold !important;
+  /* -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black; */
+  /* background-color: aqua; */
+}
+
+.drawer-cont {
+  background-color: white !important;
+  opacity: 1 !important;
 }

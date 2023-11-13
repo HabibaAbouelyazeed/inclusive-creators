@@ -2,29 +2,31 @@
   "courses": [
     {
       "Title": "The Inventor",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/The inventor.jpg",
       "Description": "Embark on a fascinating journey into the world of young inventors and animations! This course is designed to unleash the boundless creativity within your child, providing an exciting exploration of both the realms of invention.",
       "id": "1",
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": true,
-      "rate": 5
+      "rate": 5,
+      "type": "science"
     },
     {
       "Title": "The Pilot Hero",
-      "Image": "../assets/Autism2.jpg",
+      "Image": "../assets/Courses/The pilot.jpg",
       "Description": "Welcome to the thrilling world of Air Dynamics and Planes for middle-aged kids! This course takes young aviation enthusiasts on a captivating journey through the principles of air dynamics and the marvels of aviation.",
       "id": "2",
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 4
+      "rate": 4,
+      "type": "science"
     },
     {
       "Title": "The Mechanic",
-      "Image": "../assets/Autism3.jpg",
+      "Image": "../assets/Courses/Autism3.jpg",
       "Description": " In this course, young learners aged 4 to 7 will embark on a thrilling journey into the world of cars and mechanics. Get ready for a fun-filled adventure where we'll explore the fascinating rules that make cars go vroom-vroom",
       "id": 3,
       "Duration": "15 minutes",
@@ -35,18 +37,19 @@
     },
     {
       "Title": "The Investigator",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Autism1.jpg",
       "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 4,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "type": "forensic"
     },
     {
       "Title": " Math Marvels",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Mathmarvels.jpg",
       "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 5,
       "Duration": "15 minutes",
@@ -57,7 +60,7 @@
     },
     {
       "Title": "The Scientist",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Autism4.jpg",
       "Description": "Embark on a journey of scientific discovery with The Scientist! This course introduces young minds to basic scientific principles through exciting experiments.",
       "id": 6,
       "Duration": "15 minutes",
@@ -68,18 +71,19 @@
     },
     {
       "Title": "Detective Explorers Club",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Autism5.jpg",
       "Description": "Join the Detective Explorers Club and sharpen your detective skills! This course engages kids in solving mysteries, enhancing their logical thinking and attention to detail.",
       "id": 7,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "type": "forensic"
     },
     {
       "Title": "RoboBuilders Workshop",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Autism6.jpg",
       "Description": "Explore the fascinating world of robotics in RoboBuilders Workshop! Kids will learn the basics of building and programming robots, fostering an early interest in technology.",
       "id": 8,
       "Duration": "15 minutes",
@@ -90,7 +94,7 @@
     },
     {
       "Title": "Code Wizards",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Codewizards.jpg",
       "Description": "  Unleash the magic of coding with Code Wizards! This course introduces kids to the basics of programming, allowing them to create their own digital wonders.",
       "id": 9,
       "Duration": "15 minutes",
@@ -101,7 +105,7 @@
     },
     {
       "Title": "STEM Storytellers",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Storytellers.jpg",
       "Description": "Storytelling meets STEM in STEM Storytellers! This course combines the art of narrative with science, technology, engineering, and math, making learning an imaginative adventure",
       "id": 10,
       "Duration": "15 minutes",
@@ -112,7 +116,7 @@
     },
     {
       "Title": "Fun with Physics",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Funwith.jpg",
       "Description": " Make physics fun and accessible with Fun with Physics! This course introduces young learners to the wonders of the physical world through engaging experiments.",
       "id": 11,
       "Duration": "15 minutes",
@@ -123,7 +127,7 @@
     },
     {
       "Title": "Digital Art and Design for Kids",
-      "Image": "./assets/Autism1.jpg",
+      "Image": "./assets/Courses/Design.jpg",
       "Description": "Unleash your child's creativity with Digital Art and Design for Kids! This course provides a playful introduction to digital art, allowing kids to express themselves visually",
       "id": 12,
       "Duration": "15 minutes",

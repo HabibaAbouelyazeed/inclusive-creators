@@ -20,19 +20,14 @@ const CourseDetails = () => {
     axios
       .get(`http://localhost:3000/Details/${params.courseId}`)
       .then((response) => {
-        console.log(response.data);
         setCourse(response.data);
-        console.log(response.data.videos);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
   }, []);
   // /////////////////////////////
-  useEffect(() => {
-    console.log(course.videos);
-  }, [course]);
-  // /////////////////////////////////////////
+
   const GotoNext = () => {
     if (videoNumber < course.videos.length) {
       setVideoNumber(videoNumber + 1);
@@ -54,7 +49,7 @@ const CourseDetails = () => {
       <section className="flex flex-col">
         <header className="title">
           <h1 className="text-[2rem] text-olive  font-semibold pt-2">
-            Young Inventor
+            {course.Title}
           </h1>
         </header>
         <div className="flex justify-center mt-2 p-2">
@@ -66,7 +61,10 @@ const CourseDetails = () => {
               Courses
             </a>
             <a href="#" className="opacity-60">
-              <DrawerWithNavigation videos={course.videos} />
+              <DrawerWithNavigation
+                course={course}
+                numberofVideo={videoNumber}
+              />
             </a>
             {course && course.videos && course.videos.length > 0 ? (
               <a
