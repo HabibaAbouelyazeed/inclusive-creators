@@ -3,27 +3,33 @@ import profileImage from "../assets/images/profile.jpg";
 const RegisterPage = () => {
   return (
     <section className="register py-8">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto">
         <h1 className="text-left mx-auto w-10/12 py-4 font-semibold text-olive text:lg md:text-3xl">
           Register
         </h1>
         <form className=" mx-auto text-left w-10/12 shadow-xl p-8">
           <div className="grid gap-0 md:grid-cols-3 md:gap-12">
-            <figure className="order-first md:order-last mx-auto md:mx-0 w-40 py-auto">
-              <label htmlFor="myfile" className="cursor-pointer">
-                <img
-                  src={profileImage}
-                  alt="User's profile picture"
-                  className="rounded-full my-8"
+            <div>
+              <figure className="order-first md:order-last mx-auto  w-40 py-auto">
+                <label htmlFor="myfile" className="cursor-pointer">
+                  <img
+                    src={profileImage}
+                    alt="User's profile picture"
+                    className="rounded-full"
+                  />
+                </label>
+                <input
+                  type="file"
+                  id="myfile"
+                  className="hidden"
+                  name="userImg"
                 />
-              </label>
-              <input
-                type="file"
-                id="myfile"
-                className="hidden"
-                name="userImg"
-              />
-            </figure>
+              </figure>
+              <h2 className="text-sm sm:text-lg capitalize text-center font-medium text-neutral-600 mb-4 md:mb-0  ">
+                Upload Profile Picture
+              </h2>
+            </div>
+
             <div className="order-last md:order-first md:col-span-2 ">
               <div className="flex flex-col md:flex-row">
                 <div className="mb-8 md:mr-8">

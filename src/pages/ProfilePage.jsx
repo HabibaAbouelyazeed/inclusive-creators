@@ -1,9 +1,11 @@
 import React from "react";
+import profileImage from "../assets/images/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
 const ProfilePage = () => {
   const emailIcon = <FontAwesomeIcon icon={faEnvelope} />;
   const jopIcon = <FontAwesomeIcon icon={faBriefcase} />;
@@ -12,14 +14,14 @@ const ProfilePage = () => {
   return (
     <>
       <section className="profile py-8">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto ">
           <div className="grid grid-cols-12">
             <div className="profile_details col-span-full md:col-span-4">
               <div className="mx-auto flex flex-col justify-center max-w-xs p-4">
                 <figure className="my-4">
                   <img
-                    src="https://source.unsplash.com/150x150/?portrait?3"
-                    alt=""
+                    src={profileImage}
+                    alt="profile-img"
                     className="w-32 h-32 mx-auto md:mx-0 rounded-full dark:bg-gray-500 aspect-square"
                   />
                 </figure>

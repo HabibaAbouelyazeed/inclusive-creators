@@ -1,9 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import ArticlesBanner from "../components/articles/ArticlesBanner";
+import ArticlesList from "../components/articles/ArticlesList";
+import ArticlesSearch from "../components/articles/ArticlesSearch";
 const ArticlesPage = () => {
   return (
-    <div>ArticlesPage</div>
-  )
-}
+    <>
+      <ArticlesBanner />
+      <ArticlesSearch />
+      <ArticlesList />
+    </>
+  );
+};
 
-export default ArticlesPage
+export default ArticlesPage;
