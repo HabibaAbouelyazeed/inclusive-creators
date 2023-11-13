@@ -1,6 +1,6 @@
 import React from "react";
 
-const Post = () => {
+const Post = (props) => {
   return (
     <div>
       <div className="bg-olive p-6 overflow-hidden rounded-lg shadow text-neutral-100 mt-6">
@@ -18,13 +18,9 @@ const Post = () => {
           </div>
         </div>
         <article className="text-left mt-4">
-          <h2 className="text-xl">Sed diam massa, semper a condimentum</h2>
+          <h2 className="text-xl">{props.post.title}</h2>
           <p className="mt-4 dark:text-gray-400">
-            Morbi porttitor mi in diam scelerisque commodo. Proin sed laoreet
-            libero. Fusce faucibus porttitor lacus, at blandit mauris blandit
-            eget. Donec facilisis lorem et risus commodo, quis auctor nulla
-            varius. Pellentesque facilisis feugiat turpis, id molestie augue
-            semper quis. Nunc ornare eget est sit amet elementum.
+            {props.post.body}
           </p>
         </article>
         <div className="flex  mt-8 space-x-4">

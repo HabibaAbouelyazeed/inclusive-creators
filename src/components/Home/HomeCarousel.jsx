@@ -1,12 +1,13 @@
 import React from "react";
 import { Carousel, Typography, Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 import hero from "../../assets/images/child-with-autism.jpg";
 import courseImage from "../../assets/images/ADHD-Strategies-1024x615.jpg";
 import eventImage from "../../assets/images/about.jpg";
 
 const HomeCarousel = () => {
   return (
-    <Carousel className="h-[65vh] pb-2">
+    <Carousel className="h-[65vh] ">
       <div className="relative h-full w-full">
         <img src={hero} alt="image 1" className="h-full w-full object-cover" />
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
@@ -55,9 +56,11 @@ const HomeCarousel = () => {
               minima quidem quaerat, assumenda, corporis voluptates eaque
               laborum eligendi praesentium voluptas nobis labore.
             </Typography>
+            <Link to={'/events'}>
             <Button size="lg" className="bg-dirtyPink text-olive font-semibold">
               Explore Events
             </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -86,10 +89,12 @@ const HomeCarousel = () => {
               in alias dolor vero, hic, ex aliquam? Aut sit iure nesciunt
               voluptatem.
             </Typography>
-
-            <Button size="lg" className="bg-dirtyPink text-olive font-semibold">
+          <Link to={'/courses'}>
+          <Button size="lg" className="bg-dirtyPink text-olive font-semibold">
               Explore Courses
             </Button>
+          </Link>
+            
           </div>
         </div>
       </div>

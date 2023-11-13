@@ -1,5 +1,10 @@
 import React from "react";
 import profileImage from "../assets/images/profile.jpg";
+import { Link } from "react-router-dom";
+import {
+  Button,
+} from "@material-tailwind/react";
+
 const RegisterPage = () => {
   return (
     <section className="register py-8">
@@ -35,8 +40,7 @@ const RegisterPage = () => {
                 <div className="mb-8 md:mr-8">
                   <label
                     htmlFor="first_name"
-                    className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-                  >
+                    className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                     First name
                   </label>
                   <input
@@ -51,8 +55,7 @@ const RegisterPage = () => {
                 <div className="mb-8">
                   <label
                     htmlFor="last_name"
-                    className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-                  >
+                    className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                     Last name
                   </label>
                   <input
@@ -68,8 +71,7 @@ const RegisterPage = () => {
               <div className="mb-8">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-                >
+                  className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                   Email
                 </label>
                 <input
@@ -86,8 +88,7 @@ const RegisterPage = () => {
           <div className="mb-8">
             <label
               htmlFor="address"
-              className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-            >
+              className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
               Address
             </label>
             <input
@@ -103,8 +104,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="city"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 City
               </label>
               <input
@@ -119,8 +119,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="country"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 Country
               </label>
               <input
@@ -135,8 +134,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="phone"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 Phone number
               </label>
               <input
@@ -152,8 +150,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="zipCode"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 Zip/Code
               </label>
               <input
@@ -168,8 +165,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="password"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 Password
               </label>
               <input
@@ -184,8 +180,7 @@ const RegisterPage = () => {
             <div className="mb-8">
               <label
                 htmlFor="confirm_password"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
                 Confirm password
               </label>
               <input
@@ -201,8 +196,7 @@ const RegisterPage = () => {
           <div className="mb-8">
             <label
               htmlFor="about"
-              className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-            >
+              className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white">
               About
             </label>
             <textarea
@@ -226,25 +220,28 @@ const RegisterPage = () => {
             </div>
             <label
               htmlFor="remember"
-              className="ms-2 text-base font-medium text-neutral-600 dark:text-gray-300"
-            >
+              className="ms-2 text-base font-medium text-neutral-600 dark:text-gray-300">
               I agree with the{" "}
               <a
                 href="#"
-                className="text-dirtyPink hover:underline dark:text-blue-500"
-              >
+                className="text-dirtyPink hover:underline dark:text-blue-500">
                 terms and conditions
               </a>
               .
             </label>
           </div>
           <div className="flex justify-center">
-            <button
+            <Button
               type="submit"
-              className=" w-full md:w-40 text-olive bg-dirtyPink hover:bg-dirtyPink-800  focus:outline-none font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
+              className="w-full md:w-40 font-bold text-olive bg-dirtyPink hover:bg-pinkGrey  focus:outline-none font-medium rounded-lg text-base px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
               Submit
-            </button>
+            </Button>
+          </div>
+          <div className="mt-4 text-center font-normal text-neutral-600">
+            Don't have an account?{" "}
+            <Link to="/login" className="font-medium text-neutral-800 underline underline-offset-2">
+              Login
+            </Link>
           </div>
         </form>
       </div>

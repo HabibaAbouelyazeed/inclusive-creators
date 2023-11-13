@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import ArticleCard from "./ArticleCard";
+import axios from "axios";
 
 const ArticlesList = () => {
   const articles = [
@@ -29,7 +30,33 @@ const ArticlesList = () => {
       date: "2023-03-10",
     },
   ];
-
+  // const apiKey = "7c84bb645b6b4de6b9e2dbbd59743cf4";
+  // const searchQuery = "children with disabilities";
+  // const url = `https://newsapi.org/v2/everything?q=${searchQuery}&from=2023-11-13&sortBy=popularity&apiKey=${apiKey}`;
+  // useEffect(() => {
+  //   axios
+  //     .get(url)
+  //     .then((res) => {
+  //       if (res.data.status === "ok") {
+  //         if (res.data.totalResults > 0) {
+  //           console.log(res.data.articles);
+  //         } else {
+  //           console.log("No articles found for the search query.");
+  //         }
+  //       } else {
+  //         console.log(
+  //           "API request failed with the following error:",
+  //           res.data.message
+  //         );
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(
+  //         "An error occurred while making the API request:",
+  //         error.message
+  //       );
+  //     });
+  // }, []);
   return (
     <section className="py-8">
       <div className="container mx-auto">
