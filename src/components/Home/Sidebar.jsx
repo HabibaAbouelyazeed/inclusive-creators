@@ -12,7 +12,7 @@ const Sidebar = () => {
  
     <div className='lg:w-1/5 sm:w-2/5 mt-6 py-6 pl-6 rounded  h-full bg-secondary-500' >
   <h3 className='mb-4 text-2xl md:text-3xl lg:text-3xl text-left font-bold'>Latest Articles</h3>
-  <Card className="my-2 w-96 block mx-auto text-left">
+  <Card className="my-2 w-96 block mx-auto text-left scale-95 hover:scale-100">
   
    <article className="max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
 	<div className="w-full mx-auto space-y-4">
