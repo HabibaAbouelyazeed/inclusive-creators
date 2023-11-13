@@ -1,10 +1,21 @@
 import { ButtonDefault } from "../Buttons";
 
 const Coursesinput = () => {
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3000/Details/${params.courseId}`)
+      .then((response) => {
+        console.log(response.data);
+        setCourse(response.data);
+        console.log(response.data.videos);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
   return (
     <div>
       <div className="container">
-        {" "}
         <form className="mt-4 p-4">
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">

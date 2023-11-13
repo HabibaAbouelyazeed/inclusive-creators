@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import {
   Drawer,
@@ -9,32 +10,11 @@ import {
   ListItemPrefix,
 } from "@material-tailwind/react";
 
-export function DrawerWithNavigation() {
+export function DrawerWithNavigation({ videos }) {
+  console.log(videos);
   const [open, setOpen] = React.useState(false);
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
-  const Videos = [
-    {
-      video: "Video1",
-      id: "1",
-    },
-    {
-      video: "Video2",
-      id: "2",
-    },
-    {
-      video: "Video3",
-      id: "3",
-    },
-    {
-      video: "Video4",
-      id: "4",
-    },
-    {
-      video: "Video5",
-      id: "5",
-    },
-  ];
 
   return (
     <React.Fragment>
@@ -70,7 +50,7 @@ export function DrawerWithNavigation() {
           </IconButton>
         </div>
         <List>
-          {Videos?.map((video) => (
+          {videos?.map((video) => (
             <ListItem key={video.id}>
               <ListItemPrefix>
                 <svg
@@ -86,7 +66,7 @@ export function DrawerWithNavigation() {
                   />
                 </svg>
               </ListItemPrefix>
-              {video.video}
+              {video.title}
             </ListItem>
           ))}
         </List>

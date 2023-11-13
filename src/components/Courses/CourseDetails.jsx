@@ -66,7 +66,7 @@ const CourseDetails = () => {
               Courses
             </a>
             <a href="#" className="opacity-60">
-              <DrawerWithNavigation />
+              <DrawerWithNavigation videos={course.videos} />
             </a>
             {course && course.videos && course.videos.length > 0 ? (
               <a
