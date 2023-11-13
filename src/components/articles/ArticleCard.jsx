@@ -18,17 +18,26 @@ const ArticleCard = ({ article }) => {
         <p className="text-olive text-sm md:text-base lg:text-lg mb-4 md:mb-8">
           {article.content}
         </p>
-        <div className="flex items-center">
-          <h4 className="text-dirtyPink text-sm md:text-base lg:text-lg font-semibold">
-            {article.author}
-          </h4>
-          <h5 className="text-dirtyPink text-sm md:text-base lg:text-lg mx-4 md:mx-8 font-semibold">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <figure>
+              <img
+                src="https://placehold.co/48x48/DDD3D2/5D6B6B"
+                alt=""
+                className="rounded-full"
+              />
+            </figure>
+            <h4 className="capitalize text-dirtyPink text-sm md:text-base lg:text-lg font-semibold mx-4">
+              by : {article.author}
+            </h4>
+          </div>
+          <h5 className="text-dirtyPink text-sm md:text-base lg:text-lg  font-semibold">
             {article.date}
           </h5>
         </div>
         <Link
-          to=""
-          className="text-olive text-sm md:text-base lg:text-lg font-medium inline-block my-2"
+          to={`/article/:${article.id}`}
+          className="text-olive text-sm md:text-base lg:text-lg font-medium inline-block my-2 hover:text-dirtyPink transition-all ease-in-out duration-300"
         >
           Learn more <span className="mx-1 text-base">{arrowIcon}</span>
         </Link>
