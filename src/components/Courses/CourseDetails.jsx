@@ -9,7 +9,7 @@ import { ButtonDefault } from "../Buttons";
 import { Breadcrumbs } from "@material-tailwind/react";
 import { DrawerWithNavigation } from "./Drawer";
 import axios from "axios";
-import YoutubeEmbed from "./Iframe";
+import ReactPlayer from "react-player";
 
 const CourseDetails = () => {
   const params = useParams();
@@ -80,7 +80,14 @@ const CourseDetails = () => {
         </div>
         <article className="p-6">
           {course && course.videos && course.videos.length > 0 && (
-            <YoutubeEmbed embedId={course.videos[videoNumber].url} />
+            <ReactPlayer
+              url={`https://www.youtube.com/watch?v=${course.videos[videoNumber].url}`}
+              controls
+              volume={0.8}
+              playbackRate={1}
+              width="100%"
+              height="40rem"
+            />
           )}
         </article>
 

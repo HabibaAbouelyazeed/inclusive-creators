@@ -12,13 +12,14 @@ import {
 
 export function DrawerWithNavigation({ course, numberofVideo }) {
   const [open, setOpen] = React.useState(false);
-  const [selectedVideo, setSelectedVideo] = useState(numberofVideo);
+  const [selectedVideo, setSelectedVideo] = useState();
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
   const gotovideo = (index) => {
     console.log(index);
     const selectVideo = course.videos.find((cou) => cou.id === index);
-    setSelectedVideo(selectVideo);
+    numberofVideo = selectVideo;
+    setSelectedVideo(numberofVideo);
   };
 
   return (
