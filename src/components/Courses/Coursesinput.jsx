@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { ButtonDefault } from "../Buttons";
 
 const Coursesinput = ({ filterbyAll, filterbyF, filterbyscience }) => {
@@ -58,7 +59,7 @@ const Coursesinput = ({ filterbyAll, filterbyF, filterbyscience }) => {
               onClick={() => {
                 filterbyF();
               }}
-              Name="F.S"
+              Name="Forensic Science"
               classname="m-2 text-olive bg-tealGrey"
             />
           </div>

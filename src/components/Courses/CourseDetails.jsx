@@ -85,8 +85,9 @@ const CourseDetails = () => {
                 controls
                 volume={0.8}
                 playbackRate={1}
-                width="100%"
-                height="40rem"
+                width="80%"
+                height="38rem"
+                className="m-auto"
               />
             )}
           </article>
