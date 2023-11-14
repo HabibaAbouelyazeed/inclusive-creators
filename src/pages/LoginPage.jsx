@@ -4,13 +4,18 @@ import { Link } from "react-router-dom";
 
 const LoginPage = () => {
   return (
-    <section className="loginPage py-8 relative">
+    <section className="py-8 relative">
+      <div
+        className="w-full h-full absolute top-0 left-0 py-8 -z-10 bg-cover bg-center opacity-10"
+        style={{
+          backgroundImage: `url('../public/assets/loginBanner.jpg')`,
+        }}></div>
       <div className="container">
         <Card
           color="transparent"
-          shadow={false}
-          className="py-8 columns-1 md:w-1/2 mx-auto">
-          <Typography variant="h4" className="text-olive">
+          shadow={true}
+          className="p-8 columns-1 md:w-1/2 mx-auto">
+          <Typography variant="h3" className="text-olive">
             Login
           </Typography>
           <Typography className="mt-1 text-olive font-normal">
@@ -30,7 +35,6 @@ const LoginPage = () => {
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-                
               />
               <Typography
                 variant="h6"
@@ -45,7 +49,6 @@ const LoginPage = () => {
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
-                
               />
             </div>
 
