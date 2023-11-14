@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import {
   Drawer,
   Button,
@@ -9,17 +9,18 @@ import {
   ListItem,
   ListItemPrefix,
 } from "@material-tailwind/react";
+import { Numbercontext } from "./CourseDetails";
 
-export function DrawerWithNavigation({ course, numberofVideo }) {
+export function DrawerWithNavigation({ course }) {
+  const { setVideoNumber } = useContext(Numbercontext);
   const [open, setOpen] = React.useState(false);
-  const [selectedVideo, setSelectedVideo] = useState();
-  const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
+  const openDrawer = () => setOpen(true);
+
   const gotovideo = (index) => {
-    console.log(index);
     const selectVideo = course.videos.find((cou) => cou.id === index);
-    numberofVideo = selectVideo;
-    setSelectedVideo(numberofVideo);
+    const videoId = selectVideo.id;
+    setVideoNumber(videoId);
   };
 
   return (
@@ -34,8 +35,13 @@ export function DrawerWithNavigation({ course, numberofVideo }) {
         </Button>
       )}
 
-      <Drawer open={open} onClose={closeDrawer} className="drawer-cont">
-        <div className="mb-2 flex items-center justify-between p-4">
+      <Drawer open={open} onClose={closeDrawer} className="drawer-cont ">
+        <div
+          className="mb-2 flex items-center justify-between p-4"
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 1)",
+          }}
+        >
           {course?.title && (
             <Typography variant="h5" color="blue-gray">
               {course.title}
@@ -62,16 +68,18 @@ export function DrawerWithNavigation({ course, numberofVideo }) {
         {course?.videos && (
           <List className="drawer-list">
             {course.videos?.map((video) => (
-              <ListItem key={video.id}>
+              <ListItem
+                key={video.id}
+                onClick={() => {
+                  gotovideo(video.id);
+                }}
+              >
                 <ListItemPrefix>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     className="h-5 w-5"
-                    onClick={() => {
-                      gotovideo(video.id);
-                    }}
                   >
                     <path
                       fillRule="evenodd"

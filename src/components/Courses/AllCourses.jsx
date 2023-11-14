@@ -16,12 +16,7 @@ export function CardDefault({ courses }) {
   useEffect(() => {
     fetchCourses();
   }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+
   return (
     <section className="container">
       <div className="flex flex-wrap mt-5 pb-5">
@@ -42,7 +37,9 @@ export function CardDefault({ courses }) {
                   Free
                 </div>
               ) : (
-                ""
+                <div className="bg-pinkGrey text-oolive px-4 py-2 absolute top-0 right-5 rounded-md">
+                  200$
+                </div>
               )}
 
               <CardBody>
@@ -76,13 +73,20 @@ export function CardDefault({ courses }) {
                 </section>
               </CardBody>
               <CardFooter className="pt-0">
-                <Link to={`/courses/${course.Title}/${course.id}`}>
+                {course.Free ? (
+                  <Link to={`/courses/${course.Title}/${course.id}`}>
+                    <ButtonDefault
+                      classname="text-olive bg-tealGrey"
+                      Name="View Course"
+                    />
+                  </Link>
+                ) : (
                   <ButtonDefault
                     classname="text-olive bg-tealGrey"
                     Name="View Course"
-                    onclick={scrollToTop}
+                    disabled={true}
                   />
-                </Link>
+                )}
               </CardFooter>
             </Card>
           </article>

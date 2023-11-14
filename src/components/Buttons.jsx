@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Button } from "@material-tailwind/react";
 
-export function ButtonDefault({ Name, onclick, classname }) {
+export function ButtonDefault({ Name, onClick, classname, disabled }) {
   return (
-    <Button onClick={() => onclick()} className={classname}>
+    <Button onClick={onClick} className={classname} disabled={disabled}>
       {Name}
     </Button>
   );

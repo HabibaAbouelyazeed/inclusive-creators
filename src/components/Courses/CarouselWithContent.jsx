@@ -2,10 +2,14 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 const CarouselWithContent = () => {
   const godown = () => {
+    window.addEventListener("scroll", { passive: true });
+
     window.scrollTo({
       top: 800,
       behavior: "smooth",
     });
+
+    window.removeEventListener("scroll");
   };
   return (
     <Carousel className="rounded-l h-[45rem]">

@@ -41,21 +41,21 @@ const Coursesinput = ({ filterbyAll, filterbyF, filterbyscience }) => {
         <div className="row">
           <div className="col-lg-3">
             <ButtonDefault
-              onclick={() => {
+              onClick={() => {
                 filterbyAll();
               }}
               Name="all"
               classname="m-2 text-olive bg-tealGrey"
             />
             <ButtonDefault
-              onclick={() => {
+              onClick={() => {
                 filterbyscience();
               }}
               Name="Science"
               classname="m-2 text-olive bg-tealGrey"
             />
             <ButtonDefault
-              onclick={() => {
+              onClick={() => {
                 filterbyF();
               }}
               Name="F.S"
