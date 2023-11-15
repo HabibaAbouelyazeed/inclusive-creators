@@ -14,7 +14,12 @@ import CoursesDetailsPage from "./pages/CoursesDetailsPage";
 import "./App.css";
 import Footer from "./components/Footer";
 import EventsDetails from "./pages/EventsDetails";
-//  import ArticlesDetails from "./components/articles/ArticlesDetails";
+
+
+
+
+import SearchResults from "./pages/SearchResults";
+
 
 function App() {
   return (
@@ -30,7 +35,7 @@ function App() {
           <Route path="/courses" element={<CoursesPage />} />
           <Route
             path="/courses/:courseTitle/:courseId"
-            Component={CoursesDetailsPage}
+            element={<CoursesDetailsPage />}
           />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/event/:eventId" element={<EventsDetails />} />
@@ -39,6 +44,7 @@ function App() {
           <Route path="/profile" Component={ProfilePage} />
           <Route path="/register" Component={RegisterPage} />
           <Route path="/login" Component={Login} />
+          <Route path="/search" element={<SearchResults />} />
         </Routes>
 
         <footer>
