@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import EventsList from "../components/Events/EventsList";
 import HeroEvent from "../components/Events/HeroEvent";
 import HeroSection from "../components/Events/HeroSection";
-import SearchComponent from "../components/Events/Serach";
+import SearchComponent from "../components/SearchComponent";
 import UpcomingEvents from "../components/Events/UpcomingEvents";
 import { fetchEvents } from "../components/Events/EventsApi";
 
@@ -32,7 +32,7 @@ const EventsPage = () => {
   return (
     <>
       <HeroSection />
-      <SearchComponent />
+      <SearchComponent title={"Explore, Connect, and Grow"} searchCategory={"events"} />
       <HeroEvent key={newestEvent.id} event={newestEvent[0]} />
       <UpcomingEvents events={upcomingEvents} />
       <EventsList events={restOfEvents} />
