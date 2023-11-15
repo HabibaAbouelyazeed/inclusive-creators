@@ -9,10 +9,12 @@ import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import Login from "./pages/LoginPage";
 import CoursesDetailsPage from "./pages/CoursesDetailsPage";
-import ArticlesDetailsPage from "./pages/ArticlesDetailsPage";
+ import ArticlesDetailsPage from "./pages/ArticlesDetailsPage";
+
 import "./App.css";
 import Footer from "./components/Footer";
 import EventsDetails from "./pages/EventsDetails";
+//  import ArticlesDetails from "./components/articles/ArticlesDetails";
 
 function App() {
   return (
@@ -33,7 +35,7 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/event/:eventId" element={<EventsDetails />} />
           <Route path="/articles" Component={ArticlesPage} />
-          <Route path="/article/:articleId" Component={ArticlesDetailsPage} />
+          <Route path="/article/:articalId" Component={ArticlesDetailsPage} />
           <Route path="/profile" Component={ProfilePage} />
           <Route path="/register" Component={RegisterPage} />
           <Route path="/login" Component={Login} />
