@@ -1,14 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 import EventsList from "../components/Events/EventsList";
 import HeroEvent from "../components/Events/HeroEvent";
 import HeroSection from "../components/Events/HeroSection";
 import SearchComponent from "../components/Search/SearchComponent";
 import UpcomingEvents from "../components/Events/UpcomingEvents";
 import LoaderComponent from "../components/Loader";
-import useFetch from '../components/useFetch';
+import useFetch from "../components/useFetch";
 
 const EventsPage = () => {
-  const { data, isLoading, error } = useFetch('events');
+  const { data, isLoading, error } = useFetch("events");
 
   const events = useMemo(() => {
     if (data && data.length > 0) {
@@ -26,14 +26,19 @@ const EventsPage = () => {
   }
 
   const newestEvent = events.length > 0 ? [events[0]] : [];
-  const upcomingEvents = events.slice(1, 7); 
+  const upcomingEvents = events.slice(1, 7);
   const restOfEvents = events.slice(7);
 
   return (
     <>
       <HeroSection />
-      <SearchComponent title={"Explore, Connect, and Grow"} searchCategory={"events"} />
-      {newestEvent.length > 0 && <HeroEvent key={newestEvent[0].id} event={newestEvent[0]} />}
+      <SearchComponent
+        title={"Explore, Connect, and Grow"}
+        searchCategory={"events"}
+      />
+      {newestEvent.length > 0 && (
+        <HeroEvent key={newestEvent[0].id} event={newestEvent[0]} />
+      )}
       <UpcomingEvents events={upcomingEvents} />
       <EventsList events={restOfEvents} />
     </>
