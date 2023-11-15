@@ -2,7 +2,7 @@ import { Dna } from "react-loader-spinner";
 
 const LoaderComponent = () => {
   return (
-    <div className="container">
+    <div className="container py-8 md:py-12">
       <div className="flex justify-center align-items-center">
         <Dna
           visible={true}

@@ -784,7 +784,8 @@
       "imagePath": "/assets/Events/1.webp",
       "host": "Random Host 1",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/1"
     },
     {
       "id": 2,
