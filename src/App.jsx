@@ -13,6 +13,7 @@ import ArticlesDetailsPage from "./pages/ArticlesDetailsPage";
 import "./App.css";
 import Footer from "./components/Footer";
 import EventsDetails from "./pages/EventsDetails";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route path="/profile" Component={ProfilePage} />
           <Route path="/register" Component={RegisterPage} />
           <Route path="/login" Component={Login} />
+          <Route path="/search" element={<SearchResults />} />
         </Routes>
 
         <footer>

@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 
 const SearchComponent = ({ title, searchCategory }) => {
     const [searchTerm, setSearchTerm] = useState('');
+    const navigate = useNavigate(); 
 
     const handleSearch = async () => {
         console.log(`Searching for ${searchCategory}:`, searchTerm);
+        // Navigate to the search page with the search term as a query parameter
+        navigate(`/search?category=${searchCategory}&term=${searchTerm}`);
     };
 
     const containerClasses = title ? "flex flex-col items-center md:flex-row md:justify-between" : "flex flex-col items-center";

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import EventsList from "../components/Events/EventsList";
 import HeroEvent from "../components/Events/HeroEvent";
 import HeroSection from "../components/Events/HeroSection";
-import SearchComponent from "../components/SearchComponent";
+import SearchComponent from "../components/Search/SearchComponent";
 import UpcomingEvents from "../components/Events/UpcomingEvents";
 import LoaderComponent from "../components/Loader";
 import useFetch from '../components/useFetch';
