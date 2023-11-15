@@ -49,12 +49,12 @@ export function CardDefault({ courses }) {
                   </Typography>
                   <div className="details flex flex-col justify-between">
                     <Typography className="py-4">
-                      {course.Description}
+                      {course.description}
                     </Typography>
                     <div className="flex justify-between">
                       <p>
                         <span className="font-bold ">Hours:</span>
-                        {course.Duration}
+                        {course.duration}
                       </p>
                       <Rating value={course.rate} readonly />
                     </div>
