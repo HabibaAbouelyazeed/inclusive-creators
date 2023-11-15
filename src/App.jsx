@@ -28,7 +28,7 @@ function App() {
           <Route path="/courses" element={<CoursesPage />} />
           <Route
             path="/courses/:courseTitle/:courseId"
-            Component={CoursesDetailsPage}
+            element={<CoursesDetailsPage />}
           />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/event/:eventId" element={<EventsDetails />} />

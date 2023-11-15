@@ -1,7 +1,7 @@
 {
   "courses": [
     {
-      "Title": "The Inventor",
+      "title": "The Inventor",
       "Image": "./assets/Courses/Inventor.png",
       "Description": "Embark on a fascinating journey into the world of young inventors and animations! This course is designed to unleash the boundless creativity within your child, providing an exciting exploration of both the realms of invention.",
       "id": "1",
@@ -10,131 +10,155 @@
       "Age": "3-7",
       "Free": true,
       "rate": 5,
-      "type": "science"
+      "type": "science",
+      "date": "2023-05-10",
+      "url": "/courses/1"
     },
     {
-      "Title": "The Pilot Hero",
+      "title": "The Pilot Hero",
       "Image": "../assets/Courses/pilot.png",
-      "Description": "Welcome to the thrilling world of Air Dynamics and Planes for middle-aged kids! This course takes young aviation enthusiasts on a captivating journey through the principles of air dynamics and the marvels of aviation.",
+      "description": "Welcome to the thrilling world of Air Dynamics and Planes for middle-aged kids! This course takes young aviation enthusiasts on a captivating journey through the principles of air dynamics and the marvels of aviation.",
       "id": "2",
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
       "rate": 4,
-      "type": "science"
+      "type": "science",
+      "date": "2023-06-10",
+      "url": "/courses/2"
     },
     {
-      "Title": "The Mechanic",
+      "title": "The Mechanic",
       "Image": "../assets/Courses/Mechanical.png",
-      "Description": " In this course, young learners aged 4 to 7 will embark on a thrilling journey into the world of cars and mechanics. Get ready for a fun-filled adventure where we'll explore the fascinating rules that make cars go vroom-vroom",
+      "description": " In this course, young learners aged 4 to 7 will embark on a thrilling journey into the world of cars and mechanics. Get ready for a fun-filled adventure where we'll explore the fascinating rules that make cars go vroom-vroom",
       "id": 3,
       "Duration": "15 minutes",
       "level": "Beginners",
       "Age": "3-7",
       "Free": false,
-      "rate": 4
+      "rate": 4,
+      "date": "2023-07-10",
+      "url": "/courses/3"
     },
     {
-      "Title": "The Investigator",
+      "title": "The Investigator",
       "Image": "./assets/Courses/Investigator.png",
-      "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
+      "description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 4,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
       "rate": 5,
-      "type": "forensic"
+      "type": "forensic",
+      "date": "2023-09-10",
+      "url": "/courses/4"
     },
     {
-      "Title": " Math Marvels",
+      "title": " Math Marvels",
       "Image": "./assets/Courses/Mathmarvels.jpg",
-      "Description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
+      "description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
       "id": 5,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
-      "rate": 4
+      "rate": 4,
+      "date": "2024-05-10",
+      "url": "/courses/5"
     },
     {
-      "Title": "The Scientist",
+      "title": "The Scientist",
       "Image": "./assets/Courses/Autism4.jpg",
-      "Description": "Embark on a journey of scientific discovery with The Scientist! This course introduces young minds to basic scientific principles through exciting experiments.",
+      "description": "Embark on a journey of scientific discovery with The Scientist! This course introduces young minds to basic scientific principles through exciting experiments.",
       "id": 6,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2023-03-10",
+      "url": "/courses/6"
     },
     {
-      "Title": "Detective Explorers Club",
+      "title": "Detective Explorers Club",
       "Image": "./assets/Courses/Autism5.jpg",
-      "Description": "Join the Detective Explorers Club and sharpen your detective skills! This course engages kids in solving mysteries, enhancing their logical thinking and attention to detail.",
+      "description": "Join the Detective Explorers Club and sharpen your detective skills! This course engages kids in solving mysteries, enhancing their logical thinking and attention to detail.",
       "id": 7,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
       "rate": 5,
-      "type": "forensic"
+      "type": "forensic",
+      "date": "2023-02-10",
+      "url": "/courses/7"
     },
     {
-      "Title": "RoboBuilders Workshop",
+      "title": "RoboBuilders Workshop",
       "Image": "./assets/Courses/Autism6.jpg",
-      "Description": "Explore the fascinating world of robotics in RoboBuilders Workshop! Kids will learn the basics of building and programming robots, fostering an early interest in technology.",
+      "description": "Explore the fascinating world of robotics in RoboBuilders Workshop! Kids will learn the basics of building and programming robots, fostering an early interest in technology.",
       "id": 8,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2023-05-11",
+      "url": "/courses/8"
     },
     {
-      "Title": "Code Wizards",
+      "title": "Code Wizards",
       "Image": "./assets/Courses/Codewizards.jpg",
-      "Description": "  Unleash the magic of coding with Code Wizards! This course introduces kids to the basics of programming, allowing them to create their own digital wonders.",
+      "description": "  Unleash the magic of coding with Code Wizards! This course introduces kids to the basics of programming, allowing them to create their own digital wonders.",
       "id": 9,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2023-05-12",
+      "url": "/courses/9"
     },
     {
-      "Title": "STEM Storytellers",
+      "title": "STEM Storytellers",
       "Image": "./assets/Courses/Storytellers.jpg",
-      "Description": "Storytelling meets STEM in STEM Storytellers! This course combines the art of narrative with science, technology, engineering, and math, making learning an imaginative adventure",
+      "description": "Storytelling meets STEM in STEM Storytellers! This course combines the art of narrative with science, technology, engineering, and math, making learning an imaginative adventure",
       "id": 10,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2023-05-20",
+      "url": "/courses/10"
     },
     {
-      "Title": "Fun with Physics",
+      "title": "Fun with Physics",
       "Image": "./assets/Courses/Funwith.jpg",
-      "Description": " Make physics fun and accessible with Fun with Physics! This course introduces young learners to the wonders of the physical world through engaging experiments.",
+      "description": " Make physics fun and accessible with Fun with Physics! This course introduces young learners to the wonders of the physical world through engaging experiments.",
       "id": 11,
       "Duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2023-05-17",
+      "url": "/courses/11"
     },
     {
-      "Title": "Digital Art and Design for Kids",
+      "title": "Digital Art and Design for Kids",
       "Image": "./assets/Courses/Design.jpg",
-      "Description": "Unleash your child's creativity with Digital Art and Design for Kids! This course provides a playful introduction to digital art, allowing kids to express themselves visually",
+      "description": "Unleash your child's creativity with Digital Art and Design for Kids! This course provides a playful introduction to digital art, allowing kids to express themselves visually",
       "id": 12,
       "Duration": "15 minutes",
       "level": "Intermediate",
       "Age": "8-12",
       "Free": false,
-      "rate": 5
+      "rate": 5,
+      "date": "2024-06-10",
+      "url": "/courses/12"
     }
   ],
   "Details": [
