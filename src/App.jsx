@@ -9,17 +9,11 @@ import ProfilePage from "./pages/ProfilePage";
 import RegisterPage from "./pages/RegisterPage";
 import Login from "./pages/LoginPage";
 import CoursesDetailsPage from "./pages/CoursesDetailsPage";
- import ArticlesDetailsPage from "./pages/ArticlesDetailsPage";
-
+import ArticlesDetailsPage from "./pages/ArticlesDetailsPage";
 import "./App.css";
 import Footer from "./components/Footer";
 import EventsDetails from "./pages/EventsDetails";
-
-
-
-
 import SearchResults from "./pages/SearchResults";
-
 
 function App() {
   return (
@@ -28,7 +22,6 @@ function App() {
         <header>
           <Navbar />
         </header>
-
         <Routes>
           <Route path="" Component={LandingPage} />
           <Route path="/home" Component={HomePage} />
@@ -46,7 +39,6 @@ function App() {
           <Route path="/login" Component={Login} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
-
         <footer>
           <Footer />
         </footer>
