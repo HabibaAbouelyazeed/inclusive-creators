@@ -24,20 +24,20 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="" Component={LandingPage} />
-          <Route path="/home" Component={HomePage} />
+          <Route path="" element={<LandingPage/>} />
+          <Route path="/home" element={<HomePage/>} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route
             path="/courses/:courseTitle/:courseId"
-            Component={CoursesDetailsPage}
+            element={<CoursesDetailsPage/>}
           />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/event/:eventId" element={<EventsDetails />} />
-          <Route path="/articles" Component={ArticlesPage} />
-          <Route path="/article/:articleId" Component={ArticlesDetailsPage} />
-          <Route path="/profile" Component={ProfilePage} />
-          <Route path="/register" Component={RegisterPage} />
-          <Route path="/login" Component={Login} />
+          <Route path="/articles" element={<ArticlesPage/>} />
+          <Route path="/article/:articleId" element={<ArticlesDetailsPage/>} />
+          <Route path="/profile" element={<ProfilePage/>} />
+          <Route path="/register" element={<RegisterPage/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
 

@@ -1,5 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../config/Firebase/firebase";
+import { signOut } from "firebase/auth";
 import {
   Navbar as NavComponent,
   Collapse,
@@ -12,18 +15,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [user] = useAuthState(auth);
 
+  const [openNav, setOpenNav] = React.useState(false);
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
 
   React.useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
-
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
+
+  const handleLogout = () => {
+    signOut(auth);
+  };
   return (
     <header className="appNavbar w-100 bg-olive text-secondary-300">
       <NavComponent className="py-8 mx-auto max-w-full bg-olive border-0 rounded-none">
@@ -35,6 +42,7 @@ export const Navbar = () => {
             <div className="hidden lg:block mr-4">
               <NavList />
             </div>
+              {!user && (
             <div className="flex items-center gap-x-2">
               <NavLink
                 to="/register"
@@ -56,6 +64,15 @@ export const Navbar = () => {
                 </Button>
               </NavLink>
             </div>
+              )}
+              {!!user && (
+                <Button
+                  onClick={handleLogout}
+                  size="sm"
+                  className="hidden lg:inline-block bg-dirtyPink ">
+                  logout
+                </Button>
+              )}
           </div>
 
           <IconButton
@@ -73,6 +90,7 @@ export const Navbar = () => {
 
         <Collapse open={openNav} className="container">
           <NavList />
+          {!user && (
           <div className="flex items-center gap-x-1">
             <NavLink to="/register">
               <Button fullWidth size="sm" className="bg-dirtyPink text-olive">
@@ -89,6 +107,16 @@ export const Navbar = () => {
               </Button>
             </NavLink>
           </div>
+          )}
+            {!!user && (
+              <Button
+                onClick={handleLogout}
+                fullWidth
+                size="sm"
+                className="mt-4 bg-dirtyPink text-olive">
+                logout
+              </Button>
+            )}
         </Collapse>
       </NavComponent>
     </header>
