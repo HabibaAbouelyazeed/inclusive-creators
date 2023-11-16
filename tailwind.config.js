@@ -28,6 +28,7 @@ module.exports = withMT({
       "neutral-300": "#F1F3F7",
       "neutral-200": "#F8FAFF",
       "neutral-100": "#FFFFFF",
+      "red": "red"
     },
     plugins: [],
   },

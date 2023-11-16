@@ -1,8 +1,35 @@
-import React from "react";
-import { Card, Input, Button, Typography } from "@material-tailwind/react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config/Firebase/firebase";
+import { Card, Input, Button, Typography } from "@material-tailwind/react";
 
 const LoginPage = () => {
+  const [loggedIn, setLoggedIn] = useState(true);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const submitLoginForm = (e) => {
+    console.log(e.email, e.password);
+    signInWithEmailAndPassword(auth, e.email, e.password)
+      .then((userCredential) => {
+        console.log("User Credential", userCredential);
+        setLoggedIn(true);
+        // reset(...{e})
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setLoggedIn(false);
+      });
+  };
+
   return (
     <section className="py-8 relative">
       <div
@@ -21,7 +48,9 @@ const LoginPage = () => {
           <Typography className="mt-1 text-olive font-normal">
             Welcome Back!
           </Typography>
-          <form className="mt-8 mb-2 w-full max-w-screen-lg">
+          <form
+            className="mt-8 mb-2 w-full max-w-screen-lg"
+            onSubmit={handleSubmit(submitLoginForm)}>
             <div className="mb-1 flex flex-col gap-6">
               <Typography
                 variant="h6"
@@ -30,12 +59,23 @@ const LoginPage = () => {
               </Typography>
               <Input
                 size="lg"
-                placeholder="name@mail.com"
+                placeholder="example@email.com"
                 className=" !border-dirtyPink focus:!border-tealGrey"
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
+                {...register("email", {
+                  required: {
+                    value: true,
+                    message: "This field is required",
+                  },
+                })}
               />
+              {errors?.email && (
+                <p className="text-red text-start ps-2">
+                  {errors.email.message}
+                </p>
+              )}
               <Typography
                 variant="h6"
                 className="-mb-3 text-left text-neutral-600  dark:text-white">
@@ -49,10 +89,25 @@ const LoginPage = () => {
                 labelProps={{
                   className: "before:content-none after:content-none",
                 }}
+                {...register("password", {
+                  required: { value: true, message: "This field is required" },
+                })}
               />
+              {errors?.password && (
+                <p className="text-red text-start ps-2">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
-
-            <Button className="mt-6 bg-dirtyPink hover:bg-pinkGrey text-olive">
+            {!loggedIn && (
+              <p className="text-red text-start mt-4">
+                User credentials don't match. Check again or Sign up if you don't
+                have an account.
+              </p>
+            )}
+            <Button
+              type="submit"
+              className="mt-6 bg-dirtyPink hover:bg-pinkGrey text-olive">
               Login
             </Button>
             <Typography
