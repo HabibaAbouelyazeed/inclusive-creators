@@ -6,7 +6,7 @@ import LoaderComponent from "../components/Loader";
 import { useMemo } from "react";
 const ArticlesDetailsPage = () => {
   const params = useParams();
-  const articleId = params.articalId;
+  const id = params.articleId;
   const { data, isLoading, error } = useFetch("articles");
   const articles = useMemo(() => {
     if (data && data.length > 0) {
@@ -14,7 +14,8 @@ const ArticlesDetailsPage = () => {
     }
     return [];
   }, [data]);
-  const article = articles.find((item) => item.id === parseInt(articleId));
+  const article = articles.find((item) => item.id === parseInt(id));
+  // console.log(article);
   if (isLoading) {
     return <LoaderComponent />;
   }
@@ -23,8 +24,7 @@ const ArticlesDetailsPage = () => {
   }
   return (
     <>
-      {" "}
-      <ArticlesDetails article={article} />{" "}
+      <ArticlesDetails article={article} />
     </>
   );
 };

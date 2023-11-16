@@ -3,6 +3,7 @@ import React from "react";
 const ArticlesDetails = ({ article }) => {
   if (!article) return null;
   const { title, img, author, content, source } = article;
+  // console.log(article);
   return (
     <section className="py-8">
       <div className="container mx-auto">

@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ArticleCard = ({ article }) => {
-  console.log(article);
   const { id, title, img, body, author, date } = article;
   const arrowIcon = <FontAwesomeIcon icon={faArrowRight} />;
   return (
