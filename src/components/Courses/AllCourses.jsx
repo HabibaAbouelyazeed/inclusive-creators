@@ -30,7 +30,7 @@ export function CardDefault({ courses }) {
                 color="blue-gray"
                 className="relative h-56 shadow-none"
               >
-                <img src={course.Image} alt={course.Title} />
+                <img src={course.Image} alt={course.title} />
               </CardHeader>
               {course.Free ? (
                 <div className="bg-pinkGrey text-oolive px-4 py-2 absolute top-0 right-5 rounded-md">
@@ -45,16 +45,16 @@ export function CardDefault({ courses }) {
               <CardBody>
                 <section className="flex flex-col">
                   <Typography variant="h5" color="blue-gray" className="mb-2">
-                    {course.Title}
+                    {course.title}
                   </Typography>
                   <div className="details flex flex-col justify-between">
                     <Typography className="py-4">
-                      {course.Description}
+                      {course.description}
                     </Typography>
                     <div className="flex justify-between">
                       <p>
                         <span className="font-bold ">Hours:</span>
-                        {course.Duration}
+                        {course.duration}
                       </p>
                       <Rating value={course.rate} readonly />
                     </div>
@@ -74,7 +74,7 @@ export function CardDefault({ courses }) {
               </CardBody>
               <CardFooter className="pt-0">
                 {course.Free ? (
-                  <Link to={`/courses/${course.Title}/${course.id}`}>
+                  <Link to={`/courses/${course.title}/${course.id}`}>
                     <ButtonDefault
                       classname="text-olive bg-tealGrey"
                       Name="View Course"

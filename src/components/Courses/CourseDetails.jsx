@@ -28,7 +28,7 @@ const CourseDetails = () => {
       });
   }, []);
 
-  // /////////////////////////////
+
 
   const GotoNext = () => {
     if (videoNumber < course.videos.length) {
@@ -40,7 +40,7 @@ const CourseDetails = () => {
       setVideoNumber((prev) => prev - 1);
     }
   };
-  // ///////////////////////////////
+
 
   const [open, setOpen] = React.useState(0);
 
@@ -52,7 +52,7 @@ const CourseDetails = () => {
         <section className="flex flex-col">
           <header className="title">
             <h1 className="text-[2rem] text-olive  font-semibold pt-2">
-              {course.Title}
+              {course.title}
             </h1>
           </header>
           <div className="flex justify-center mt-2 p-2">
@@ -126,7 +126,7 @@ const CourseDetails = () => {
                 >
                   {question.id} - {question.question}
                 </AccordionHeader>
-                <AccordionBody className="m-4 font-medium ">
+                <AccordionBody className="m-4 font-medium text-left ">
                   {question.answer}
                 </AccordionBody>
               </Accordion>

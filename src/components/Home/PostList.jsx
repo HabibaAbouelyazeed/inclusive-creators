@@ -9,7 +9,7 @@ const PostList = () => {
     axios
       .get("http://localhost:3000/posts")
       .then((response) => {
-        console.log(data)
+        console.log(response.data)
         setPosts(response.data);
       })
       .catch((error) => {
