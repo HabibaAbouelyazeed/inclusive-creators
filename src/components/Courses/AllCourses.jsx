@@ -10,7 +10,11 @@ import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 import { ButtonDefault } from "../Buttons";
 
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../config/Firebase/firebase";
+
 export function CardDefault({ courses }) {
+  const [user] = useAuthState(auth);
   return (
     <section className="container">
       <div className="flex flex-wrap mt-5 pb-5">
@@ -72,6 +76,14 @@ export function CardDefault({ courses }) {
                     <ButtonDefault
                       classname="text-olive bg-tealGrey"
                       Name="View Course"
+                    />
+                  </Link>
+                ) : user ? (
+                  <Link to={`/courses/${course.title}/${course.id}`}>
+                    <ButtonDefault
+                      classname="text-olive bg-tealGrey"
+                      Name="View Course"
+                      disabled={false}
                     />
                   </Link>
                 ) : (

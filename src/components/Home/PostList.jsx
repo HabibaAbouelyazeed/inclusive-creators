@@ -2,13 +2,7 @@ import { useState, useEffect } from "react";
 
 import Post from "./Post";
 
-import {
-  addDoc,
-  deleteDoc,
-  doc,
-  collection,
-  getDocs,
-} from "firebase/firestore";
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/Firebase/firebase";
 
 const PostList = () => {
@@ -20,11 +14,9 @@ const PostList = () => {
       const colRef = collection(db, "posts");
       const snapshot = await getDocs(colRef);
       let posts = [];
-      console.log(snapshot);
       snapshot.docs.forEach((doc) => {
         posts.push({ ...doc.data(), id: doc.id });
         setPosts(posts);
-        console.log(posts);
       });
     } catch (error) {
       console.log(error);
@@ -42,7 +34,7 @@ const PostList = () => {
     e.preventDefault();
 
     try {
-      const docRef = await addDoc(collection(db, "posts"), {
+      await addDoc(collection(db, "posts"), {
         body,
         AllComments: [],
       });
