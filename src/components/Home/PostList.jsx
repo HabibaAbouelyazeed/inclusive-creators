@@ -1,14 +1,42 @@
 import { useState, useEffect } from "react";
+import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { auth, db } from "../../config/Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 import Post from "./Post";
 
-import { addDoc, collection, getDocs } from "firebase/firestore";
-import { db } from "../../config/Firebase/firebase";
-
 const PostList = () => {
+  const [currentUser] = useAuthState(auth);
   const [posts, setPosts] = useState([]);
-
   const [body, setBody] = useState(" ");
+  const [userInfo, setUserInfo] = useState("");
+
+  useEffect(() => {
+    if (!!currentUser) {
+      getUserInfo();
+    } else {
+      setUserInfo(false);
+    }
+    fetchData();
+  }, []);
+
+  // Get current user info
+  const getUserInfo = async () => {
+    try {
+      const userRef = doc(db, "users", currentUser.uid);
+      const docSnap = await getDoc(userRef);
+
+      if (docSnap.exists()) {
+        setUserInfo(docSnap.data());
+      } else {
+        console.log("No such document!");
+      }
+    } catch (error) {
+      console.log("Error getting user info: ", error);
+    }
+  };
+
+  // Fetch Posts 
   const fetchData = async () => {
     try {
       const colRef = collection(db, "posts");
@@ -22,21 +50,19 @@ const PostList = () => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    fetchData();
-  }, []);
 
+  // Handle Post form
   const handleChange = (event) => {
-    console.log("hello");
     setBody(event.target.value);
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       await addDoc(collection(db, "posts"), {
         body,
         AllComments: [],
+        userName: userInfo.displayName || "Anonymous user",
       });
       setBody("");
       fetchData();
@@ -58,15 +84,13 @@ const PostList = () => {
                   value={body}
                   onChange={handleChange}
                   className="shadow-lg block w-full sm:text-xl text-dark border-gray-300 rounded-md p-4 focus:border-neutral-700 focus:ring focus:ring-neutral-700 outline-none"
-                  placeholder="Write a post here..."
-                ></textarea>
+                  placeholder="Write a post here..."></textarea>
               </div>
             </div>
             <div className="mt-4 flex justify-end">
               <button
                 type="submit"
-                className="px-8 py-3 font-bold rounded-full bg-neutral-800 text-dirtyPink mr-10"
-              >
+                className="px-8 py-3 font-bold rounded-full bg-neutral-800 text-dirtyPink mr-10">
                 Post
               </button>
             </div>

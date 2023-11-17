@@ -8,18 +8,32 @@ import {
   onSnapshot,
   updateDoc,
 } from "@firebase/firestore";
-import { db } from "../../config/Firebase/firebase";
+import { auth, db } from "../../config/Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Post = ({ post }) => {
+  const [currentUser] = useAuthState(auth);
   const [commentplace, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [currentDate, setCurrentDate] = useState("");
   const [user, setUser] = useState("");
   const [postReactions, setReactions] = useState(0);
+  const [userInfo, setUserInfo] = useState("");
 
-  const handlechange = (e) => {
-    setComment(e.target.value);
-  };
+  useEffect(() => {
+    if(!!currentUser){
+      getUserInfo();
+    }else{
+      setUserInfo(false);
+    }
+
+    fetchComments();
+    updateDate();
+  }, []);
+
+
+
+  // Toggle like Function
   const toggleLike = async (index) => {
     const docRef = doc(db, "posts", index);
     const docSnap = await getDoc(docRef);
@@ -30,48 +44,67 @@ const Post = ({ post }) => {
     }
   };
 
+  // Handle Comment form
+  const handlechange = (e) => {
+    setComment(e.target.value);
+  };
+
   const handleSubmit = async (index) => {
     await updateDoc(doc(db, "posts", index), {
-      AllComments: [...comments, { userName: "esraa", Text: commentplace }],
+      AllComments: [...comments, { userName: userInfo.displayName || "Anonymous", Text: commentplace }],
     });
     setComments((prevComments) => [
       ...prevComments,
-      { userName: "esraa", Text: commentplace },
+      { userName: userInfo.displayName|| "Anonymous", Text: commentplace },
     ]);
     setComment("");
   };
-  useEffect(() => {
-    const fetchComments = async () => {
-      const docRef = doc(db, "posts", post.id);
-      const docSnap = await getDoc(docRef);
+
+  // Update Date
+  const updateDate = () => {
+    const today = new Date();
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+    const formattedDate = today.toLocaleDateString("en-US", options);
+    setCurrentDate(formattedDate);
+  };
+
+  // Fetch Comments
+  const fetchComments = async () => {
+    const docRef = doc(db, "posts", post.id);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      setComments(data.AllComments);
+      setUser(data.AllComments.userName || "user");
+      setReactions(data.reactions);
+    }
+  };
+
+
+  // Get current user info
+  const getUserInfo = async () => {
+    try {
+      const userRef = doc(db, "users", currentUser.uid);
+      const docSnap = await getDoc(userRef);
+
       if (docSnap.exists()) {
-        const data = docSnap.data();
-        setComments(data.AllComments);
-        setUser(data.AllComments.userName || "user");
-        setReactions(data.reactions);
+        setUserInfo(docSnap.data());
+      } else {
+        console.log("No such document!");
       }
-    };
+    } catch (error) {
+      console.log("Error getting user info: ", error);
+    }
+  };
 
-    fetchComments();
-  }, []);
-  useEffect(() => {
-    const updateDate = () => {
-      const today = new Date();
-      const options = {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-        hour: "numeric",
-        minute: "numeric",
-        second: "numeric",
-      };
-      const formattedDate = today.toLocaleDateString("en-US", options);
-      setCurrentDate(formattedDate);
-    };
 
-    // Initial update
-    updateDate();
-  }, []);
   return (
     <div>
       <div className="bg-olive p-6 overflow-hidden rounded-lg shadow text-neutral-100 mt-6">
@@ -82,7 +115,7 @@ const Post = ({ post }) => {
             className="w-10 h-10 rounded-full dark:bg-gray-500"
           />
           <div>
-            <h3 className="text-sm font-semibold text-left">Leroy Jenkins</h3>
+            <h3 className="text-sm font-semibold text-left">{post.userName || "Anonymous User"}</h3>
             <time dateTime="2021-02-18" className="text-sm dark:text-gray-400">
               {currentDate}
             </time>
@@ -101,8 +134,7 @@ const Post = ({ post }) => {
             onClick={() => {
               toggleLike(post.id);
             }}
-            className="w-1/4 px-8 py-3 font-bold rounded-full shadow bg-dirtyPink  text-olive"
-          >
+            className="w-1/4 px-8 py-3 font-bold rounded-full shadow bg-dirtyPink  text-olive">
             Like
           </button>
 
@@ -112,16 +144,14 @@ const Post = ({ post }) => {
             placeholder="Comment"
             value={commentplace}
             onKeyDown={(e) => e.key === "Enter" && handleSubmit(post.id)}
-            onChange={handlechange}
-          ></input>
+            onChange={handlechange}></input>
         </div>
         {Array.isArray(comments) && comments.length > 0 && (
           <div className="mt-4 p-3 ">
             {comments?.map((comment) => (
               <div
                 key={comment.Text}
-                className="flex w-[100%] justify-center items-center  my-3"
-              >
+                className="flex w-[100%] justify-center items-center  my-3">
                 <img
                   src="https://source.unsplash.com/100x100/?portrait"
                   alt=""

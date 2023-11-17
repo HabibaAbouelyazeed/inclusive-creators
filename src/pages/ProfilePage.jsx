@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { auth, db } from "../config/Firebase/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { doc, getDoc } from "firebase/firestore";
 import profileImage from "../assets/images/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +10,34 @@ import { faHourglassStart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const ProfilePage = () => {
+  const [user] = useAuthState(auth);
+  const [userInfo, setUserInfo] = useState("");
+
+  const getUserInfo = async () => {
+    try {
+      const userRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(userRef);
+
+      if (docSnap.exists()) {
+        setUserInfo(docSnap.data());
+      } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+      }
+    } catch (error) {
+      console.log("Error: ", error);
+    }
+  };
+
+  useEffect(() => {
+    if (!!user) {
+      getUserInfo();
+    }
+    else{
+      setUserInfo("");
+    }
+  }, []);
+
   const emailIcon = <FontAwesomeIcon icon={faEnvelope} />;
   const jopIcon = <FontAwesomeIcon icon={faBriefcase} />;
   const ageIcon = <FontAwesomeIcon icon={faHourglassStart} />;
@@ -30,7 +61,7 @@ const ProfilePage = () => {
                     <strong className="text-subtle text-xl font-semibold hidden md:block">
                       Name
                     </strong>
-                    John Doe
+                    {userInfo.displayName || "John Doe"}
                   </p>
                   <p className="text-olive px-4 text-xs sm:text-base font-semibold md:font-normal">
                     <strong className="text-subtle text-xl font-semibold hidden md:block">

@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, usersCol } from "../config/Firebase/firebase";
-import { addDoc } from "firebase/firestore";
+import { auth, db } from "../config/Firebase/firebase";
+import { doc, setDoc } from "firebase/firestore";
 import { Button } from "@material-tailwind/react";
 import profileImage from "../assets/images/profile.jpg";
 
 const RegisterPage = () => {
   const [signUpState, setSignUpState] = useState("");
-
+  
   const {
     register,
     control,
@@ -18,17 +18,22 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
-  const createUser = (usrEmail, usrPassword, dName, about) => {
+  const createUser = (usrEmail, usrPassword, userInfo) => {
     createUserWithEmailAndPassword(auth, usrEmail, usrPassword)
-      .then((userCredential) => {
+      .then(async (userCredential) => {
         // Signed up
         const user = userCredential.user;
-        addDoc(usersCol, {
-          uid: user?.uid,
-          displayName: dName,
-          email: user?.email,
-          bio: about,
-        });
+        userInfo.uid = user.uid;
+        let userRef = doc(db, "users", user.uid);
+
+        try {
+          await setDoc(userRef, userInfo);
+          setSignUpState(true);
+          // console.log(userInfo);
+        } catch (error) {
+          console.error("Error adding doc:", error);
+        }
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -38,7 +43,13 @@ const RegisterPage = () => {
   };
 
   const submitSignUpForm = (e) => {
-    createUser(e.email, e.password, `${e.firstName} ${e.lastName}`, e.about);
+    const userInfo = {
+      displayName: `${e.firstName} ${e.lastName}`,
+      email: e.email,
+      bio: e.about,
+    }
+    // createUser(e.email, e.password, `${e.firstName} ${e.lastName}`, e.about);
+    createUser(e.email, e.password, userInfo);
   };
 
   return (
@@ -376,7 +387,7 @@ const RegisterPage = () => {
             </Button>
           </div>
           <div className="mt-4 text-center font-normal text-neutral-600">
-            Don't have an account?{" "}
+            Already have an account?{" "}
             <Link
               to="/login"
               className="font-medium text-neutral-800 underline underline-offset-2"

@@ -16,12 +16,9 @@ const LoginPage = () => {
   } = useForm();
 
   const submitLoginForm = (e) => {
-    console.log(e.email, e.password);
     signInWithEmailAndPassword(auth, e.email, e.password)
       .then((userCredential) => {
-        console.log("User Credential", userCredential);
         setLoggedIn(true);
-        // reset(...{e})
       })
       .catch((error) => {
         const errorCode = error.code;
