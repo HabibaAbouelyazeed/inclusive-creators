@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/Firebase/firebase";
@@ -7,7 +7,7 @@ import { Card, Input, Button, Typography } from "@material-tailwind/react";
 
 const LoginPage = () => {
   const [loggedIn, setLoggedIn] = useState(true);
-
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -19,6 +19,7 @@ const LoginPage = () => {
     signInWithEmailAndPassword(auth, e.email, e.password)
       .then((userCredential) => {
         setLoggedIn(true);
+        navigate("/home");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -81,7 +82,7 @@ const LoginPage = () => {
               <Input
                 type="password"
                 size="lg"
-                placeholder="********"
+                placeholder="•••••••••"
                 className=" !border-dirtyPink focus:!border-tealGrey"
                 labelProps={{
                   className: "before:content-none after:content-none",

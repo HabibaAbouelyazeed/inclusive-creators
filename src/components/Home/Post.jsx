@@ -117,7 +117,7 @@ const Post = ({ post }) => {
           <div>
             <h3 className="text-sm font-semibold text-left">{post.userName || "Anonymous User"}</h3>
             <time dateTime="2021-02-18" className="text-sm dark:text-gray-400">
-              {currentDate}
+              { post.postTime ||currentDate}
             </time>
           </div>
         </div>

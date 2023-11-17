@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../config/Firebase/firebase";
@@ -9,7 +9,8 @@ import profileImage from "../assets/images/profile.jpg";
 
 const RegisterPage = () => {
   const [signUpState, setSignUpState] = useState("");
-  
+  const navigate = useNavigate();
+
   const {
     register,
     control,
@@ -29,7 +30,7 @@ const RegisterPage = () => {
         try {
           await setDoc(userRef, userInfo);
           setSignUpState(true);
-          // console.log(userInfo);
+          navigate("/home");
         } catch (error) {
           console.error("Error adding doc:", error);
         }
@@ -46,9 +47,15 @@ const RegisterPage = () => {
     const userInfo = {
       displayName: `${e.firstName} ${e.lastName}`,
       email: e.email,
+      address: {
+        address: e.address,
+        city: e.city,
+        country: e.country
+      },
+      childMedicalCondition: e.medicalCondition,
+      phoneNumber: e.phoneNumber,
       bio: e.about,
     }
-    // createUser(e.email, e.password, `${e.firstName} ${e.lastName}`, e.about);
     createUser(e.email, e.password, userInfo);
   };
 
@@ -237,6 +244,31 @@ const RegisterPage = () => {
             </div>
             <div className="mb-8">
               <label
+                htmlFor="zipCode"
+                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
+              >
+                Child Medical Condition
+              </label>
+              <input
+                type="text"
+                id="zipCode"
+                className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Medical Condition"
+                name="medicalCondition"
+                {...register("medicalCondition", {
+                  required: { value: true, message: "This field is required" },
+                  minLength: {
+                    value: 2,
+                    message: "Min length is 2",
+                  },
+                })}
+              />
+              {errors?.medicalCondition && (
+                <p className="text-red ps-2">{errors.medicalCondition.message}</p>
+              )}
+            </div>
+            <div className="mb-8">
+              <label
                 htmlFor="phone"
                 className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
               >
@@ -260,21 +292,7 @@ const RegisterPage = () => {
                 <p className="text-red ps-2">{errors.phoneNumber.message}</p>
               )}
             </div>
-            <div className="mb-8">
-              <label
-                htmlFor="zipCode"
-                className="block mb-2 text-sm sm:text-lg capitalize font-medium text-neutral-600  dark:text-white"
-              >
-                Zip/Code
-              </label>
-              <input
-                type="text"
-                id="zipCode"
-                className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter ZIP Code"
-                name="zipCode"
-              />
-            </div>
+            
             <div className="mb-8">
               <label
                 htmlFor="password"

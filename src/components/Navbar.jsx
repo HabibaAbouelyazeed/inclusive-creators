@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../config/Firebase/firebase";
 import { signOut } from "firebase/auth";
@@ -16,12 +16,13 @@ import { faXmark, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Navbar = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
 
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleWindowResize);
     return () => {
       window.removeEventListener("resize", handleWindowResize);
@@ -29,7 +30,8 @@ export const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    signOut(auth);
+   signOut(auth);
+   navigate("/");
   };
   return (
     <header className="appNavbar w-100 bg-olive text-secondary-300">
@@ -67,7 +69,7 @@ export const Navbar = () => {
               )}
               {!!user && (
                 <Button
-                  onClick={handleLogout}
+                  onClick={() => handleLogout()}
                   size="sm"
                   className="hidden lg:inline-block bg-dirtyPink ">
                   logout
@@ -110,7 +112,7 @@ export const Navbar = () => {
           )}
             {!!user && (
               <Button
-                onClick={handleLogout}
+                onClick={() => handleLogout()}
                 fullWidth
                 size="sm"
                 className="mt-4 bg-dirtyPink text-olive">

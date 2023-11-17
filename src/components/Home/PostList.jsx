@@ -10,6 +10,7 @@ const PostList = () => {
   const [posts, setPosts] = useState([]);
   const [body, setBody] = useState(" ");
   const [userInfo, setUserInfo] = useState("");
+  const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
     if (!!currentUser) {
@@ -18,6 +19,7 @@ const PostList = () => {
       setUserInfo(false);
     }
     fetchData();
+    updateDate();
   }, []);
 
   // Get current user info
@@ -63,12 +65,27 @@ const PostList = () => {
         body,
         AllComments: [],
         userName: userInfo.displayName || "Anonymous user",
+        postTime: currentDate,
       });
       setBody("");
       fetchData();
     } catch (error) {
       console.error("Error adding comment:", error);
     }
+  };
+
+  const updateDate = () => {
+    const today = new Date();
+    const options = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+    };
+    const formattedDate = today.toLocaleDateString("en-US", options);
+    setCurrentDate(formattedDate);
   };
 
   return (
