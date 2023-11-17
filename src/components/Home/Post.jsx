@@ -10,7 +10,7 @@ import {
   updateDoc,
 } from "@firebase/firestore";
 import { initializeApp } from "@firebase/app";
-import { firebaseConfig } from "../../configuration";
+import { firebaseConfig } from "../../config/Firebase/firebase.config";
 const Post = ({ post }) => {
   const firebaseApp = initializeApp(firebaseConfig);
   const db = getFirestore(firebaseApp);
