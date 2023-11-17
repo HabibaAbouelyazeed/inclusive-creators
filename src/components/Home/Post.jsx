@@ -8,11 +8,9 @@ import {
   onSnapshot,
   updateDoc,
 } from "@firebase/firestore";
-import { initializeApp } from "@firebase/app";
-import { firebaseConfig } from "../../config/Firebase/firebase.config";
+import { db } from "../../config/Firebase/firebase";
+
 const Post = ({ post }) => {
-  const firebaseApp = initializeApp(firebaseConfig);
-  const db = getFirestore(firebaseApp);
   const [commentplace, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [currentDate, setCurrentDate] = useState("");
@@ -57,10 +55,6 @@ const Post = ({ post }) => {
     fetchComments();
   }, []);
   useEffect(() => {
-    // const today = new Date();
-    // const options = { year: "numeric", month: "long", day: "numeric" };
-    // const formattedDate = today.toLocaleDateString("en-US", options);
-    // setCurrentDate(formattedDate);
     const updateDate = () => {
       const today = new Date();
       const options = {
@@ -125,7 +119,7 @@ const Post = ({ post }) => {
           <div className="mt-4 p-3 ">
             {comments?.map((comment) => (
               <div
-                key={comment.userName}
+                key={comment.Text}
                 className="flex w-[100%] justify-center items-center  my-3"
               >
                 <img
