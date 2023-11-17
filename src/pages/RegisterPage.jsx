@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../config/Firebase/firebase";
+import { auth, usersCol } from "../config/Firebase/firebase";
+import { addDoc } from "firebase/firestore";
 import { Button } from "@material-tailwind/react";
 import profileImage from "../assets/images/profile.jpg";
 
@@ -17,14 +18,18 @@ const RegisterPage = () => {
     formState: { errors },
   } = useForm();
 
-  const createUser = (usrEmail, usrPassword) => {
+  const createUser = (usrEmail, usrPassword, dName, about) => {
     createUserWithEmailAndPassword(auth, usrEmail, usrPassword)
       .then((userCredential) => {
         // Signed up
-        // console.log('User Credential',userCredential);
         const user = userCredential.user;
-        // console.log("user:", user)
-        setSignUpState(true);
+        addDoc(usersCol, {
+          uid: user?.uid,
+          displayName: dName,
+          email: user?.email,
+          bio: about,
+        });
+
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -34,7 +39,7 @@ const RegisterPage = () => {
   };
 
   const submitSignUpForm = (e) => {
-    createUser(e.email, e.password);
+    createUser(e.email, e.password, `${e.firstName} ${e.lastName}`, e.about);
   };
 
   return (
@@ -311,7 +316,15 @@ const RegisterPage = () => {
               className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder=""
               name="about"
+              {...register("about", {
+                required: { value: true, message: "This field is required" },
+              })}
             />
+            {errors?.about && (
+              <p className="text-red ps-2">
+                {errors.about.message}
+              </p>
+            )}
           </div>
           <div className="flex items-start mb-8">
             <div className="flex items-center h-5">

@@ -1,9 +1,11 @@
 import { firebaseConfig } from "./firebase.config";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, collection } from "firebase/firestore";
 
 const firebaseApp = initializeApp(firebaseConfig);
 export const auth = getAuth(firebaseApp);
-const db = getFirestore(firebaseApp);
-export { db };
+export const db = getFirestore(firebaseApp);
+
+
+export const usersCol = collection(db, "users");
