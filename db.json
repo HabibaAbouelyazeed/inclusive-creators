@@ -797,7 +797,8 @@
       "imagePath": "/assets/Events/2.webp",
       "host": "Random Host 2",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/2"
     },
     {
       "id": 3,
@@ -809,7 +810,8 @@
       "imagePath": "/assets/Events/3.webp",
       "host": "Random Host 3",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/3"
     },
     {
       "id": 4,
@@ -821,7 +823,8 @@
       "imagePath": "/assets/Events/4.webp",
       "host": "Random Host 4",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/4"
     },
     {
       "id": 5,
@@ -833,7 +836,8 @@
       "imagePath": "/assets/Events/5.webp",
       "host": "Random Host 5",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/5"
     },
     {
       "id": 6,
@@ -845,7 +849,8 @@
       "imagePath": "/assets/Events/6.webp",
       "host": "Random Host 6",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/6"
     },
     {
       "id": 7,
@@ -857,7 +862,8 @@
       "imagePath": "/assets/Events/7.webp",
       "host": "Random Host 7",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/7"
     },
     {
       "id": 8,
@@ -869,7 +875,8 @@
       "imagePath": "/assets/Events/8.webp",
       "host": "Random Host 8",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/8"
     },
     {
       "id": 9,
@@ -881,7 +888,8 @@
       "imagePath": "/assets/Events/9.webp",
       "host": "Random Host 9",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/9"
     },
     {
       "id": 10,
@@ -893,7 +901,8 @@
       "imagePath": "/assets/Events/10.webp",
       "host": "Random Host 10",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/10"
     }
   ],
   "posts": [

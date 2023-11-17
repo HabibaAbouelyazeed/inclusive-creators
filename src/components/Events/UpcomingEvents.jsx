@@ -15,12 +15,12 @@ const UpcomingEvents = ({ events }) => {
       : events.filter((event) => event.category === activeCategory);
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-6 md:py-6">
       <div className="header flex flex-col md:flex-row items-center justify-between">
-        <h2 className="text-3xl md:text-5xl text-olive font-bold my-4 md:mb-0">
+        <h2 className="w-1/2 md:w-2/3 text-3xl md:text-5xl text-olive font-bold my-4 md:mb-0 text-left">
           Upcoming Events
         </h2>
-        <div className="w-full md:w-1/4 flex items-center justify-between mt-4 md:mt-0">
+        <div className="w-1/2 md:w-1/3 flex items-center justify-between mt-4 md:mt-0">
           {categories.map((category, index) => (
             <button
               key={category}
