@@ -1,8 +1,7 @@
 import React from "react";
 import bannerImage from "../../assets/images/articlesbanner.jpg";
-import { Link } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
-
+import { HashLink as Link } from "react-router-hash-link";
 const ArticlesBanner = () => {
   return (
     <>
@@ -21,24 +20,15 @@ const ArticlesBanner = () => {
               with disabilities. Our articles focus on building a brighter
               future for every unique child.
             </p>
-            <div className="text-center md:text-left my-4 flex flex-col md:flex-row">
-              <Link to="/register">
-                <Button
-                  variant="filled"
-                  className="bg-dirtyPink text-olive font-bold text-xs uppercase"
-                >
-                  Sign Up
-                </Button>
-              </Link>
-              <Link to="" className="mt-4 md:mt-0">
-                <Button
-                  variant="outlined"
-                  className="md:ml-4 font-bold text-xs uppercase text-white border border-dirtyPink focus:outline-none focus:ring-0  "
-                >
-                  Learn More
-                </Button>
-              </Link>
-            </div>
+
+            <Link smooth to="#articleslist" className="text-left block mt-4">
+              <Button
+                variant="outlined"
+                className=" font-bold text-xs uppercase text-white border border-dirtyPink focus:outline-none focus:ring-0  tracking-tight"
+              >
+                Read More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

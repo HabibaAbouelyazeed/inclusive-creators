@@ -8,10 +8,10 @@ const ArticleCard = ({ article }) => {
   const arrowIcon = <FontAwesomeIcon icon={faArrowRight} />;
   return (
     <div className="grid grid-cols-12 my-8 shadow-lg rounded">
-      <figure className="col-span-full md:col-span-4 p-4 md:p-8">
+      <figure className="col-span-full lg:col-span-4 p-4 md:p-8">
         <img src={img} />
       </figure>
-      <div className="col-span-full md:col-span-8 text-left p-4 md:p-8">
+      <div className="col-span-full lg:col-span-8 text-left p-4 md:p-8">
         <h2 className="text-olive font-medium text-lg md:text-xl lg:text-4xl mb-2 md:mb-4">
           {title}
         </h2>
@@ -23,7 +23,7 @@ const ArticleCard = ({ article }) => {
             <figure>
               <img src="" alt="" className="rounded-full" />
             </figure>
-            <h4 className="capitalize text-dirtyPink text-sm md:text-base lg:text-lg font-semibold mx-4">
+            <h4 className="capitalize text-dirtyPink text-sm md:text-base lg:text-lg font-semibold mr-4">
               by : {author}
             </h4>
           </div>
@@ -35,7 +35,7 @@ const ArticleCard = ({ article }) => {
           to={`/article/${id}`}
           className="text-olive text-sm md:text-base lg:text-lg font-medium inline-block my-2 hover:text-dirtyPink transition-all ease-in-out duration-300"
         >
-          Learn more <span className="mx-1 text-base">{arrowIcon}</span>
+          Read more <span className="mx-1 text-base">{arrowIcon}</span>
         </Link>
       </div>
     </div>

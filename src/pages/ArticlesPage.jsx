@@ -4,6 +4,7 @@ import ArticlesList from "../components/articles/ArticlesList";
 import ArticlesSearch from "../components/articles/ArticlesSearch";
 import useFetch from "../components/useFetch";
 import LoaderComponent from "../components/Loader";
+import SearchComponent from "../components/Search/SearchComponent";
 const ArticlesPage = () => {
   const { data, isLoading, error } = useFetch("articles");
   const articles = useMemo(() => {
@@ -22,7 +23,11 @@ const ArticlesPage = () => {
   return (
     <>
       <ArticlesBanner />
-      <ArticlesSearch />
+      <SearchComponent
+        title={"Explore, Connect, and Grow"}
+        searchCategory={"articles"}
+      />
+      {/* <ArticlesSearch /> */}
       <ArticlesList articles={articles} />
     </>
   );
