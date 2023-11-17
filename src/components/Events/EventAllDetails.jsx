@@ -14,7 +14,7 @@ const EventAllDetails = ({ event }) => {
   } = event;
 
   return (
-    <div className="container mx-auto my-8 p-6 bg-white shadow-md rounded">
+    <div className="container mx-auto my-4 p-6 bg-white shadow-md rounded">
       <div className="flex flex-col md:flex-row">
         <div className="md:ml-6">
           <p className="text-olive font-semibold">

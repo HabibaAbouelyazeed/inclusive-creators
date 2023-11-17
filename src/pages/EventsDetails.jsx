@@ -20,7 +20,7 @@ const EventDetails = () => {
   }
 
   const filteredEvents = data.filter((e) => e.id !== event?.id);
-  const exploreEvents = filteredEvents.slice(0, 6);
+  const exploreEvents = filteredEvents.slice(0, 3);
 
   return (
     <>
