@@ -8,7 +8,7 @@ module.exports = withMT({
   theme: {
     container: {
       center: true,
-      padding: "2rem"
+      padding: "2rem",
     },
     colors: {
       transparent: "transparent",
@@ -28,7 +28,7 @@ module.exports = withMT({
       "neutral-300": "#F1F3F7",
       "neutral-200": "#F8FAFF",
       "neutral-100": "#FFFFFF",
-      "red": "red"
+      red: "red",
     },
     plugins: [],
   },

@@ -26,6 +26,7 @@
     "react-loader-spinner": "^5.4.5",
     "react-player": "^2.13.0",
     "react-router-dom": "^6.18.0",
+    "react-router-hash-link": "^2.4.3",
     "source-map-js": "^1.0.2"
   },
   "devDependencies": {
