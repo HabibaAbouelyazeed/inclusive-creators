@@ -9,14 +9,8 @@ import {
 import { Link } from "react-router-dom";
 import { Rating } from "@material-tailwind/react";
 import { ButtonDefault } from "../Buttons";
-import { useEffect } from "react";
-import { fetchCourses } from "./CoursesApi";
 
 export function CardDefault({ courses }) {
-  useEffect(() => {
-    fetchCourses();
-  }, []);
-
   return (
     <section className="container">
       <div className="flex flex-wrap mt-5 pb-5">

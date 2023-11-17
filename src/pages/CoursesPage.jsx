@@ -2,41 +2,32 @@ import { useEffect, useState } from "react";
 import Coursesinput from "../components/Courses/Coursesinput";
 import CarouselWithContent from "../components/Courses/CarouselWithContent";
 import { CardDefault } from "../components/Courses/AllCourses";
-import { fetchCourses } from "../components/Courses/CoursesApi";
 import LoaderComponent from "../components/Loader";
+import useFetch from "../components/useFetch";
 
 const CoursesPage = () => {
-  const [courses, setCourses] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
-  const [loading, setLoading] = useState(false);
 
+  const { data, isLoading, error } = useFetch("courses");
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const CoursesData = await fetchCourses();
-        setCourses(CoursesData);
-        setFilteredItems(CoursesData);
-      } finally {
-        setLoading(false);
-      }
-    };
+    setFilteredItems(data);
+  }, [data]);
 
-    fetchData();
-  }, []);
-
-  if (loading) {
+  if (isLoading) {
     return <LoaderComponent />;
   }
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
   const filterbyAll = () => {
-    setFilteredItems(courses);
+    setFilteredItems(data);
   };
   const filterbyF = () => {
-    const filtered = courses.filter((course) => course.type === "forensic");
+    const filtered = data.filter((course) => course.type === "forensic");
     setFilteredItems(filtered);
   };
   const filterbyscience = () => {
-    const filtered = courses.filter((course) => course.type === "science");
+    const filtered = data.filter((course) => course.type === "science");
     setFilteredItems(filtered);
   };
   return (

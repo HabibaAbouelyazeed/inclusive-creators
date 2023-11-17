@@ -1,37 +1,63 @@
-import React , { useState , useEffect}from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+
 import Post from "./Post";
-import { data } from "autoprefixer";
+
+import {
+  addDoc,
+  deleteDoc,
+  doc,
+  collection,
+  getDocs,
+} from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import { firebaseConfig } from "../../configuration";
+import { getFirestore } from "firebase/firestore";
+
 const PostList = () => {
+  const firebaseApp = initializeApp(firebaseConfig);
+  const db = getFirestore(firebaseApp);
   const [posts, setPosts] = useState([]);
-  const [postText ,setPostText] = useState(" ");
-  useEffect(() => {
-    axios
-      .get("http://localhost:3000/posts")
-      .then((response) => {
-        console.log(data)
-        setPosts(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
+  const [body, setBody] = useState(" ");
+  const fetchData = async () => {
+    try {
+      const colRef = collection(db, "posts");
+      const snapshot = await getDocs(colRef);
+      let posts = [];
+      console.log(snapshot);
+      snapshot.docs.forEach((doc) => {
+        posts.push({ ...doc.data(), id: doc.id });
+        setPosts(posts);
+        console.log(posts);
       });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
   }, []);
 
-  const postList = posts?.map((post) =>{
-    return(
-      <Post key={post.id} post={post}/>
-    )
-  });
-
+  const handleChange = (event) => {
+    setBody(event.target.value);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const docRef = await addDoc(collection(db, "posts"), {
+        body,
+        AllComments: [],
+      });
+      setBody("");
+      fetchData();
+    } catch (error) {
+      console.error("Error adding comment:", error);
+    }
   };
 
-  
-
-    return (
-      <>
-        <div className='mt-4 sm:w-full lg:w-3/5 mr-10'>
+  return (
+    <>
+      <div className="mt-4 sm:w-full lg:w-3/5 mr-10">
         <div className="container ms-auto">
           <form onSubmit={handleSubmit}>
             <div className="mt-4 mr-10">
@@ -39,21 +65,25 @@ const PostList = () => {
                 <textarea
                   id="post"
                   name="post"
-                  value={postText}
-                  
-                  className="shadow-lg block w-full sm:text-xl border-gray-300 rounded-md p-4 focus:border-neutral-700 focus:ring focus:ring-neutral-700 outline-none"
-                  placeholder="Write a post here..."></textarea>
+                  value={body}
+                  onChange={handleChange}
+                  className="shadow-lg block w-full sm:text-xl text-dark border-gray-300 rounded-md p-4 focus:border-neutral-700 focus:ring focus:ring-neutral-700 outline-none"
+                  placeholder="Write a post here..."
+                ></textarea>
               </div>
             </div>
             <div className="mt-4 flex justify-end">
               <button
                 type="submit"
-                className="px-8 py-3 font-bold rounded-full bg-neutral-800 text-dirtyPink mr-10">
+                className="px-8 py-3 font-bold rounded-full bg-neutral-800 text-dirtyPink mr-10"
+              >
                 Post
               </button>
             </div>
           </form>
-          {postList}
+          {posts?.map((post) => (
+            <Post key={post.id} post={post} />
+          ))}
         </div>
       </div>
     </>

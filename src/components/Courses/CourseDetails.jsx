@@ -28,8 +28,6 @@ const CourseDetails = () => {
       });
   }, []);
 
-
-
   const GotoNext = () => {
     if (videoNumber < course.videos.length) {
       setVideoNumber(videoNumber + 1);
@@ -40,7 +38,6 @@ const CourseDetails = () => {
       setVideoNumber((prev) => prev - 1);
     }
   };
-
 
   const [open, setOpen] = React.useState(0);
 
