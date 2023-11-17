@@ -1,13 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect, useState } from "react";
-import {
-  doc,
-  getDoc,
-  getFirestore,
-  onSnapshot,
-  updateDoc,
-} from "@firebase/firestore";
+import { doc, getDoc, updateDoc } from "@firebase/firestore";
 import { auth, db } from "../../config/Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
@@ -16,7 +10,6 @@ const Post = ({ post }) => {
   const [commentplace, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const [currentDate, setCurrentDate] = useState("");
-  const [user, setUser] = useState("");
   const [postReactions, setReactions] = useState(0);
   const [userInfo, setUserInfo] = useState("");
 
@@ -117,7 +110,7 @@ const Post = ({ post }) => {
               {post.userName || "Anonymous User"}
             </h3>
             <time dateTime="2021-02-18" className="text-sm dark:text-gray-400">
-              { post.postTime ||currentDate}
+              {post.postTime || currentDate}
             </time>
           </div>
         </div>
