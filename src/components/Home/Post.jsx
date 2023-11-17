@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import {
-  FieldValue,
   doc,
   getDoc,
   getFirestore,
@@ -16,6 +15,7 @@ const Post = ({ post }) => {
   const db = getFirestore(firebaseApp);
   const [commentplace, setComment] = useState("");
   const [comments, setComments] = useState([]);
+  const [currentDate, setCurrentDate] = useState("");
   const [user, setUser] = useState("");
   const [postReactions, setReactions] = useState(0);
 
@@ -28,7 +28,7 @@ const Post = ({ post }) => {
     if (docSnap.exists()) {
       const currentReactions = docSnap.data().reactions || 0;
       await updateDoc(docRef, { reactions: currentReactions + 1 });
-      setReactions((prevreaction) => prevreaction++);
+      setReactions(currentReactions + 1);
     }
   };
 
@@ -56,6 +56,28 @@ const Post = ({ post }) => {
 
     fetchComments();
   }, []);
+  useEffect(() => {
+    // const today = new Date();
+    // const options = { year: "numeric", month: "long", day: "numeric" };
+    // const formattedDate = today.toLocaleDateString("en-US", options);
+    // setCurrentDate(formattedDate);
+    const updateDate = () => {
+      const today = new Date();
+      const options = {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      };
+      const formattedDate = today.toLocaleDateString("en-US", options);
+      setCurrentDate(formattedDate);
+    };
+
+    // Initial update
+    updateDate();
+  }, []);
   return (
     <div>
       <div className="bg-olive p-6 overflow-hidden rounded-lg shadow text-neutral-100 mt-6">
@@ -66,9 +88,9 @@ const Post = ({ post }) => {
             className="w-10 h-10 rounded-full dark:bg-gray-500"
           />
           <div>
-            <h3 className="text-sm font-semibold">Leroy Jenkins</h3>
+            <h3 className="text-sm font-semibold text-left">Leroy Jenkins</h3>
             <time dateTime="2021-02-18" className="text-sm dark:text-gray-400">
-              24
+              {currentDate}
             </time>
           </div>
         </div>

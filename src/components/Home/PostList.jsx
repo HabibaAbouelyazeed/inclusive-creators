@@ -9,13 +9,9 @@ import {
   collection,
   getDocs,
 } from "firebase/firestore";
-import { initializeApp } from "firebase/app";
-import { firebaseConfig } from "../../config/Firebase/firebase.config";
-import { getFirestore } from "firebase/firestore";
+import { db } from "../../config/Firebase/firebase";
 
 const PostList = () => {
-  const firebaseApp = initializeApp(firebaseConfig);
-  const db = getFirestore(firebaseApp);
   const [posts, setPosts] = useState([]);
 
   const [body, setBody] = useState(" ");
@@ -39,6 +35,7 @@ const PostList = () => {
   }, []);
 
   const handleChange = (event) => {
+    console.log("hello");
     setBody(event.target.value);
   };
   const handleSubmit = async (e) => {
