@@ -17,6 +17,7 @@ const PostList = () => {
   const firebaseApp = initializeApp(firebaseConfig);
   const db = getFirestore(firebaseApp);
   const [posts, setPosts] = useState([]);
+
   const [body, setBody] = useState(" ");
   const fetchData = async () => {
     try {

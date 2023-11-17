@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 
-const baseUrl = 'http://localhost:3000';
+const baseUrl = "http://localhost:3000";
 
 const fetchData = async (contentType) => {
   try {

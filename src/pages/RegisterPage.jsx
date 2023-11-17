@@ -1,9 +1,42 @@
-import React from "react";
-import profileImage from "../assets/images/profile.jpg";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../config/Firebase/firebase";
 import { Button } from "@material-tailwind/react";
+import profileImage from "../assets/images/profile.jpg";
 
 const RegisterPage = () => {
+  const [signUpState, setSignUpState] = useState("");
+
+  const {
+    register,
+    control,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const createUser = (usrEmail, usrPassword) => {
+    createUserWithEmailAndPassword(auth, usrEmail, usrPassword)
+      .then((userCredential) => {
+        // Signed up
+        // console.log('User Credential',userCredential);
+        const user = userCredential.user;
+        // console.log("user:", user)
+        setSignUpState(true);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setSignUpState(false);
+      });
+  };
+
+  const submitSignUpForm = (e) => {
+    createUser(e.email, e.password);
+  };
+
   return (
     <section className="relative bannerBg py-8">
       <div
@@ -15,7 +48,9 @@ const RegisterPage = () => {
         <h2 className="text-left mx-auto w-10/12 py-4 font-semibold text-olive text:lg md:text-3xl">
           Register
         </h2>
-        <form className=" mx-auto text-left w-10/12 shadow-xl p-8">
+        <form
+          className=" mx-auto text-left w-10/12 shadow-xl p-8"
+          onSubmit={handleSubmit(submitSignUpForm)}>
           <div className="grid gap-0 md:grid-cols-3 md:gap-12">
             <div>
               <figure className="order-first md:order-last mx-auto  w-40 py-auto">
@@ -51,9 +86,17 @@ const RegisterPage = () => {
                     id="first_name"
                     className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="John"
-                    required
                     name="firstName"
+                    {...register("firstName", {
+                      required: {
+                        value: true,
+                        message: "This field is required",
+                      },
+                    })}
                   />
+                  {errors?.firstName && (
+                    <p className="text-red ps-2">{errors.firstName.message}</p>
+                  )}
                 </div>
                 <div className="mb-8">
                   <label
@@ -66,9 +109,17 @@ const RegisterPage = () => {
                     id="last_name"
                     className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Doe"
-                    required
                     name="lastName"
+                    {...register("lastName", {
+                      required: {
+                        value: true,
+                        message: "This field is required",
+                      },
+                    })}
                   />
+                  {errors?.lastName && (
+                    <p className="text-red ps-2">{errors.lastName.message}</p>
+                  )}
                 </div>
               </div>
               <div className="mb-8">
@@ -82,9 +133,21 @@ const RegisterPage = () => {
                   id="email"
                   className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="john.doe@company.com"
-                  required
                   name="e-mail"
+                  {...register("email", {
+                    required: {
+                      value: true,
+                      message: "This field is required",
+                    },
+                    pattern: {
+                      value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                      message: "Incorrect email format",
+                    },
+                  })}
                 />
+                {errors?.email && (
+                  <p className="text-red ps-2">{errors.email.message}</p>
+                )}
               </div>
             </div>
           </div>
@@ -99,9 +162,14 @@ const RegisterPage = () => {
               id="address"
               className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="123-Any Street"
-              required
               name="address"
+              {...register("address", {
+                required: { value: true, message: "This field is required" },
+              })}
             />
+            {errors?.address && (
+              <p className="text-red ps-2">{errors.address.message}</p>
+            )}
           </div>
           <div className="grid md:gap-x-8 md:grid-cols-2">
             <div className="mb-8">
@@ -115,9 +183,14 @@ const RegisterPage = () => {
                 id="city"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Alexandria"
-                required
                 name="city"
+                {...register("city", {
+                  required: { value: true, message: "This field is required" },
+                })}
               />
+              {errors?.city && (
+                <p className="text-red ps-2">{errors.city.message}</p>
+              )}
             </div>
             <div className="mb-8">
               <label
@@ -130,9 +203,14 @@ const RegisterPage = () => {
                 id="country"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Egypt"
-                required
                 name="country"
+                {...register("country", {
+                  required: { value: true, message: "This field is required" },
+                })}
               />
+              {errors?.country && (
+                <p className="text-red ps-2">{errors.country.message}</p>
+              )}
             </div>
             <div className="mb-8">
               <label
@@ -144,11 +222,19 @@ const RegisterPage = () => {
                 type="tel"
                 id="phone"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter phone number"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-                required
+                placeholder="ex: 123-45-678"
                 name="phoneNumber"
+                {...register("phoneNumber", {
+                  required: { value: true, message: "This field is required" },
+                  pattern: {
+                    value: /[0-9]{3}-[0-9]{2}-[0-9]{3}/,
+                    message: "Follow phone pattern: 123-45-678",
+                  },
+                })}
               />
+              {errors?.phoneNumber && (
+                <p className="text-red ps-2">{errors.phoneNumber.message}</p>
+              )}
             </div>
             <div className="mb-8">
               <label
@@ -161,7 +247,6 @@ const RegisterPage = () => {
                 id="zipCode"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="Enter ZIP Code"
-                required
                 name="zipCode"
               />
             </div>
@@ -176,9 +261,18 @@ const RegisterPage = () => {
                 id="password"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="•••••••••"
-                required
                 name="password"
+                {...register("password", {
+                  required: { value: true, message: "This field is required" },
+                  minLength: {
+                    value: 6,
+                    message: "Min length for password is 6",
+                  },
+                })}
               />
+              {errors?.password && (
+                <p className="text-red ps-2">{errors.password.message}</p>
+              )}
             </div>
             <div className="mb-8">
               <label
@@ -191,9 +285,18 @@ const RegisterPage = () => {
                 id="confirm_password"
                 className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="•••••••••"
-                required
                 name="confirmPassword"
+                {...register("confirmPassword", {
+                  required: { value: true, message: "This field is required" },
+                  validate: (val) =>
+                    val === watch("password") || "Password doesn't match",
+                })}
               />
+              {errors?.confirmPassword && (
+                <p className="text-red ps-2">
+                  {errors.confirmPassword.message}
+                </p>
+              )}
             </div>
           </div>
           <div className="mb-8">
@@ -207,7 +310,6 @@ const RegisterPage = () => {
               id="about"
               className="bg-neutral-100 border border-dirtyPink text-neutral-600 text-base rounded-lg  focus:outline-none block w-full p-2.5 font-normal  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder=""
-              required
               name="about"
             />
           </div>
@@ -218,7 +320,9 @@ const RegisterPage = () => {
                 type="checkbox"
                 value=""
                 className="w-4 h-4 border border-dirtyPink rounded bg-neutral-100 focus:ring-3 focus:ring-dirtyPink dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                required
+                {...register("termsAndConditions", {
+                  required: { value: true, message: "This field is required" },
+                })}
               />
             </div>
             <label
@@ -232,6 +336,11 @@ const RegisterPage = () => {
               </a>
               .
             </label>
+            {errors?.termsAndConditions && (
+              <p className="text-red ps-2">
+                {errors.termsAndConditions.message}
+              </p>
+            )}
           </div>
           <div className="flex justify-center">
             <Button
@@ -247,6 +356,14 @@ const RegisterPage = () => {
               className="font-medium text-neutral-800 underline underline-offset-2">
               Login
             </Link>
+          </div>
+          <div>
+            {signUpState === true && (
+              <p className="text-olive mt-2">Signed up Successfullly</p>
+            )}
+            {signUpState === false && (
+              <p className="text-red mt-2">Sign up Failed</p>
+            )}
           </div>
         </form>
       </div>
