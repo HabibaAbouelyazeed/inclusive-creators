@@ -1,18 +1,14 @@
-import React, { useMemo } from "react";
+import React from "react";
 import ArticlesBanner from "../components/articles/ArticlesBanner";
 import ArticlesList from "../components/articles/ArticlesList";
-import ArticlesSearch from "../components/articles/ArticlesSearch";
 import useFetch from "../components/useFetch";
 import LoaderComponent from "../components/Loader";
 import SearchComponent from "../components/Search/SearchComponent";
+
 const ArticlesPage = () => {
-  const { data, isLoading, error } = useFetch("articles");
-  const articles = useMemo(() => {
-    if (data && data.length > 0) {
-      return [...data].sort((a, b) => new Date(b.date) - new Date(a.date));
-    }
-    return [];
-  }, [data]);
+  // Use useMemo if you need to memoize the data
+  const { data: articlesData, isLoading, error } = useFetch("articles");
+
   if (isLoading) {
     return <LoaderComponent />;
   }
@@ -20,6 +16,7 @@ const ArticlesPage = () => {
   if (error) {
     return <div>Error: {error}</div>;
   }
+
   return (
     <>
       <ArticlesBanner />
@@ -28,7 +25,7 @@ const ArticlesPage = () => {
         searchCategory={"articles"}
       />
       {/* <ArticlesSearch /> */}
-      <ArticlesList articles={articles} />
+      <ArticlesList articles={articlesData} />
     </>
   );
 };
