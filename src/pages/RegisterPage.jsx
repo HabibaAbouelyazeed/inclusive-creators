@@ -64,7 +64,7 @@ const RegisterPage = () => {
       <div
         className="w-full h-full absolute top-0 left-0 py-8 -z-10  bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: `url('../public/assets/loginBanner.jpg')`,
+          backgroundImage: `url('/assets/loginBanner.jpg')`,
         }}
       ></div>
       <div className="container mx-auto">
@@ -415,10 +415,13 @@ const RegisterPage = () => {
           </div>
           <div>
             {signUpState === true && (
-              <p className="text-olive mt-2">Signed up Successfullly</p>
+              <p className="text-olive mt-2">Signed up Successfully</p>
             )}
             {signUpState === false && (
-              <p className="text-red mt-2">Sign up Failed</p>
+              <>
+              <p className="text-red mt-2">Sign up Failed.</p>
+              <p className="text-red mt-2">User may already exist. Try using a different email</p>
+              </>
             )}
           </div>
         </form>

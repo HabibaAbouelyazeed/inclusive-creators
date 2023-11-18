@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+
 import { Navbar } from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
@@ -14,8 +16,11 @@ import "./App.css";
 import Footer from "./components/Footer";
 import EventsDetails from "./pages/EventsDetails";
 import SearchResults from "./pages/SearchResults";
+import GuardedRoute from "./GuardRoute";
+import { auth } from "./config/Firebase/firebase";
 
 function App() {
+  const [user] = useAuthState(auth);
   return (
     <Router>
       <div className="app">
@@ -23,22 +28,34 @@ function App() {
           <Navbar />
         </header>
         <Routes>
-          <Route path="" element={<LandingPage/>} />
-          <Route path="/home" element={<HomePage/>} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/courses" element={<CoursesPage />} />
-          <Route
-            path="/courses/:courseTitle/:courseId"
-            element={<CoursesDetailsPage/>}
-          />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/event/:eventId" element={<EventsDetails />} />
-          <Route path="/articles" element={<ArticlesPage/>} />
-          <Route path="/article/:articleId" element={<ArticlesDetailsPage/>} />
-          <Route path="/profile" element={<ProfilePage/>} />
-          <Route path="/register" element={<RegisterPage/>} />
-          <Route path="/login" element={<Login/>} />
-          <Route path="/search" element={<SearchResults />} />
+          <Route path="/articles" element={<ArticlesPage />} />
+
+          <Route element={<GuardedRoute user={!!user} redirectPath="/login" />}>
+            <Route path="/home" element={<HomePage />} key="home" />
+            <Route path="/profile" element={<ProfilePage />} key="profile" />
+            <Route
+              path="/courses/:courseTitle/:courseId"
+              element={<CoursesDetailsPage />}
+              key="courseDetails"
+            />
+            <Route path="/event/:eventId" element={<EventsDetails />} key="eventDetails" />
+            <Route
+              path="/article/:articleId"
+              element={<ArticlesDetailsPage />}
+              key="articleDetails"
+            />
+            <Route path="/search" element={<SearchResults />} key="searchResults"/>
+          </Route>
+
+          <Route element={<GuardedRoute user={!user} redirectPath="/home" />}>
+            <Route path="/register" element={<RegisterPage />} key="register"/>
+            <Route path="/login" element={<Login />} key="login"/>
+          </Route>
         </Routes>
+
         <footer>
           <Footer />
         </footer>

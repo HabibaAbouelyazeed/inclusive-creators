@@ -24,7 +24,7 @@ const Hero = () => {
         <figure className="md:basis-1/2">
           <img
             className="h-96 w-full rounded-lg object-cover object-center"
-            src="../public/assets/loginBanner.jpg"
+            src="/assets/loginBanner.jpg"
             alt="nature image"
           />
         </figure>

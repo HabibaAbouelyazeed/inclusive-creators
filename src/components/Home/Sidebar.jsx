@@ -56,8 +56,7 @@ const Sidebar = ({ articles, courses }) => {
           </Typography>
           <Typography
             variant="h3"
-            color="secondary-100"
-            className="mb-6 font-bold leading-[1.5]"
+            className="mb-6 font-bold leading-[1.5] text-secondary-500"
           >
             {course.date}
           </Typography>
@@ -69,9 +68,9 @@ const Sidebar = ({ articles, courses }) => {
 
   return (
     <div className="flex flex-col lg:w-1/5 sm:w-2/5 mt-6 py-6 pl-6 rounded  h-full bg-secondary-500">
-      <h3 className='mb-4 text-2xl md:text-3xl lg:text-3xl text-left font-bold text-neutral-700'>Latest Articles</h3>
+      <h3 className="mb-4 text-2xl md:text-3xl lg:text-3xl text-left font-bold text-neutral-700" >Latest Articles</h3>
       {articleElements}
-      <h3 className='my-4 p-2 text-2xl md:text-3xl lg:text-3xl text-left font-bold text-neutral-700'>Latest Courses</h3>
+      <h3 className="my-4 p-2 text-2xl md:text-3xl lg:text-3xl text-left font-bold text-neutral-700" >Latest Courses</h3>
       {courseElements}
     </div>
   );
