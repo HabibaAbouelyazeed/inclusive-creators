@@ -33,7 +33,7 @@ const LoginPage = () => {
       <div
         className="w-full h-full absolute top-0 left-0 py-8 -z-10 bg-cover bg-center opacity-10"
         style={{
-          backgroundImage: `url('../public/assets/loginBanner.jpg')`,
+          backgroundImage: `url('/assets/loginBanner.jpg')`,
         }}></div>
       <div className="container">
         <Card
@@ -45,6 +45,9 @@ const LoginPage = () => {
           </Typography>
           <Typography className="mt-1 text-olive font-normal">
             Welcome Back!
+          </Typography>
+          <Typography className="mt-1 text-olive font-medium">
+            Login now to see new content.
           </Typography>
           <form
             className="mt-8 mb-2 w-full max-w-screen-lg"
