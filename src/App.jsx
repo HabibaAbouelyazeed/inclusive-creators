@@ -23,20 +23,20 @@ function App() {
           <Navbar />
         </header>
         <Routes>
-          <Route path="" element={<LandingPage/>} />
-          <Route path="/home" element={<HomePage/>} />
+          <Route path="" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route
             path="/courses/:courseTitle/:courseId"
-            element={<CoursesDetailsPage/>}
+            element={<CoursesDetailsPage />}
           />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/event/:eventId" element={<EventsDetails />} />
-          <Route path="/articles" element={<ArticlesPage/>} />
-          <Route path="/article/:articleId" element={<ArticlesDetailsPage/>} />
-          <Route path="/profile" element={<ProfilePage/>} />
-          <Route path="/register" element={<RegisterPage/>} />
-          <Route path="/login" element={<Login/>} />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/article/:articleId" element={<ArticlesDetailsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/search" element={<SearchResults />} />
         </Routes>
         <footer>

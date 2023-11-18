@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const ArticleCard = ({ article }) => {
-  const { id, title, img, body, author, date } = article;
+  const { id, title, img, description, author, date } = article;
   const arrowIcon = <FontAwesomeIcon icon={faArrowRight} />;
   return (
     <div className="grid grid-cols-12 my-8 shadow-lg rounded">
@@ -16,7 +16,7 @@ const ArticleCard = ({ article }) => {
           {title}
         </h2>
         <p className="text-olive text-sm md:text-base lg:text-lg mb-4 md:mb-8">
-          {body}
+          {description}
         </p>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
