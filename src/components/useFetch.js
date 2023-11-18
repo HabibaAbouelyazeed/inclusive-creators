@@ -12,7 +12,19 @@ const useFetch = (contentType) => {
       setError('');
 
       try {
-        const fetchedData = await fetchData(contentType);
+        let fetchedData = [];
+
+        if (contentType === 'all') {
+          const types = ['events', 'articles', 'courses'];
+          for (const type of types) {
+            const typeData = await fetchData(type);
+            fetchedData = [...fetchedData, ...typeData];
+          }
+        } else {
+          fetchedData = await fetchData(contentType);
+        }
+
+        // const fetchedData = await fetchData(contentType);
         setData(fetchedData);
       } catch (err) {
         setError(`Error fetching ${contentType}. Please try again later.`);

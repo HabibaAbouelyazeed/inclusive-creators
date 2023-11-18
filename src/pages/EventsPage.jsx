@@ -36,9 +36,9 @@ const EventsPage = () => {
         title={"Explore, Connect, and Grow"}
         searchCategory={"events"}
       />
-      {newestEvent.length > 0 && (
+      {/* {newestEvent.length > 0 && (
         <HeroEvent key={newestEvent[0].id} event={newestEvent[0]} />
-      )}
+      )} */}
       <UpcomingEvents events={upcomingEvents} />
       <EventsList events={restOfEvents} />
     </>

@@ -15,7 +15,7 @@ const SearchComponent = ({ title, searchCategory }) => {
     const inputWrapperClasses = title ? "flex items-center border-2 border-secondary-300 rounded-md px-2 mt-4 md:mt-0" : "flex items-center border-2 border-secondary-300 rounded-md px-2 mt-4 md:mt-0 w-full";
 
     return (
-        <div className="container py-6 md:py-12">
+        <div className="container py-3">
             <div className={containerClasses}>
                 {title && (
                     <h2 className="text-2xl md:text-4xl text-olive font-bold mb-4 md:mb-0">

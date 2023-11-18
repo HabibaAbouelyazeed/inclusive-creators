@@ -44,7 +44,7 @@
     {
       "title": "The Investigator",
       "Image": "./assets/Courses/Investigator.png",
-      "description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
+      "description": "Embark on an exciting learning journey tailored for kids who love solving mysteries. Our Junior Investigator Course offers engaging lessons, interactive activities, and thrilling detective missions, fostering critical thinking and teamwork in a playful environment",
       "id": 4,
       "duration": "15 minutes",
       "level": "Beginner",
@@ -58,7 +58,7 @@
     {
       "title": " Math Marvels",
       "Image": "./assets/Courses/Mathmarvels.jpg",
-      "description": "Dive into the world of numbers and shapes with Math Marvels! This course makes learning mathematics a delightful experience for beginners, fostering a love for numbers.",
+      "description": "Dive into the world of numbers and problem-solving with our Math Marvels course designed exclusively for kids. Through interactive lessons, games, and creative activities, young learners will develop strong foundational math skills in a fun and engaging way.",
       "id": 5,
       "duration": "15 minutes",
       "level": "Beginner",
@@ -71,8 +71,7 @@
     {
       "title": "The Scientist",
       "Image": "./assets/Courses/Autism4.jpg",
-      "description": "Embark on a journey of scientific discovery with The Scientist! This course introduces young minds to basic scientific principles through exciting experiments.",
-      "id": 6,
+      "description": "Embark on an exciting scientific adventure with our Young Scientists Exploratorium course specially crafted for kids. Through hands-on experiments, captivating demonstrations, and immersive activities, budding scientists will unravel the wonders of the natural world.",
       "duration": "15 minutes",
       "level": "Beginner",
       "Age": "3-7",
@@ -797,7 +796,8 @@
       "imagePath": "/assets/Events/2.webp",
       "host": "Random Host 2",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/2"
     },
     {
       "id": 3,
@@ -809,7 +809,8 @@
       "imagePath": "/assets/Events/3.webp",
       "host": "Random Host 3",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/3"
     },
     {
       "id": 4,
@@ -821,7 +822,8 @@
       "imagePath": "/assets/Events/4.webp",
       "host": "Random Host 4",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/4"
     },
     {
       "id": 5,
@@ -833,7 +835,8 @@
       "imagePath": "/assets/Events/5.webp",
       "host": "Random Host 5",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/5"
     },
     {
       "id": 6,
@@ -845,7 +848,8 @@
       "imagePath": "/assets/Events/6.webp",
       "host": "Random Host 6",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/6"
     },
     {
       "id": 7,
@@ -857,7 +861,8 @@
       "imagePath": "/assets/Events/7.webp",
       "host": "Random Host 7",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/7"
     },
     {
       "id": 8,
@@ -869,7 +874,8 @@
       "imagePath": "/assets/Events/8.webp",
       "host": "Random Host 8",
       "category": "Science",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/8"
     },
     {
       "id": 9,
@@ -881,7 +887,8 @@
       "imagePath": "/assets/Events/9.webp",
       "host": "Random Host 9",
       "category": "Engineering",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/9"
     },
     {
       "id": 10,
@@ -893,7 +900,8 @@
       "imagePath": "/assets/Events/10.webp",
       "host": "Random Host 10",
       "category": "Technology",
-      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B"
+      "hostAvatar": "https://placehold.co/48x48/DDD3D2/5D6B6B",
+      "url": "/event/10"
     }
   ],
   "posts": [
@@ -1030,7 +1038,7 @@
       "date": "Novamber 20, 2023"
     },
 
-     {
+    {
       "id": 2,
       "title": "Occupational Therapy for Autism",
       "body": "Occupational therapy plays a vital role in supporting children with autism spectrum disorder (ASD). This article explores the significance of occupational therapy interventions and how they can enhance the lives of children on the autism spectrum.",
@@ -1039,7 +1047,6 @@
       "source": "https://www.verywellhealth.com/occupational-therapy-for-autism-4783594",
       "author": "Lisa Jo Rudy",
       "date": "August 15, 2023"
-
     },
     {
       "id": 3,
@@ -1051,7 +1058,6 @@
       "author": "SABRINA HILTUNEN",
       "date": "May 25, 2023 9:27 AM"
     },
- 
 
     {
       "id": 4,
@@ -1083,17 +1089,18 @@
       "source": "https://resilienteducator.com/classroom-resources/inclusive-classrooms-special-needs/",
       "author": "The Editorial Team",
       "date": "January 20, 2023"
-    }, {
-
-        "id": 7,
-        "title": "Understanding Autism Spectrum Disorders",
-        "body": "The number of children diagnosed with Autism Spectrum Disorders (ASD) has grown exponentially within the past two decades. Acknowledging that accurate numbers are difficult to measure for a disability defined by characteristics, the Centers for Disease Control Autism and Developmental Disabilities Monitoring Network reports that currently approximately one in every eighty-eight children is diagnosed with an Autism Spectrum Disorder.",
-        "content": "Because the incidence of children with Autism Spectrum Disorders (ASD) is growing, educators need to be informed and responsive. What strategies can we employ to support students with ASD? “See the child first,” says special education professor Beverley Cush Evans.Information about Autism Can Be ConfusingAs a result of this reported prevalence, many sources have reported on the subject, including professional journals, the media, and personal accounts. With so much information, it is difficult to know what is to be trusted. The professional bias is to lean toward the scientific information found in peer-reviewed journals. However, it is important to recognize that there is bias in every source of information",
-        "img": "https://educomplus.eu/wp-content/uploads/2021/04/Course-10.jpg",
-        "source": "https://lesley.edu/article/understanding-autism-spectrum-disorders",
-        "author": "Lesley University",
-        "date": "Novamber 18, 2023"
-    }, {
+    },
+    {
+      "id": 7,
+      "title": "Understanding Autism Spectrum Disorders",
+      "body": "The number of children diagnosed with Autism Spectrum Disorders (ASD) has grown exponentially within the past two decades. Acknowledging that accurate numbers are difficult to measure for a disability defined by characteristics, the Centers for Disease Control Autism and Developmental Disabilities Monitoring Network reports that currently approximately one in every eighty-eight children is diagnosed with an Autism Spectrum Disorder.",
+      "content": "Because the incidence of children with Autism Spectrum Disorders (ASD) is growing, educators need to be informed and responsive. What strategies can we employ to support students with ASD? “See the child first,” says special education professor Beverley Cush Evans.Information about Autism Can Be ConfusingAs a result of this reported prevalence, many sources have reported on the subject, including professional journals, the media, and personal accounts. With so much information, it is difficult to know what is to be trusted. The professional bias is to lean toward the scientific information found in peer-reviewed journals. However, it is important to recognize that there is bias in every source of information",
+      "img": "https://educomplus.eu/wp-content/uploads/2021/04/Course-10.jpg",
+      "source": "https://lesley.edu/article/understanding-autism-spectrum-disorders",
+      "author": "Lesley University",
+      "date": "Novamber 18, 2023"
+    },
+    {
       "id": 8,
       "title": "What is ADHD?",
       "body": "ADHD is one of the most common neurodevelopmental disorders of childhood. It is usually first diagnosed in childhood and often lasts into adulthood. Children with ADHD may have trouble paying attention, controlling impulsive behaviors (may act without thinking about what the result will be), or be overly active.",
@@ -1102,16 +1109,16 @@
       "source": "https://www.cdc.gov/ncbddd/adhd/facts.html",
       "author": "Sarah Miller",
       "date": "September 27, 2023"
-    },{
-        "id": 9,
-        "title": "The Best Ways To Manage ADHD ",
-        "body": "ADHD is one of the most common neurodevelopmental disorders of childhood. It is usually first diagnosed in childhood and often lasts into adulthood. Children with ADHD may have trouble paying attention, controlling impulsive behaviors (may act without thinking about what the result will be), or be overly active.",
-        "content":"ADHD is characterized by various symptoms that can manifest in different ways. Due to the broad nature of ADHD symptoms, they are often categorized into inattentive, hyperactive-impulsive, and combined types (via the CDC). Inattentive ADHD is characterized by difficulty maintaining attention, organization, and following through on tasks. People who predominantly show these symptoms may seem forgetful and have trouble focusing on details. In contrast, hyperactive-impulsive ADHD is characterized by restlessness, impulsivity, and difficulty staying still or quiet. Such individuals might interrupt others frequently, act impulsively without considering consequences, and find it challenging to wait their turn. Lastly, as the name suggests, the combined type presents a combination of inattentive and hyperactive-impulsive symptoms.",
-        "img":"https://www.healthdigest.com/img/gallery/the-best-ways-to-manage-adhd-that-arent-medication/intro-1692723354.webp",
-        "source": "https://www.healthdigest.com/1372619/best-ways-manage-adhd-without-medication/",
-        "author": "ARIANE LANG",
-        "date": "August 23, 2023"
+    },
+    {
+      "id": 9,
+      "title": "The Best Ways To Manage ADHD ",
+      "body": "ADHD is one of the most common neurodevelopmental disorders of childhood. It is usually first diagnosed in childhood and often lasts into adulthood. Children with ADHD may have trouble paying attention, controlling impulsive behaviors (may act without thinking about what the result will be), or be overly active.",
+      "content": "ADHD is characterized by various symptoms that can manifest in different ways. Due to the broad nature of ADHD symptoms, they are often categorized into inattentive, hyperactive-impulsive, and combined types (via the CDC). Inattentive ADHD is characterized by difficulty maintaining attention, organization, and following through on tasks. People who predominantly show these symptoms may seem forgetful and have trouble focusing on details. In contrast, hyperactive-impulsive ADHD is characterized by restlessness, impulsivity, and difficulty staying still or quiet. Such individuals might interrupt others frequently, act impulsively without considering consequences, and find it challenging to wait their turn. Lastly, as the name suggests, the combined type presents a combination of inattentive and hyperactive-impulsive symptoms.",
+      "img": "https://www.healthdigest.com/img/gallery/the-best-ways-to-manage-adhd-that-arent-medication/intro-1692723354.webp",
+      "source": "https://www.healthdigest.com/1372619/best-ways-manage-adhd-without-medication/",
+      "author": "ARIANE LANG",
+      "date": "August 23, 2023"
     }
-    
   ]
 }

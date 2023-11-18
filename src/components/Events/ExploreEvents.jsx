@@ -3,7 +3,7 @@ import EventCard from "./EventCard";
 const ExploreEvents = ({ events }) => {
   
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-3">
       <div className="header flex flex-col md:flex-row items-center justify-between">
         <h2 className="text-3xl md:text-5xl text-olive font-bold my-4 md:mb-0">
           Explore Other Events
