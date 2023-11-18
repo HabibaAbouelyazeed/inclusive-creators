@@ -90,7 +90,7 @@ const PostList = () => {
 
   return (
     <>
-      <div className="mt-4 sm:w-full lg:w-3/5 mr-10">
+      <div className="mt-14 sm:w-full lg:w-10/12 mr-6">
         <div className="container ms-auto">
           <form onSubmit={handleSubmit}>
             <div className="mt-4 mr-10">

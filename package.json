@@ -15,6 +15,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@material-tailwind/react": "^2.1.4",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
     "axios": "^1.6.1",
     "create-vite": "^4.4.1",
     "firebase": "^10.6.0",

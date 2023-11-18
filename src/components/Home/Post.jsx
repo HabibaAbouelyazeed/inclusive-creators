@@ -98,7 +98,7 @@ const Post = ({ post }) => {
 
   return (
     <div>
-      <div className="bg-olive p-6 overflow-hidden rounded-lg shadow text-neutral-100 mt-6">
+      <div className="bg-olive p-6 overflow-hidden rounded-lg shadow  text-neutral-100 mt-6">
         <div className="flex  mt-8 space-x-4">
           <img
             src="https://source.unsplash.com/100x100/?portrait"

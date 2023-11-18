@@ -19,7 +19,7 @@ const Sidebar = ({ articles, courses }) => {
       <Card className="my-2 w-96 block mx-auto text-left scale-95 hover:scale-100 bg-neutral-100">
         <article className="max-w-2xl px-6 py-24 mx-auto space-y-16 dark:bg-gray-800 dark:text-gray-50">
           <div className="w-full mx-auto space-y-4">
-            <h1 className="text-5xl font-bold leadi">{article.title}</h1>
+            <h1 className="text-5xl font-bold">{article.title}</h1>
           </div>
           
           <div className="dark:text-gray-100">

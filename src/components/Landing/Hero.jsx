@@ -8,7 +8,7 @@ const Hero = () => {
     <section className="py-8 bg-olive">
       <div className="container flex flex-col md:flex-row gap-6">
         <div className="md:basis-1/2 flex flex-col justify-around text-start text-secondary-500">
-          <h1 className="text-5xl text-secondary-300">Inclusive Creators</h1>
+          <h1 className="text-5xl font-bold text-secondary-300">Inclusive Creators</h1>
           <p className="my-6 md:my-0">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             non pariatur ipsum placeat vitae, illum suscipit ratione dignissimos

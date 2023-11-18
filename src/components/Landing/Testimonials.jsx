@@ -51,9 +51,7 @@ const Testimonials = () => {
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;I found solution to all my design needs from Creative
-                  Tim. I use them as a freelancer in my hobby projects for fun!
-                  And its really affordable, very humble guys !!!&quot;
+                  &quot;Transformative Experience! Inclusive Creators provides an empowering platform for creativity and learning. The diverse range of articles, engaging courses, and inspiring events have truly enriched my creative journey.  !!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -93,9 +91,7 @@ const Testimonials = () => {
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;I found solution to all my design needs from Creative
-                  Tim. I use them as a freelancer in my hobby projects for fun!
-                  And its really affordable, very humble guys !!!&quot;
+                  &quot;The community here is vibrant and supportive, making it an exceptional space for individuals from all backgrounds to thrive.!!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -135,9 +131,7 @@ const Testimonials = () => {
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;I found solution to all my design needs from Creative
-                  Tim. I use them as a freelancer in my hobby projects for fun!
-                  And its really affordable, very humble guys !!!&quot;
+                  &quot;I highly recommend Inclusive Creators for anyone seeking to unlock their creative potential in a welcoming and inclusive environment !!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -177,9 +171,7 @@ const Testimonials = () => {
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;I found solution to all my design needs from Creative
-                  Tim. I use them as a freelancer in my hobby projects for fun!
-                  And its really affordable, very humble guys !!!&quot;
+                  &quot;Exceptional Resource! Inclusive Creators has been a game-changer for me. The thoughtfully curated articles, insightful courses, and impactful events have significantly enhanced my skills and perspective.!!!&quot;
                 </Typography>
               </CardBody>
             </Card>
