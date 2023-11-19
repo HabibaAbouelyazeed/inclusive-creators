@@ -31,28 +31,37 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route
+            path="/event/:eventId"
+            element={<EventsDetails />}
+            key="eventDetails"
+          />
           <Route path="/articles" element={<ArticlesPage />} />
+          <Route
+            path="/article/:articleId"
+            element={<ArticlesDetailsPage />}
+            key="articleDetails"
+          />
 
+          <Route
+            path="/courses/:courseTitle/:courseId"
+            element={<CoursesDetailsPage />}
+            key="courseDetails"
+          />
+          
           <Route element={<GuardedRoute user={!!user} redirectPath="/login" />}>
             <Route path="/home" element={<HomePage />} key="home" />
             <Route path="/profile" element={<ProfilePage />} key="profile" />
             <Route
-              path="/courses/:courseTitle/:courseId"
-              element={<CoursesDetailsPage />}
-              key="courseDetails"
+              path="/search"
+              element={<SearchResults />}
+              key="searchResults"
             />
-            <Route path="/event/:eventId" element={<EventsDetails />} key="eventDetails" />
-            <Route
-              path="/article/:articleId"
-              element={<ArticlesDetailsPage />}
-              key="articleDetails"
-            />
-            <Route path="/search" element={<SearchResults />} key="searchResults"/>
           </Route>
 
           <Route element={<GuardedRoute user={!user} redirectPath="/home" />}>
-            <Route path="/register" element={<RegisterPage />} key="register"/>
-            <Route path="/login" element={<Login />} key="login"/>
+            <Route path="/register" element={<RegisterPage />} key="register" />
+            <Route path="/login" element={<Login />} key="login" />
           </Route>
         </Routes>
 

@@ -22,7 +22,7 @@ const Footer = () => {
     <footer className="relative w-full bg-olive text-secondary-300 py-8">
       <div className="container w-full px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2 text-start">
-          <Link to="#" variant="h5" className="mb-6 font-bold text-xl hover:text-dirtyPink">
+          <Link to="/" variant="h4" className="mb-6 font-bold text-2xl hover:text-dirtyPink">
             InCreators
           </Link>
           <div className="grid grid-cols-3 justify-between gap-4">

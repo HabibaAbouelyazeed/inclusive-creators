@@ -6,7 +6,7 @@ const ArticlesBanner = () => {
   return (
     <>
       <section
-        className="articles_banner bg-cover bg-center bg-no-repeat h-[85vh] relative flex items-center"
+        className="articles_banner mb-8 bg-cover bg-center bg-no-repeat h-[85vh] relative flex items-center"
         style={{ backgroundImage: `url(${bannerImage})` }}
       >
         <div className="absolute top-0 bottom-0 left-0 w-full h-full  bg-black/75"></div>

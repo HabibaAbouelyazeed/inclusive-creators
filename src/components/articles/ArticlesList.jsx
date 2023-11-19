@@ -2,7 +2,6 @@ import React from "react";
 import ArticleCard from "./ArticleCard";
 
 const ArticlesList = ({ articles }) => {
-  // console.log(articles);
   return (
     <section className="py-8" id="articleslist">
       <div className="container mx-auto">

@@ -13,7 +13,7 @@ const Testimonials = () => {
     <>
       <section className="py-8 bg-secondary-300">
         <div className="container">
-          <h3 className="mb-6 text-olive text-3xl">Testimonials</h3>
+          <h3 className="mb-8 text-olive text-4xl">Testimonials</h3>
           <Carousel className="rounded-xl bg-tealGrey py-8">
             {/* Card Item */}
             <Card
@@ -28,7 +28,7 @@ const Testimonials = () => {
                 <Avatar
                   size="lg"
                   variant="circular"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="tania andrew"
                 />
                 <div className="flex w-full flex-col gap-0.5">
@@ -44,14 +44,19 @@ const Testimonials = () => {
                       <StarIcon />
                     </div>
                   </div>
-                  <Typography color="blue-gray" className="text-center md:text-left">
-                    Frontend Lead @ Google
+                  <Typography
+                    color="blue-gray"
+                    className="text-center md:text-left">
+                    Parent of child with ADHD
                   </Typography>
                 </div>
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;Transformative Experience! Inclusive Creators provides an empowering platform for creativity and learning. The diverse range of articles, engaging courses, and inspiring events have truly enriched my creative journey.  !!!&quot;
+                  &quot;Transformative Experience! Inclusive Creators provides
+                  an empowering platform for creativity and learning. The
+                  diverse range of articles, engaging courses, and inspiring
+                  events have truly enriched my creative journey. !!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -74,7 +79,7 @@ const Testimonials = () => {
                 <div className="flex w-full flex-col gap-0.5">
                   <div className="flex flex-col md:flex-row items-center justify-between">
                     <Typography variant="h5" color="blue-gray">
-                      Tania Andrew
+                      John Walter
                     </Typography>
                     <div className="5 flex items-center gap-0">
                       <StarIcon />
@@ -84,14 +89,18 @@ const Testimonials = () => {
                       <StarIcon />
                     </div>
                   </div>
-                  <Typography color="blue-gray" className="text-center md:text-left">
-                    Frontend Lead @ Google
+                  <Typography
+                    color="blue-gray"
+                    className="text-center md:text-left">
+                    Parent of child with Autism
                   </Typography>
                 </div>
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;The community here is vibrant and supportive, making it an exceptional space for individuals from all backgrounds to thrive.!!!&quot;
+                  &quot;The community here is vibrant and supportive, making it
+                  an exceptional space for individuals from all backgrounds to
+                  thrive.!!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -108,13 +117,13 @@ const Testimonials = () => {
                 <Avatar
                   size="lg"
                   variant="circular"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
-                  alt="tania andrew"
+                  src="https://images.unsplash.com/photo-1526835746352-0b9da4054862?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Jenna Doe"
                 />
                 <div className="flex w-full flex-col gap-0.5">
                   <div className="flex flex-col md:flex-row items-center justify-between">
                     <Typography variant="h5" color="blue-gray">
-                      Tania Andrew
+                      Jenna Doe
                     </Typography>
                     <div className="5 flex items-center gap-0">
                       <StarIcon />
@@ -124,14 +133,18 @@ const Testimonials = () => {
                       <StarIcon />
                     </div>
                   </div>
-                  <Typography color="blue-gray" className="text-center md:text-left">
-                    Frontend Lead @ Google
+                  <Typography
+                    color="blue-gray"
+                    className="text-center md:text-left">
+                    Parent of child with ADHD
                   </Typography>
                 </div>
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;I highly recommend Inclusive Creators for anyone seeking to unlock their creative potential in a welcoming and inclusive environment !!!&quot;
+                  &quot;I highly recommend Inclusive Creators for anyone seeking
+                  to unlock their creative potential in a welcoming and
+                  inclusive environment !!!&quot;
                 </Typography>
               </CardBody>
             </Card>
@@ -148,13 +161,13 @@ const Testimonials = () => {
                 <Avatar
                   size="lg"
                   variant="circular"
-                  src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
+                  src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?q=80&w=1930&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="tania andrew"
                 />
                 <div className="flex w-full flex-col gap-0.5">
                   <div className="flex flex-col md:flex-row items-center justify-between">
                     <Typography variant="h5" color="blue-gray">
-                      Tania Andrew
+                      Mike Peter
                     </Typography>
                     <div className="5 flex items-center gap-0">
                       <StarIcon />
@@ -164,18 +177,22 @@ const Testimonials = () => {
                       <StarIcon />
                     </div>
                   </div>
-                  <Typography color="blue-gray" className="text-center md:text-left">
-                    Frontend Lead @ Google
+                  <Typography
+                    color="blue-gray"
+                    className="text-center md:text-left">
+                    Parent of child with Learning disability
                   </Typography>
                 </div>
               </CardHeader>
               <CardBody className="mb-6 p-0">
                 <Typography>
-                  &quot;Exceptional Resource! Inclusive Creators has been a game-changer for me. The thoughtfully curated articles, insightful courses, and impactful events have significantly enhanced my skills and perspective.!!!&quot;
+                  &quot;Exceptional Resource! Inclusive Creators has been a
+                  game-changer for me. The thoughtfully curated articles,
+                  insightful courses, and impactful events have significantly
+                  enhanced my skills and perspective.!!!&quot;
                 </Typography>
               </CardBody>
             </Card>
-            
           </Carousel>
         </div>
       </section>

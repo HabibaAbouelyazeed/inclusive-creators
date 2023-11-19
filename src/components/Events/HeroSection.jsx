@@ -1,4 +1,3 @@
-// const backgroundImage = "https://placehold.co/1500x757";
 import backgroundImage from "/assets/Events/banner.webp";
 
 const HeroSection = () => {

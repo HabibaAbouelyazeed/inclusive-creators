@@ -6,7 +6,6 @@ const SearchComponent = ({ title, searchCategory }) => {
     const navigate = useNavigate(); 
 
     const handleSearch = async () => {
-        console.log(`Searching for ${searchCategory}:`, searchTerm);
         // Navigate to the search page with the search term as a query parameter
         navigate(`/search?category=${searchCategory}&term=${searchTerm}`);
     };

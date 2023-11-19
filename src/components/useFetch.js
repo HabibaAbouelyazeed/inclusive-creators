@@ -24,7 +24,6 @@ const useFetch = (contentType) => {
           fetchedData = await fetchData(contentType);
         }
 
-        // const fetchedData = await fetchData(contentType);
         setData(fetchedData);
       } catch (err) {
         setError(`Error fetching ${contentType}. Please try again later.`);

@@ -1,9 +1,5 @@
 import React from "react";
-import {
-  Card,
-  CardBody,
-  Typography,
-} from "@material-tailwind/react";
+import { Card, CardBody, Typography } from "@material-tailwind/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBullseye, faEye, faGem } from "@fortawesome/free-solid-svg-icons";
 
@@ -20,34 +16,47 @@ const Strategy = () => {
               Mission
             </Typography>
             <Typography>
-              Because it&apos;s about motivating the doers. Because I&apos;m
-              here to follow my dreams and inspire others.
+              Our mission is to empower parents of children with disabilities by
+              providing knowledge, fostering community connections, and offering
+              educational opportunities. We are dedicated to equipping parents
+              with the tools to navigate unique challenges, fostering
+              confidence, support, and resilience in their parenting journey.
             </Typography>
           </CardBody>
         </Card>
 
         <Card className="mt-6 bg-secondary-300 text-neutral-800">
           <CardBody>
-            <FontAwesomeIcon icon={faEye} className="fa-4x text-tealGrey"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faEye}
+              className="fa-4x text-tealGrey"></FontAwesomeIcon>
             <Typography variant="h5" className="my-4 text-olive">
               Vision
             </Typography>
             <Typography>
-              Because it&apos;s about motivating the doers. Because I&apos;m
-              here to follow my dreams and inspire others.
+              At InCreators, we aim to be the top platform for parents of
+              children with disabilities, globally recognized for fostering a
+              connected community and providing exceptional resources. Our
+              vision is a world where parents feel informed and empowered,
+              celebrating the uniqueness of each child for brighter futures.
             </Typography>
           </CardBody>
         </Card>
 
         <Card className="mt-6 bg-secondary-300 text-neutral-800">
           <CardBody>
-            <FontAwesomeIcon icon={faGem} className="fa-4x text-tealGrey"></FontAwesomeIcon>
+            <FontAwesomeIcon
+              icon={faGem}
+              className="fa-4x text-tealGrey"></FontAwesomeIcon>
             <Typography variant="h5" className="my-4 text-olive">
               Values
             </Typography>
             <Typography>
-              Because it&apos;s about motivating the doers. Because I&apos;m
-              here to follow my dreams and inspire others.
+              Our values are empathy, inclusivity, and
+              knowledge. We prioritize building a supportive community where
+              every parent is heard and respected. Celebrating diversity, we
+              foster an inclusive space that values differences and empowers
+              parents with accurate information.
             </Typography>
           </CardBody>
         </Card>

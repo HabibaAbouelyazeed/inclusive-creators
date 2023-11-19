@@ -38,7 +38,7 @@ const PostList = () => {
     }
   };
 
-  // Fetch Posts 
+  // Fetch Posts
   const fetchData = async () => {
     try {
       const colRef = collection(db, "posts");
@@ -94,7 +94,7 @@ const PostList = () => {
         <div className="container ms-auto">
           <form onSubmit={handleSubmit}>
             <div className="mt-4 mr-10">
-              <div className="mt-1">
+              <div className="mt-1 border-2 border-neutral-800">
                 <textarea
                   id="post"
                   name="post"

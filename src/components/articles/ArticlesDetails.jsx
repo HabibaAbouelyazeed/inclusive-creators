@@ -3,7 +3,6 @@ import React from "react";
 const ArticlesDetails = ({ article }) => {
   if (!article) return null;
   const { title, img, author, content, source } = article;
-  // console.log(article);
   return (
     <section className="py-8">
       <div className="container mx-auto">
@@ -17,12 +16,16 @@ const ArticlesDetails = ({ article }) => {
           <h3 className="mt-2 text-olive font-medium text-md">By: {author}</h3>
           <h4 className="text-dirtyPink font-medium text-md">{article.date}</h4>
         </div>
-        <p className="text-left text-olive py-4 text-sm md:text-base lg:text-lg font-medium max-w-[80%] mx-auto">
+        <p className="text-left text-neutral-800 py-4 text-sm md:text-base lg:text-lg font-medium max-w-[80%] mx-auto">
           {content}
         </p>
-        <h3 className="text-xl text-dirtyPink hover:underline hover:text-olive">
-          <a href={source} target="blank">
-            More details: {source}
+        <h3 className="text-xl text-dirtyPink ">
+          <span>More details: </span>
+          <a
+            href={source}
+            target="blank"
+            className="text-olive underline hover:text-tealGrey">
+            {source}
           </a>
         </h3>
       </div>

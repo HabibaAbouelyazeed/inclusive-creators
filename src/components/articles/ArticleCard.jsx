@@ -15,7 +15,7 @@ const ArticleCard = ({ article }) => {
         <h2 className="text-olive font-medium text-lg md:text-xl lg:text-4xl mb-2 md:mb-4">
           {title}
         </h2>
-        <p className="text-olive text-sm md:text-base lg:text-lg mb-4 md:mb-8">
+        <p className="text-neutral-800 text-sm md:text-base lg:text-lg mb-4 md:mb-8">
           {description}
         </p>
         <div className="flex items-center justify-between">

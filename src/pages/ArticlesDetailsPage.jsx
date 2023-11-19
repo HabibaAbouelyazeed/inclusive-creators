@@ -1,5 +1,5 @@
 import React from "react";
-import ArticlesDetails from "../components/articles/ArticlesDetails";
+import ArticlesDetails from "../components/Articles/ArticlesDetails";
 import useFetch from "../components/useFetch";
 import { useParams } from "react-router-dom";
 import LoaderComponent from "../components/Loader";
@@ -15,7 +15,6 @@ const ArticlesDetailsPage = () => {
     return [];
   }, [data]);
   const article = articles.find((item) => item.id === parseInt(id));
-  // console.log(article);
   if (isLoading) {
     return <LoaderComponent />;
   }

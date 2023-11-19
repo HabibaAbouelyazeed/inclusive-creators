@@ -1,6 +1,6 @@
 import React from "react";
-import ArticlesBanner from "../components/articles/ArticlesBanner";
-import ArticlesList from "../components/articles/ArticlesList";
+import ArticlesBanner from "../components/Articles/ArticlesBanner";
+import ArticlesList from "../components/Articles/ArticlesList";
 import useFetch from "../components/useFetch";
 import LoaderComponent from "../components/Loader";
 import SearchComponent from "../components/Search/SearchComponent";
@@ -24,7 +24,6 @@ const ArticlesPage = () => {
         title={"Explore, Connect, and Grow"}
         searchCategory={"articles"}
       />
-      {/* <ArticlesSearch /> */}
       <ArticlesList articles={articlesData} />
     </>
   );

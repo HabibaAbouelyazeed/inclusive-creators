@@ -37,7 +37,7 @@ export const Navbar = () => {
     <header className="appNavbar w-100 bg-olive text-secondary-300">
       <NavComponent className="py-8 mx-auto max-w-full bg-olive border-0 rounded-none">
         <div className="container flex items-center justify-between text-secondary-300">
-          <Typography variant="h4" className="mr-4 cursor-pointer py-1.5">
+          <Typography variant="h3" className="mr-4 cursor-pointer py-1.5">
             <NavLink to="/">InCreators</NavLink>
           </Typography>
           <div className="flex items-center gap-4">

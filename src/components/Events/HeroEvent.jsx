@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 
 const HeroEvent = ({ event }) => {
-  // console.log(event);
 
   if (!event) {
     // Handle the case when event is not provided
