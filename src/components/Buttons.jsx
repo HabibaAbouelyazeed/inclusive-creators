@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Button } from "@material-tailwind/react";
 
 export function ButtonDefault({ Name, onClick, classname, disabled }) {

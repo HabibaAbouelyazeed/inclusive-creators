@@ -1,6 +1,6 @@
 import React from "react";
-import { Carousel, Typography, Button } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
+import { Carousel, Typography, Button } from "@material-tailwind/react";
 import hero from "../../assets/images/child-with-autism.jpg";
 import courseImage from "../../assets/images/ADHD-Strategies-1024x615.jpg";
 import eventImage from "../../assets/images/about.jpg";
@@ -14,20 +14,10 @@ const HomeCarousel = () => {
           <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
             <Typography
               variant="h1"
-              className="mb-6 text-3xl md:text-4xl lg:text-6xl text-dirtyPink"
-            >
+              className="mb-6 text-3xl md:text-4xl lg:text-6xl text-dirtyPink">
               Crafting Together: Inclusive Creators&apos; Corner
             </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="my-12 opacity-60"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum
-              maiores amet, est laboriosam tempora voluptatem dignissimos ullam
-              accusamus vero sed beatae eius iusto voluptas? Aliquam ut saepe
-              architecto corporis totam.
-            </Typography>
+
           </div>
         </div>
       </div>
@@ -42,24 +32,22 @@ const HomeCarousel = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl text-neutral-300"
-            >
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl text-neutral-300">
               Inspiration Unleashed: Check Out Our Events
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="mb-12 opacity-60"
-            >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusantium odit error nostrum molestiae, ipsam in unde fugit
-              minima quidem quaerat, assumenda, corporis voluptates eaque
-              laborum eligendi praesentium voluptas nobis labore.
+              className="mb-12 opacity-60">
+              Join us on a journey of discovery and learning, where limitless
+              possibilities await.
             </Typography>
-            <Link to={'/events'}>
-            <Button size="lg" className="bg-dirtyPink text-olive font-semibold">
-              Explore Events
-            </Button>
+            <Link to={"/events"}>
+              <Button
+                size="lg"
+                className="bg-dirtyPink text-olive font-semibold">
+                Explore Events
+              </Button>
             </Link>
           </div>
         </div>
@@ -75,26 +63,26 @@ const HomeCarousel = () => {
             <Typography
               variant="h1"
               color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl text-secondary-500"
-            >
+              className="mb-4 text-3xl md:text-4xl lg:text-5xl text-secondary-500">
               Skillful Journeys: Courses for Every Creator
             </Typography>
             <Typography
               variant="lead"
               color="white"
-              className="my-12 opacity-60"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-              iste, quis consectetur illum aliquid earum quia consequatur odio
-              in alias dolor vero, hic, ex aliquam? Aut sit iure nesciunt
-              voluptatem.
+              className="my-12 opacity-60">
+              Incorporate hands-on activities and experiments to engage learners
+              with special needs. These activities can help individuals
+              understand abstract STEM concepts through tangible experiences.
+              Use manipulatives, models, and interactive simulations to make
+              learning more concrete
             </Typography>
-          <Link to={'/courses'}>
-          <Button size="lg" className="bg-dirtyPink text-olive font-semibold">
-              Explore Courses
-            </Button>
-          </Link>
-            
+            <Link to={"/courses"}>
+              <Button
+                size="lg"
+                className="bg-dirtyPink text-olive font-semibold">
+                Explore Courses
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

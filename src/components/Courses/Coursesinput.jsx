@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { ButtonDefault } from "../Buttons";
 import SearchComponent from "../Search/SearchComponent";
 

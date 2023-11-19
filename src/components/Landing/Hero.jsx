@@ -1,8 +1,8 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@material-tailwind/react";
-import { NavLink } from 'react-router-dom';
 
 const Hero = () => {
   return (

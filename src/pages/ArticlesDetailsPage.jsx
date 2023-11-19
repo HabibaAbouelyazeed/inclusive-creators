@@ -1,9 +1,10 @@
 import React from "react";
-import ArticlesDetails from "../components/Articles/ArticlesDetails";
-import useFetch from "../components/useFetch";
-import { useParams } from "react-router-dom";
-import LoaderComponent from "../components/Loader";
 import { useMemo } from "react";
+import { useParams } from "react-router-dom";
+import useFetch from "../components/useFetch";
+import LoaderComponent from "../components/Loader";
+import ArticlesDetails from "../components/Articles/ArticlesDetails";
+
 const ArticlesDetailsPage = () => {
   const params = useParams();
   const id = params.articleId;

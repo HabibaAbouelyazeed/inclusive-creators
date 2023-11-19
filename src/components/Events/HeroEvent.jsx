@@ -1,6 +1,6 @@
-const avatarImage = "https://placehold.co/48x48/DDD3D2/5D6B6B";
 import { Link } from "react-router-dom";
 
+const avatarImage = "https://placehold.co/48x48/DDD3D2/5D6B6B";
 
 const HeroEvent = ({ event }) => {
 

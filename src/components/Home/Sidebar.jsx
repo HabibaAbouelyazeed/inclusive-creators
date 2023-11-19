@@ -1,11 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Card,
   CardHeader,
   CardBody,
   Typography,
 } from "@material-tailwind/react";
-import { Link } from 'react-router-dom';
 
 const Sidebar = ({ articles, courses }) => {
   const displayedArticles = articles ? articles.slice(0, 3) : [];
