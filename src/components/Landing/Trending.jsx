@@ -1,6 +1,6 @@
 import React from "react";
-import courseImg from "./../../assets/images/autism4.jpg";
-import articleImg from "./../../assets/images/course-10.jpg";
+import courseImg from "./../../assets/images/Autism4.jpg";
+import articleImg from "./../../assets/images/Course-10.jpg";
 
 function Trending() {
   return (
