@@ -1,9 +1,9 @@
 import React from "react";
-import ArticlesBanner from "/src/components/Articles/ArticlesBanner";
-import ArticlesList from "/src/components/Articles/ArticlesList";
-import useFetch from "/src/components/useFetch";
-import LoaderComponent from "/src/components/Loader";
-import SearchComponent from "/src/components/Search/SearchComponent";
+import ArticlesBanner from "./../components/Articles/ArticlesBanner";
+import ArticlesList from "./../components/Articles/ArticlesList";
+import useFetch from "./../components/useFetch";
+import LoaderComponent from "./../components/Loader";
+import SearchComponent from "./../components/Search/SearchComponent";
 
 const ArticlesPage = () => {
   // Use useMemo if you need to memoize the data
