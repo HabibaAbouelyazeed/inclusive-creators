@@ -3,7 +3,7 @@ import { useMemo } from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../components/useFetch";
 import LoaderComponent from "../components/Loader";
-import ArticlesDetails from "../components/Articles/ArticlesDetails";
+import ArticlesDetails from "../components/articles/ArticlesDetails";
 
 const ArticlesDetailsPage = () => {
   const params = useParams();
