@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:3000";
+// const baseUrl = "http://localhost:3000";
+const baseUrl = "https://json-server-in-creators.vercel.app";
 
 const fetchData = async (contentType) => {
   try {

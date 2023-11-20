@@ -19,7 +19,7 @@ const CourseDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/Details/${params.courseId}`)
+      .get(`https://json-server-in-creators.vercel.app/Details/${params.courseId}`)
       .then((response) => {
         setCourse(response.data);
       })
